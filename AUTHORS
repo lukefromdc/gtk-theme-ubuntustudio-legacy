@@ -1,0 +1,90 @@
+Adapting to GTK 3.16, 3.18, 3.20, later:
+  Luke from DC <lukefromdc@hushmail.com> 
+  
+Fine detail matching between GTK2 and GTK3 all versions:  
+  Luke from DC <lukefromdc@hushmail.com> 
+
+
+2nd port to GTK3 (2014 rebase):
+
+	Luke from DC <lukefromdc@hushmail.com> 
+
+		 Extensively modifying code from:
+
+	E17gtk theme upon which 2nd generation GTK 3 version (theme engine free) is based:
+
+                http://gnome-look.org/content/show.php/?content=163472
+
+                by
+
+     		   "tsujan" on http://gnome-look.org/usermanager/search.php?username=tsujan 
+			    (no other  contact info as I do not have a login on gnome-look.org)
+
+	Some icons and code snippets from 
+
+
+	"vertex" GTK3 theme
+
+
+	http://horst3180.deviantart.com/art/Vertex-Theme-470663601
+
+
+	http://horst3180.deviantart.com/
+
+	GTK2 code snippets for pixmap engine from mint-x Gtk2 theme
+
+	Clement Lefebvre <root@linuxmint.com>
+
+
+	Also using code from gtk3 default "Raleigh" theme
+
+		Original Authors
+----------------
+Peter Mattis      <petm@xcf.berkeley.edu>
+Spencer Kimball   <spencer@xcf.berkeley.edu>
+Josh MacDonald    <jmacd@xcf.berkeley.edu>
+
+The GTK+ Team (in alphabetical order)
+-------------------------------------
+Shawn T. Amundson <amundson@gtk.org>
+Jerome Bolliet    <bolliet@gtk.org>
+Damon Chaplin     <damon@gtk.org>
+Tony Gale         <gale@gtk.org>
+Jeff Garzik       <jgarzik@gtk.org>
+Lars Hamann       <lars@gtk.org>
+Raja R Harinath   <harinath@gtk.org>
+Carsten Haitzler  <raster@gtk.org>
+Tim Janik         <timj@gtk.org>
+Stefan Jeske      <stefan@gtk.org>
+Elliot Lee        <sopwith@gtk.org>
+Raph Levien       <raph@gtk.org>
+Ian Main          <imain@gtk.org>
+Federico Mena     <quartic@gtk.org>
+Paolo Molaro      <lupus@gtk.org>
+Jay Painter       <jpaint@gtk.org>
+Manish Singh      <manish@gtk.org>
+Owen Taylor       <otaylor@gtk.org>
+
+
+Porting to GTK 3 2010:
+
+	Luke from DC <lukefromdc@hushmail.com>
+
+  		 Extensively modifying code from:
+
+                 Adwaita GTK theme from GNOME mantainers-this code NO LONGER PRESENT IN THEME
+
+Original UbuntuStudio theme:
+
+Build System:
+	Daniel Holbach <daniel.holbach@ubuntu.com>
+
+Theme and Artwork:
+        Huw Wilkins <huwshimi@gmail.com>
+        Andrew Wedderburn <andrew.wedderburn@gmail.com>
+        Cory Kontros <coryisatm@nc.rr.com>
+        Kevin Jaako <kevin@jaako.com> - ubuntustudio.jpg
+        xrrr on Flickr - ubuntustudio-lense.jpg
+        3rd.foundation <3rd.foundation@cromagnon.com> - ubuntustudio-brushes.jpg
+
+
