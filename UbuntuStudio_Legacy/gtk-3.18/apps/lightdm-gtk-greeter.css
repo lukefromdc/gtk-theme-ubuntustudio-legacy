@@ -1,0 +1,90 @@
+/*********
+* panel *
+*********/
+#panel_window, #panel_window * {
+background-color:transparent; 
+color: white;
+font: bold;
+}
+
+#panel_window .menubar {
+	background-color: black;
+}
+
+#panel_window .menubar GtkWindow {
+	background-color:#364027;
+}
+
+
+#panel_window .menubar .menu{
+	background-color: alpha(black, 0.9);
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 3px;
+	border-radius:10px;
+	font: normal;
+}
+
+#panel_window .menubar .menuitem {
+	background-color: transparent;
+	box-shadow: 0px 0px 0px 0px alpha(black, 0.0);
+}
+
+#login_window
+	{
+	background-color:alpha (black, 0.9);
+    color: white;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 3px;
+	border-radius:10px;
+	box-shadow: 0px 0px 0px 0px alpha(black, 0.0);
+}
+
+#login_window *,
+#buttonbox_frame,
+#user_image {
+	background-color: transparent;
+	color: white;
+	box-shadow: 0px 0px 0px 0px alpha(black, 0.0);
+}
+
+#shutdown_dialog,
+#restart_dialog
+ {
+    background-color:alpha (black, 0.9);
+    color: white;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 3px;
+	border-radius:10px;
+	box-shadow: 0px 0px 0px 0px alpha(black, 0.0);
+
+}
+
+#login_window #user_combobox,
+#login_window #user_combobox .button {
+	padding: 2px 4px 2px 4px;
+	border-radius: 3px;
+	border-width: 1px;
+	border-style: solid;
+	color: @theme_fg_color;
+	background-image: none;
+	background-color:transparent;	
+
+}
+
+#login_window #user_combobox GtkWindow.popup{
+
+	background-color:transparent;
+}
+
+#login_window #user_combobox .menu{
+	background-color: alpha(black, 0.9);
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 3px;
+	border-radius:10px;
+	font: normal;
+}
+

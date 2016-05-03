@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=UbuntuStudio_Legacy
+Comment=remake and partial recolor (blue >blue-green)of legacy Ubuntustudio theme for GTK3
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=UbuntuStudio_Legacy
+Type=X-GNOME-Metatheme
+Comment=A clean dark theme
+Encoding=UTF-8
+GtkTheme=UbuntuStudio_Legacy
+MetacityTheme=UbuntuStudio_Legacy
+IconTheme=UbuntuStudio_Legacy
+CursorTheme=DMZ-White
+CursorSize=24
+NotificationTheme=coco

@@ -1,0 +1,531 @@
+/* caja */
+
+CajaWindow .frame{
+	padding: 0px;
+}
+
+CajaWindow * * * * * * * .frame{   /*screwy but effective trashbar fix ! */
+	background-color: @info_bg_color;
+}
+
+CajaWindow * * * * * * * * .frame{ /*keep the trashbar color off the scrollbars */
+	background-color: @theme_bg_color;
+}
+
+CajaWindow{
+	/* the small line between sidebar and view */
+	-GtkPaned-handle-size: 6px;
+	padding: 0px;	
+}
+	/*Fix transparent text entry background on desktop caused by above */
+ 
+/*view mode selector-keep this subtle to hide non-removable inside border */
+
+CajaWindow .toolbar GtkComboBox GtkToggleButton GtkCellView,
+CajaWindow .toolbar GtkComboBox GtkToggleButton GtkImage{
+	background-image: linear-gradient(to bottom,	
+					shade(@button_gradient_color_a, 1.1),
+	                                shade(@button_gradient_color_b, 1.1) 50%,
+	                                shade(@button_gradient_color_c, 1.1) 50%,
+ 					shade(@button_gradient_color_d, 1.1));
+	border-width: 0px;
+	border-style: none;
+	border-image: none;
+}
+
+CajaWindow .toolbar GtkComboBox GtkToggleButton GtkCellView:hover{
+	color:@theme_base_color0;
+}
+
+FMListView GtkTreeView {
+background-image: linear-gradient(to bottom,
+					  #eeeeee,
+	                          #eeeeee 30%,
+	                          #ffffff 70%,
+					  #ffffff); 
+}
+
+CajaWindow .info,
+CajaWindow .question,  /* why question for trash? */
+CajaWindow .info,
+CajaTrashBar,
+CajaTrashBar .info,
+CajaXContentBar,
+CajaXContentBar.info,
+CajaQueryEditor.info,
+CajaSearchBar,
+CajaSearchBar.info {
+	background-color: @info_bg_color;
+	border-width: 0px;
+}
+
+EelEditableLabel.entry,
+EelEditableLabel.entry:focused {
+	background-color:#ffffff;
+	border-color:#000000;
+	color:#000000;
+	padding: 6px;
+	border-radius: 3px;
+	box-shadow: inset 2px 3px alpha(black, 0.2),
+	            inset 2px 2px alpha(black, 0.2),
+	            inset 1px 1px alpha(black, 0.3);
+}
+
+
+EelEditableLabel.entry:selected {
+	color:#ffffff;
+}
+
+.caja-canvas-item {
+    border-radius: 4px;
+}
+
+/* desktop mode */
+CajaDesktopWindow.background .caja-canvas-item {
+    color: white;
+    text-shadow: 1px 1px alpha (#000000, 0.8);
+    border-color:transparent;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 4px;
+}
+
+.caja-canvas-item:active, 
+.caja-canvas-item:selected {
+    background-color: @theme_selected_bg_color;
+}
+
+CajaDesktopWindow.background .caja-canvas-item:active,
+CajaDesktopWindow.background .caja-canvas-item:prelight,
+CajaDesktopWindow.background .caja-canvas-item:selected {
+    text-shadow: none;
+}
+
+CajaDesktopWindow.background EelEditableLabel.entry{
+	border-color:transparent;
+}
+
+
+/* nemo */
+.nemo-canvas-item {
+    border-radius: 5px;
+}
+
+	/*ignored in newest versions of nemo it seems, needed in older versions */
+.nemo-desktop.nemo-canvas-item {
+    color: @theme_bg_color;
+    text-shadow: 1px 1px black;
+}
+
+.nemo-canvas-item:selected, 
+.nemo-canvas-item:active {
+     background-color: @theme_selected_bg_color;
+}
+
+.nemo-desktop.nemo-canvas-item:active,
+.nemo-desktop.nemo-canvas-item:prelight,
+.nemo-desktop.nemo-canvas-item:selected {
+    text-shadow: none;
+}
+
+NemoDesktopWindow.background EelEditableLabel.entry{
+	border-color:transparent;
+}
+
+NemoListView GtkTreeView {
+background-image: linear-gradient(to bottom,
+					  #eeeeee,
+	                          #eeeeee 30%,
+	                          #ffffff 70%,
+					  #ffffff); 
+}
+
+nemoTrashBar.info,
+nemoXContentBar.info,
+nemoSearchBar.info,
+nemoQueryEditor.info {
+    background-color: @nemo_cluebar_color;
+    border-color: darker (@nemo_cluebar_color);
+
+    border-radius: 0px;
+    border-width: 1px 0px;
+    border-style: solid;
+}
+
+nemoSearchBar .entry {
+    border-image: none;
+    border-color: @nemo_cluebar_color;
+
+    -GtkEntry-inner-border: 3;
+}
+
+nemoSearchBar .entry.image {
+    color: @nemo_cluebar_color;
+}
+
+.nemo-cluebar-label {
+    font: bold;
+    color: @theme_base_color;
+}
+
+#nemo-search-button *:active,
+#nemo-search-button *:active:prelight {
+    color: darker (@nemo_cluebar_color);
+}
+
+nemoFloatingBar {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (shade (@notebook_tab_gradient_a, 0.97)),
+                                     to (shade (@notebook_tab_gradient_b, 0.90)));
+
+    border-color: shade (@notebook_tab_gradient_b, 0.80);
+
+    border-radius: 3px 3px 0px 0px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+nemoFloatingBar .button {
+    background-color: alpha (@theme_base_color, 0.0);
+    background-image: none;
+
+    border-style: none;
+    border-image: none;
+
+    -GtkButton-image-spacing: 0px;
+    -GtkButton-inner-border: 0px;
+}
+
+NemoWindow .sidebar{
+	background-color:transparent;
+}
+
+nemoWindow .sidebar .frame {
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: shade (@theme_bg_color, 0.66);
+    border-radius: 0px;
+}
+
+NemoWindow .sidebar .view {
+	padding: 1px;
+}
+
+nemoWindow > GtkTable > .pane-separator {
+    border-width: 1px 1px 0px 0px;
+    border-style: solid;
+    border-color: shade (@theme_bg_color, 0.66);
+}
+
+NemoWindow .sidebar GtkTreeView row:nth-child(odd) {
+	background-color: @theme_base_color0; 
+	border-style: none;
+}
+
+NemoWindow .sidebar  GtkTreeView row:nth-child(even){
+	background-color: @theme_base_color0; 
+	border-style: none;
+}
+
+/* nautilus */
+.nautilus-canvas-item {
+    border-radius: 5px;
+}
+
+.nautilus-desktop.nautilus-canvas-item {
+    color:#ffffff;
+    text-shadow: 1px 1px black;
+}
+
+.nautilus-canvas-item:active,
+.nautilus-canvas-item:selected {
+    background-color: @theme_selected_bg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    text-shadow: none;
+}
+
+nautilusTrashBar.info,
+nautilusXContentBar.info,
+nautilusSearchBar.info,
+nautilusQueryEditor.info {
+    background-color: @nautilus_cluebar_color;
+    border-color: darker (@nautilus_cluebar_color);
+
+    border-radius: 0px;
+    border-width: 1px 0px;
+    border-style: solid;
+}
+
+nautilusSearchBar .entry {
+    border-image: none;
+    border-color: @nautilus_cluebar_color;
+
+    -GtkEntry-inner-border: 3;
+}
+
+nautilusSearchBar .entry.image {
+    color: @nautilus_cluebar_color;
+}
+
+.nautilus-cluebar-label {
+    font: bold;
+    color: @theme_base_color;
+}
+
+#nautilus-search-button *:active,
+#nautilus-search-button *:active:prelight {
+    color: darker (@nautilus_cluebar_color);
+}
+
+nautilusFloatingBar {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (shade (@notebook_tab_gradient_a, 0.97)),
+                                     to (shade (@notebook_tab_gradient_b, 0.90)));
+
+    border-color: shade (@notebook_tab_gradient_b, 0.80);
+
+    border-radius: 3px 3px 0px 0px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+nautilusFloatingBar .button {
+    background-color: alpha (@theme_base_color, 0.0);
+    background-image: none;
+
+    border-style: none;
+    border-image: none;
+
+    -GtkButton-image-spacing: 0px;
+    -GtkButton-inner-border: 0px;
+}
+
+nautilusWindow .sidebar .frame {
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: shade (@theme_bg_color, 0.66);
+    border-radius: 0px;
+}
+
+nautilusWindow > GtkTable > .pane-separator {
+    border-width: 1px 1px 0px 0px;
+    border-style: solid;
+    border-color: shade (@theme_bg_color, 0.66);
+}
+
+/* pluma */
+
+
+PlumaWindow .pane-separator, 
+PlumaWindow .pane-separator:hover {
+   border-width: 0px 1px 1px 1px;
+   border-style: solid;
+   border-color: @borders;
+   background-color: shade(@theme_bg_color, 0.95);
+   color: @borders;
+}
+
+PlumaPanel {
+    background-color: @theme_bg_color;
+}
+
+PlumaPanel .toolbar {
+    border-style: none;
+    background-color: transparent;
+}
+
+PlumaWindow .sidebar {
+    background-color: @theme_base_color;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: @borders;
+    
+}
+
+PlumaPanel .notebook {
+    padding: 0px;
+    border-width: 0px 0px;
+	background-color: white;
+}
+
+PlumaWindow .notebook {
+    border-width: 0px 0px 0px 0px;
+}
+
+PlumaWindow .notebook tab {
+	border-radius: 0px;
+	border-style: solid;
+	border-width: 0px;
+	background-color: @button_gradient_color;
+}
+
+PlumaWindow .notebook tab.top {
+	/* top right-left bottom */
+	padding: 0px 8px 1px;
+}
+
+PlumaWindow .notebook tab.top:active {
+	padding: 1px 8px 1px;
+}
+
+PlumaWindow>GtkBox .frame{
+
+	border-width: 0px 0px 0px 0px;
+	border-color:transparent;
+	border-style: none;
+	padding: 0
+}
+/* gedit */
+
+GeditWindow .pane-separator, 
+GeditWindow .pane-separator:hover {
+   border-width: 0px 1px 1px 1px;
+   border-style: solid;
+   border-color: @borders;
+   background-color: shade(@theme_bg_color, 0.95);
+   color: @borders;
+}
+
+GeditPanel {
+    background-color: @theme_bg_color;
+}
+
+GeditPanel .toolbar {
+    border-style: none;
+    background-color: transparent;
+}
+
+GeditWindow .sidebar {
+    background-color: @theme_base_color;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: @theme_bg_color;
+    
+}
+
+GeditPanel .notebook {
+    padding: 2px;
+    border-width: 1px 0px;
+}
+
+GeditWindow .notebook {
+    border-width: 1px 0px 1px 0px;
+}
+
+GeditStatusbar {
+    padding: 1px 0px 0px 0px;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: @theme_bg_color;
+    
+}
+
+
+/* gnome-terminal */
+
+
+TerminalScreen {
+	background-color:@theme_text_color;
+	color:  #22b300;
+}
+
+
+/* gcalctool */
+
+MathWindow .frame {
+	border-color: @theme_text_color;
+	padding: 0px;
+}
+
+MathWindow GtkScrolledWindow GtkViewport.frame {
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 0px;
+	border-color: @theme_text_color;
+}
+
+MathDisplay .view {
+	background-color: @theme_text_color; 
+	color: @theme_base_color0;
+}
+
+/* gnome-documents and Totem's search */
+.documents-entry-tag {
+	background-color: transparent;
+	border-radius: 1px;
+	border-width: 0;
+	margin: 2px;
+	padding: 4px;
+
+}
+
+.documents-entry-tag:hover {
+	background-color: shade(@theme_selected_bg_color, 1.23);
+}
+
+/* for Totem's search */
+/*.entry GtkEntry {
+	background-color: transparent;
+}*/
+
+.cursor-handle.top,
+.cursor-handle.bottom {
+	background-color:transparent;
+	box-shadow: none;
+	border-style: none;
+	border-radius: 0px;
+	border-width: 0px;
+}
+
+/* Correction for Yelp and Evolution */
+GtkTextView.entry,
+GtkHTML.entry {
+	background-color: @theme_base_color0;
+	color: @theme_text_color;
+}
+
+/***********************
+ * Mate-Control-Center *
+ ***********************/
+
+/* background */
+ShellWindow GtkScrolledWindow * {
+    background-color: @theme_bg_color;
+}
+
+ShellWindow .button, ShellWindow .button * {
+    background-color: transparent;
+}
+
+/***********************
+ * Gnome-Disks *
+ ***********************/
+
+GduVolumeGrid {
+	color:black;
+}
+
+/***********************
+ * Cinnamon-settings*
+ ***********************/
+	/*for some reason a background color DOES NOT WORK here!*/
+
+GtkWindow>GtkBox>GtkStack>GtkScrolledWindow>GtkViewport>GtkBox>GtkIconView.view{
+	background-image: linear-gradient(to bottom,
+	                                  white,
+	                                  white);
+}
+
+GtkWindow>GtkBox>GtkStack>GtkScrolledWindow>GtkViewport>GtkBox>GtkIconView.view:selected{
+	background-image: linear-gradient(to bottom,
+	                                  @theme_selected_bg_color,
+	                                  @theme_selected_bg_color);
+}
+
+

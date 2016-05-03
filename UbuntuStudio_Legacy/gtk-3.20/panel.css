@@ -1,0 +1,258 @@
+/*********************************
+ * MATE Panel, Fallback Mode Panel
+ *********************************/
+
+.mate-panel-menu-bar,  
+.gnome-panel-menu-bar{
+	background-color:#000000;
+	color: white;
+}
+
+/*Theme wnckpager and wncktasklist drag handles for subtle visibility*/
+MatePanelAppletFrameDBus{
+	background-color:alpha(@theme_bg_color, 0.2 );
+}
+
+/*******************
+ * MATE Panel Menus *
+ ******************/
+
+/* Set up transparent black menu backgrounds with gray borders */
+
+.gnome-panel-menu-bar menu,
+.mate-panel-menu-bar menu,
+menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
+	background-color: alpha(black,0.9); 
+	border-image: none;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 3px 3px 3px 3px;
+	border-radius:10px;
+	padding: 2px;	/*keep selected menuitem bg inside the border */
+}
+
+/*round the outside corners of top and bottom menuitems to fit inside the border */
+
+.gnome-panel-menu-bar * menuitem:first-child,
+.mate-panel-menu-bar * menuitem:first-child {
+	border-radius: 10px 10px 3px 3px;
+	border-image: none;
+	border-color:transparent;
+}
+
+.gnome-panel-menu-bar * menuitem:last-child,
+.mate-panel-menu-bar * menuitem:last-child {
+	border-radius: 3px 3px 10px 10px;
+	border-image: none;
+	border-color:transparent;
+}
+
+.gnome-panel-menu-bar * menuitem:hover,
+.mate-panel-menu-bar * menuitem:hover {
+	border-color: @menu_gradient_color_a;
+}
+
+/*make menu windows transparent*/
+
+.mate-panel-menu-bar menu.window, 
+.gnome-panel-menu-bar menu.window{
+	background-color:transparent;
+}
+
+
+/*Keep box-shadow off anything from the panel*/
+
+.gnome-panel-menu-bar decoration,
+.mate-panel-menu-bar decoration
+{     
+	box-shadow: none; 
+}
+
+/*Keep selected menuitem image off main panel custom menu bar*/
+/*Keep button background off it as well in GTK 3.20*/
+
+
+.mate-panel-menu-bar menubar,
+.mate-panel-menu-bar menubar > menuitem,
+.mate-panel-menu-bar menubar > menuitem:hover,
+.mate-panel-menu-bar menubar > menuitem:selected,
+.gnome-panel-menu-bar menubar,
+.gnome-panel-menu-bar menubar > menuitem,
+.gnome-panel-menu-bar menubar > menuitem:hover,
+.gnome-panel-menu-bar menubar > menuitem:selected{
+	background-image:none;
+	background-color:transparent;
+	border-image:none;
+	border-width: 0px;
+}
+
+.mate-panel-menu-bar menuitem:disabled,
+.mate-panel-menu-bar  menuitem:disabled *,
+.gnome-panel-menu-bar menuitem:disabled,
+.gnome-panel-menu-bar  menuitem:disabled{
+	background-image:none;
+	background-color:transparent;
+	border-image:none;
+	border-width: 0px;
+}
+
+
+/*Font used on panel itself and "custom menu bar" */
+
+.mate-panel-menu-bar  label, .gnome-panel-menu-bar  label{
+	font-weight: bold;
+}
+
+.mate-panel-menu-bar menu label, .gnome-panel-menu-bar menu label{
+	font-weight: normal;
+}
+
+
+/*Open up the main menu size a bit*/
+/*This speeds up main menu navigation*/
+
+.mate-panel-menu-bar menubar menu menuitem label,
+.mate-panel-menu-bar button menu menuitem label,
+.gnome-panel-menu-bar menubar menu menuitem label,
+.gnome-panel-menu-bar button menu menuitem label{
+	font-stretch:  Condensed;
+	font-size: 12px;
+}
+
+/*Smaller font on other menus so they don't look ballooned*/
+
+.gnome-panel-menu-bar menu menuitem label,
+.mate-panel-menu-bar menu menuitem label{
+	font-stretch: Condensed;
+	font-size: 11px;
+}
+
+
+/*****************************
+ * Window list and Buttons *
+ *****************************/
+
+/*window list button theme somewhere between GNOME and Cinnamon/GNOME */
+
+
+.mate-panel-menu-bar button, .gnome-panel-menu-bar button,
+.mate-panel-menu-bar button:checked, .gnome-panel-menu-bar button:checked,
+#tasklist-button,#tasklist-button:checked  { /*for gnome-panel*/
+	border-color: #333333;
+	border-style: solid;
+	background-image: none;
+	border-width: 1px;
+	background-color:alpha(@theme_bg_color, 0.20);
+
+}
+
+/*transparency on clock and show desktop buttons to follow main panel background*/
+
+button#showdesktop-button, button#clock-applet-button
+{
+	background-color: transparent;
+	background-image:none;
+	border-width: 0px;
+	padding: 0px;
+	border-image:none;
+	border-style: none;
+}
+
+/*WnckPager is unnamed in GTK inspector so try this*/
+
+
+.wnck-pager {
+    background-color: shade(@theme_bg_color,1.1);
+}
+
+.wnck-pager:selected {
+    background-color: @theme_selected_fg_color;
+}
+
+na-tray-applet {
+    -NaTrayApplet-icon-padding: 1px;
+}
+
+/*******************
+ * MATE Volume Control and Power Manager's brightness slider *
+ ******************/
+
+.mate-panel-menu-bar frame,		 /*older hacked versions of mate-media only*/
+.mate-panel-applet-slider frame{    /*Current mate-media 1.11.0 and later*/
+	background-color: alpha(black, 0.9);
+	border-image: none;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 2px;
+	border-radius:6px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.mate-panel-menu-bar frame frame,
+.mate-panel-applet-slider frame frame{ 
+	background-color:transparent;
+	border-image: none;
+	border-style:none;
+	border-radius:0px;
+	padding: 0px;
+}
+
+/*support fix used in mate-media and mate-power-manager
+for gtk3 themes that do not explicitly support MATE */
+
+.mate-panel-applet-slider {
+background: transparent;
+}
+
+/*******************
+ *Calendar Window *
+ ******************/
+
+/*Clock button it pops up from */
+#clock-applet-button,
+#clock-applet-button:hover {
+	color: white;
+	font-weight: bold;
+	background-color:transparent;
+}
+
+/*custom named toplevel widget */
+window#MatePanelPopupWindow, /*this is the current name from mate-panel 1.11.0 and later*/
+window#calendarwindow 		/*Deprecated widget name from early versions*/
+  {
+	background-color:transparent;  
+} 
+
+window#MatePanelPopupWindow frame {
+	background-color: alpha(black, 0.9);
+	border-image: none;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 3px;
+	border-radius:10px;
+	
+}
+
+window#MatePanelPopupWindow frame calendar {
+	background-color:transparent;
+	color: white;
+}
+
+
+window#MatePanelPopupWindow calendar{
+	background-image: -gtk-scaled(url("assets/calendar_grid.svg"));
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding: 6px 4px 1px 5px;
+	font-stretch: Condensed;
+	font-size: 12px;
+}
+
+window#MatePanelPopupWindow calendar:selected:focus,
+window#MatePanelPopupWindow calendar:selected{
+	background-color: transparent;
+	background-image: url("assets/calendar-selected-bg.svg");
+	background-position: center;
+	text-shadow: 1px 1px alpha(@theme_fg_color, 0.3);
+}

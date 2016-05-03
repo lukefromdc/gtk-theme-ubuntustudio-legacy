@@ -1,0 +1,231 @@
+/*********************************
+ * MATE Panel, Fallback Mode Panel
+ *********************************/
+
+.mate-panel-menu-bar,
+.gnome-panel-menu-bar {
+	background-color:black;
+	background-image: none;
+	color: white;
+}
+
+/*Theme drag handles for subtle visibility*/
+
+PanelWidget * {
+
+	background-color:alpha(@theme_bg_color, 0.3 );
+}
+
+PanelWidget * * {
+
+	background-color:transparent;
+}
+
+/*******************
+ * MATE Panel Menus *
+ ******************/
+
+/* Set up transparent black menu backgrounds with gray borders */
+
+/* Applying the transparent bg here forces a much lower alpha value */
+/* due to multiple application but falls back gracefully when compositing is not available */
+
+.gnome-panel-menu-bar .menu,
+.mate-panel-menu-bar .menu,
+.menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
+	background-color: alpha(black,0.7); 
+	border-image: none;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 3px 3px 3px 3px;
+	border-radius:10px;
+	padding: 0px;	/*stop double borders on bottoms of some menus */
+}
+
+/*Keep box-shadow off anything from the panel*/
+
+/*menu alpha could be set up here at 0.9-but this would*/
+/*cause ugly fallback issues when compositing not available*/
+
+.gnome-panel-menu-bar .window-frame.csd.popup,
+.mate-panel-menu-bar .window-frame.csd.popup
+{     
+	box-shadow: none;  
+}
+
+/*Keep selected menuitem image off main panel "custom menu bar"*/
+
+gnome-panel-menu-bar .menubar > .menuitem:hover,
+.mate-panel-menu-bar .menubar > .menuitem:hover{
+	background-image:none;
+	background-color:transparent;
+	border-image:none;
+	border-width: 0px;
+}
+
+/*Font used on panel itself and "custom menu bar" */
+
+.mate-panel-menu-bar .label, .gnome-panel-menu-bar .label {
+	font: bold;
+}
+
+/*Open up the main menu size a bit*/
+/*This speeds up main menu navigation*/
+
+.gnome-panel-menu-bar .menubar .menu .menuitem .label,
+.gnome-panel-menu-bar .button .menu .menuitem .label,
+.mate-panel-menu-bar .menubar .menu .menuitem .label,
+.mate-panel-menu-bar .button .menu .menuitem .label{
+	font: Condensed 12;
+	padding: 2px 8px;
+}
+
+/*Smaller font on other menus so they don't look ballooned*/
+
+.gnome-panel-menu-bar .menu .menuitem .label,
+.mate-panel-menu-bar .menu .menuitem .label{
+	font: Condensed 11;
+}
+
+
+/*****************************
+ * Window list and Buttons *
+ *****************************/
+
+/*window list button theme somewhere between GNOME and Cinnamon/GNOME */
+WnckTasklist .button,
+.mate-panel-menu-bar .button, .gnome-panel-menu-bar .button,
+.mate-panel-menu-bar .button:active, .gnome-panel-menu-bar .button:active {
+	border-color: #333333;
+	border-style: solid;
+	background-image: none;
+	border-width: 1px;
+	background-color:alpha(@theme_bg_color, 0.15);
+}
+
+/*transparency on clock and show desktop buttons to follow main panel background*/
+
+.button#showdesktop-button, .button#clock-applet-button
+{
+	background-color: transparent;
+	border-width: 0px;
+	padding: 0px;
+	border-image:none;
+	border-style: none;
+}
+
+NaTrayApplet, NaTrayApplet *  {
+    -NaTrayApplet-icon-padding: 0;
+}
+
+WnckPager, WnckTasklist  {
+	color: white;
+	background-color: @theme_bg_color;
+
+}
+
+#clock-applet-button,
+ClockBox * {
+	color: white;
+	font: bold;
+	background-color:transparent;
+	background-image: none;
+}
+
+/*******************
+ * MATE Volume Control and Power Manager's brightness slider *
+ ******************/
+
+.mate-panel-menu-bar .frame,		 /*older hacked versions of mate-media only*/
+.mate-panel-applet-slider .frame{    /*Current mate-media 1.11.0 and later*/
+	background-color: alpha(black, 0.8);
+	border-image: none;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 2px;
+	border-radius:6px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.mate-panel-menu-bar .frame .frame,
+.mate-panel-applet-slider .frame .frame{ 
+	background-color:transparent;
+	border-image: none;
+	border-style:none;
+	border-radius:0px;
+	padding: 0px;
+}
+/*support fix for gtk3 themes that do not explicitly support MATE */
+.mate-panel-applet-slider {
+background: transparent;
+}
+
+/*******************
+ *Calendar Window *
+ ******************/
+
+/*custom named toplevel widget */
+GtkWindow#MatePanelPopupWindow, /*this is the current name from mate-panel 1.11.0 and later*/
+GtkWindow#calendarwindow 		/*Deprecated widget name from early versions*/
+  {
+	background-color:transparent;  
+} 
+
+CalendarWindow .frame {
+	background-color:alpha(black,0.85);
+	border-image: none;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 3px;
+	border-radius:10px;
+	
+}
+
+/*************
+ *GtkCalendar *
+ *************/
+
+GtkCalendar {
+	padding: 6px 3px 1px 6px;
+	font: Condensed 12;
+}
+
+GtkCalendar:selected {
+	background-color:alpha(@theme_selected_bg_color,0.7);
+	font: bold;
+}
+
+GtkCalendar.view {
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 0px;
+	border-image:none;
+	border-color: transparent;
+	padding: 2px;
+    background-color:transparent;
+	background-image: url("assets/calendar_grid.svg");
+}
+
+GtkCalendar.header {
+	padding: 2px;
+	border-radius: 0;
+	border-style: none;
+	border-width:0px;
+	border-image:none;
+	background-color:transparent;
+}
+
+GtkCalendar.button,
+GtkCalendar.button:insensitive {
+	background-image: none;
+	background-color: transparent;
+}
+
+.highlight,
+GtkCalendar.highlight {
+	background-color: transparent;
+	border-radius: 0;
+	padding: 0px;
+	border-width: 0px;
+}

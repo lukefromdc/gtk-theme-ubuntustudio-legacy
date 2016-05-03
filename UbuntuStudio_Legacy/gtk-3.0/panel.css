@@ -1,0 +1,231 @@
+/*********************************
+ * MATE Panel, Fallback Mode Panel
+ *********************************/
+
+.mate-panel-menu-bar,
+.gnome-panel-menu-bar,
+PanelToplevel, 
+PanelWidget, PanelWidget,
+PanelAppletFrame,
+PanelApplet,
+GtkWindow#PanelPlug {
+	background-color:black;
+	background-image: none;
+	color: white;
+}
+
+/*Keep box-shadow off anything from the panel*/
+.gnome-panel-menu-bar,
+.gnome-panel-menu-bar,
+.gnome-panel-menu-bar .window-frame, 
+.mate-panel-menu-bar .window-frame
+.gnome-panel-menu-bar .window-frame.csd,
+.mate-panel-menu-bar .window-frame.csd,
+.gnome-panel-menu-bar .window-frame.csd.popup,
+.mate-panel-menu-bar .window-frame.csd.popup {
+		box-shadow: none; 
+}
+
+/*Theme drag handles for subtle visibility*/
+
+PanelWidget * {
+
+	background-color:alpha(@theme_bg_color, 0.3 );
+}
+
+PanelWidget * * {
+
+	background-color:transparent;
+}
+
+/*******************
+ * MATE Panel Menus *
+ ******************/
+
+ /*Make backgrounds of main menus slightly transparent black */
+
+	/*NOTE: alpha value gets applied BOTH to menu and menushell for doubled opacity*/
+
+.mate-panel-menu-bar .menu,
+.mate-panel-menu-bar .menu,
+.menu#cpufreq-menu /*For hacked Ubuntu indicator-cupfreq until it catches up */
+ {
+	background-color: alpha(black,0.7);
+	border-image: none;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 3px 3px 3px 3px;
+	border-radius:10px;
+	font: normal;	
+	padding: 0px 0px 0px 0px;  /*Kill double borders on some menus */
+}
+
+
+ /*Font used on panel itself and "custom menu bar" */
+
+.mate-panel-menu-bar, .gnome-panel-menu-bar  {
+	font: bold;
+}
+
+/*Open up the main menu size a bit*/
+/*This speeds up main menu navigation*/
+
+.mate-panel-menu-bar .menubar .menu .menuitem,
+.mate-panel-menu-bar .button .menu .menuitem {
+	font: Condensed 12;
+	padding: 2px 8px;
+}
+
+/*Smaller font on other menus so they don't look ballooned*/
+
+.mate-panel-menu-bar .menu .menuitem {
+	font: Condensed 11;
+}
+
+/*Keep selected menuitem image off main panel menubar*/
+
+.mate-panel-menu-bar .menubar > .menuitem:hover{
+	background-image:none;
+	background-color:transparent;
+	border-image:none;
+	border-width: 0px;
+}
+
+/*****************************
+ * Window list and Buttons *
+ *****************************/
+
+/*window list button theme somewhere between GNOME and Cinnamon/GNOME */
+
+.mate-panel-menu-bar .button, .gnome-panel-menu-bar .button,
+.mate-panel-menu-bar .button:active, .gnome-panel-menu-bar .button:active {
+	border-color: #333333;
+	border-style: solid;
+	background-image: none;
+	border-width: 1px;
+	background-color:alpha(@theme_bg_color, 0.15);
+}
+
+/*transparency on clock and show desktop buttons to follow main panel background*/
+
+.button#showdesktop-button, .button#clock-applet-button
+{
+	background-color: transparent;
+	border-width: 0px;
+	padding: 0px;
+	border-image:none;
+	border-style: none;
+}
+
+NaTrayApplet, NaTrayApplet *  {
+    -NaTrayApplet-icon-padding: 0;
+}
+
+WnckPager, WnckTasklist  {
+	color: white;
+	background-color: @theme_bg_color;
+
+}
+
+ClockBox * {
+	color: white;
+	font: bold;
+	background-color:transparent;
+}
+
+/*******************
+ * MATE Volume Control and Power Manager's brightness slider *
+ ******************/
+/*Set up the volume control and brightness slider frames to look like the menu theme */
+
+.mate-panel-applet-slider .frame,
+.mate-panel-menu-bar .frame{ 
+	background-color: alpha(black, 0.8);
+	border-image: none;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 2px;
+	border-radius:6px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.mate-panel-applet-slider .frame .frame,
+.mate-panel-menu-bar .frame .frame{ 
+	background-color:transparent;
+	border-image: none;
+	border-style:none;
+	border-radius:0px;
+	padding: 0px;
+}
+
+/*******************
+ *Calendar Window *
+ ******************/
+
+/*This only works with hacked build with cairo support,
+  otherwise calendar gets gray corners and solid color */
+/*custom named toplevel widget */
+GtkWindow#MatePanelPopupWindow, /*this is the current name*/
+GtkWindow#calendarwindow 		/*Deprecated widget name*/
+  {
+	background-color:transparent;  
+} 
+
+CalendarWindow .frame {
+	background-color:alpha(black,0.85);
+	border-image: none;
+	border-style: solid;
+	border-color: #888a85;
+	border-width: 3px;
+	border-radius:10px;
+	
+}
+
+/*************
+ *GtkCalendar *
+ *************/
+
+GtkCalendar {
+	padding: 6px 3px 1px 6px;
+	font: Condensed 12;
+}
+
+GtkCalendar:selected {
+	background-color:alpha(@theme_selected_bg_color,0.7);
+	font: bold;
+}
+
+GtkCalendar.view {
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 0px;
+	border-image:none;
+	border-color: transparent;
+	padding: 2px;
+    background-color:transparent;
+	background-image: url("assets/calendar_grid.svg");
+}
+
+GtkCalendar.header {
+	padding: 2px;
+	border-radius: 0;
+	border-style: none;
+	border-width:0px;
+	border-image:none;
+	background-color:transparent;
+}
+
+GtkCalendar.button,
+GtkCalendar.button:insensitive {
+	background-image: none;
+	background-color: transparent;
+}
+
+.highlight,
+GtkCalendar.highlight {
+	background-color: transparent;
+	border-radius: 0;
+	padding: 0px;
+	border-width: 0px;
+}
