@@ -1,6 +1,6 @@
 AC_PREREQ(2.53)
 
-AC_INIT([gtk-theme-ubuntustudio-legacy], [3.21.1], [http://www.raveit.de])
+AC_INIT([gtk-theme-ubuntustudio-legacy], [3.21.1], [https://github.com/lukefromdc])
 
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz tar-ustar check-news])
 
