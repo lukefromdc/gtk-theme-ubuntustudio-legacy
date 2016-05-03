@@ -7,7 +7,6 @@ theme_DATA = index.theme
 EXTRA_DIST = $(theme_DATA)
 
 SUBDIRS =    \
-	assets   \
 	gtk-2.0  \
 	gtk-3.0  \
 	gtk-3.18 \
@@ -16,7 +15,6 @@ SUBDIRS =    \
 	metacity-1
 
 DIST_SUBDIRS = \
-	assets   \
 	gtk-2.0  \
 	gtk-3.0  \
 	gtk-3.18 \

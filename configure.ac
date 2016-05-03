@@ -17,17 +17,21 @@ AC_SUBST(ACLOCAL_AMFLAGS, "\${ACLOCAL_FLAGS}")
 AC_CONFIG_FILES([
 Makefile
 UbuntuStudio_Legacy/Makefile
-UbuntuStudio_Legacy/assets/Makefile
 UbuntuStudio_Legacy/gtk-2.0/Makefile
+UbuntuStudio_Legacy/gtk-2.0/assets/Makefile
 UbuntuStudio_Legacy/gtk-2.0/panel/Makefile
 UbuntuStudio_Legacy/gtk-3.0/Makefile
 UbuntuStudio_Legacy/gtk-3.0/apps/Makefile
+UbuntuStudio_Legacy/gtk-3.0/assets/Makefile
 UbuntuStudio_Legacy/gtk-3.18/Makefile
 UbuntuStudio_Legacy/gtk-3.18/apps/Makefile
+UbuntuStudio_Legacy/gtk-3.18/assets/Makefile
 UbuntuStudio_Legacy/gtk-3.20/Makefile
 UbuntuStudio_Legacy/gtk-3.20/apps/Makefile
+UbuntuStudio_Legacy/gtk-3.20/assets/Makefile
 UbuntuStudio_Legacy/gtk-3.22/Makefile
 UbuntuStudio_Legacy/gtk-3.22/apps/Makefile
+UbuntuStudio_Legacy/gtk-3.22/assets/Makefile
 UbuntuStudio_Legacy/metacity-1/Makefile
 ])
 

@@ -1,7 +1,6 @@
 themedir = $(datadir)/themes/UbuntuStudio_Legacy/gtk-3.22
 
 theme_DATA = \
-	assets \
 	gtk.css \
 	gtk-dark.css \
 	gtk-main.css \
@@ -13,6 +12,10 @@ theme_DATA = \
 
 EXTRA_DIST = $(theme_DATA)
 
-SUBDIRS = apps
+SUBDIRS = \
+	apps \
+	assets
 
-DIST_SUBDIRS = apps
+DIST_SUBDIRS = \
+	apps \
+	assets
