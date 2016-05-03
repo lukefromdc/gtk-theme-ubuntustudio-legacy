@@ -2,4 +2,25 @@
 Port of circa 2008 era UbuntuStudio GTK theme to GTK3, with selected color changed to a blue-green
 
 
-Makefiles have NOT been created for this yet, so until they are, to install just drag the entire "UbuntuStudio_Legacy" directory to /usr/share/themes and set permissions to allow all users to "access files" and root only to write to them
+This version supports GTK3.14, 3.16, 3.18, 3.20, and 3.21(later to be 3.22)
+
+MATE GTK3 user notes: 
+
+transparent panel menu theme requires compositing in marco, metacity, or compiz
+
+Mate-Panel calendar week numbers should be turned OFF in panel clock preferences
+In the gtk3.14/16/18 version of this theme they cannot be distinguished from the days of the month and in the gtk3.20 version the calendar grid renders over them and Sun through Friday and picks up a gtk rendering error.
+
+GENERAL:
+
+This is an enhanced port of the UbuntuStudio theme from the Hardy Heron/2008 era to GTK3 with two major changes: First, the selected color is shifted to a blue-green. A minor change is the addition of modified versions of the radio buttons and the sliders from the E17 GK theme.
+
+The second change is the inclusion of a transparent black theme for mate-panel's menus and sliders inspired by they early gnome-shell default shell theme. This affects only the panel's popup widgets and is not used by application menus, etc. Thus the shell theme is separated from the application theme, taking advantage of new code in MATE 1.11.0 and later. GTK3 builds of MATE now support this separate panel menu and slider theming. Compositing must be turned on for this transparent panel menu theme to work properly, though mate-panel menu theme will fall back to solid black with gray borders but black tips outside the rounded corners if compositing is turned off.
+
+This theme has been tested with MATE in both Gtk2 and Gtk3 versions, in Cinnamon, and in gnome-shell. There is a side panel bug when the theme is used in some KDE apps giving white on white sidebar text. KF5 apps run outside of KDE will not have this problem as they use a different file chooser widget.
+
+In MATE GTK2 (not GTK3) environments, the mate-panel theme differs from the original UbuntuStudio theme only in using a solid black panel background which can be reverted to the original image if desired. The rest of the theme works just fine in most other gtk3 or gtk2 desktop environments, with or without compositing. Box-shadows require compositing to work in current GTK versions but the theme is usable without them if compositing is not used.
+
+A Note concerning Compiz and the GTK3.16 and later composition bug: This theme contains a workaround to permit CSD apps with Ubuntu Compiz to be resized and not have ugly black frames around them. Versions of compiz hacked for GTK3.18/CSD compatability allow the full CSD theme with rounded top corners matching the normal window borders to be used, but with normal Ubuntu compiz the only difference is now square top corners on CSD apps.
+
+Again, both box shadows and the transparent mate-panel menu theme require compositing to work. They will work in Metacity or Marco with composting enabled, or in compiz.
