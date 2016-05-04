@@ -1,0 +1,111 @@
+headerbar .right button.minimize.titlebutton,
+headerbar .right:dir(rtl) button.minimize.titlebutton,
+headerbar .left button.minimize.titlebutton,
+headerbar .left:dir(rtl) button.minimize.titlebutton,
+headerbar .right button.maximize.titlebutton,
+headerbar .right:dir(rtl) button.maximize.titlebutton,
+headerbar .left button.maximize.titlebutton,
+headerbar .left:dir(rtl) button.maximize.titlebutton,
+headerbar .right button.close.titlebutton,
+headerbar .right:dir(rtl) button.close.titlebutton,
+headerbar .left button.close.titlebutton,
+headerbar .left:dir(rtl) button.close.titlebutton {
+    color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+}
+
+/* Set correct layout with 
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <':minimize,maximize,close'>}" for
+     buttons on the right or
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <'close,maximize,minimize:'>}"
+    for buttons on the left */
+
+/* minimize */
+
+headerbar .right button.minimize.titlebutton,
+headerbar .right:dir(rtl) button.minimize.titlebutton,
+headerbar .left button.minimize.titlebutton,
+headerbar .left:dir(rtl) button.minimize.titlebutton {
+    background-image: url('window-controls/button-minimize-normal.png');
+}
+
+headerbar .right button.minimize.titlebutton:hover,
+headerbar .right:dir(rtl) button.minimize.titlebutton:hover,
+headerbar .left button.minimize.titlebutton:hover,
+headerbar .left:dir(rtl) button.minimize.titlebutton:hover {
+    background-image: url('window-controls/button-minimize-hover.png');
+}
+
+headerbar .right button.minimize.titlebutton:checked,
+headerbar .right:dir(rtl) button.minimize.titlebutton:checked,
+headerbar .left button.minimize.titlebutton:checked,
+headerbar .left:dir(rtl) button.minimize.titlebutton:checked {
+    background-image: url('window-controls/button-minimize-pressed.png');
+}
+
+/* maximize */
+headerbar .right button.maximize.titlebutton,
+headerbar .right:dir(rtl) button.maximize.titlebutton,
+headerbar .left button.maximize.titlebutton,
+headerbar .left:dir(rtl) button.maximize.titlebutton {
+    background-image: url('window-controls/button-maximize-normal.png');
+}
+
+headerbar .right button.maximize.titlebutton:hover,
+headerbar .right:dir(rtl) button.maximize.titlebutton:hover,
+headerbar .left button.maximize.titlebutton:hover,
+headerbar .left:dir(rtl) button.maximize.titlebutton:hover {
+    background-image: url('window-controls/button-maximize-hover.png');
+}
+
+headerbar .right button.maximize.titlebutton:checked,
+headerbar .right:dir(rtl) button.maximize.titlebutton:checked,
+headerbar .left button.maximize.titlebutton:checked,
+headerbar .left:dir(rtl) button.maximize.titlebutton:checked {
+    background-image: url('window-controls/button-maximize-pressed.png');
+}
+
+/* close */
+headerbar .right button.close.titlebutton,
+headerbar .right:dir(rtl) button.close.titlebutton,
+headerbar .left button.close.titlebutton,
+headerbar .left:dir(rtl) button.close.titlebutton {
+    background-image: url('window-controls/button-close-normal.png');
+}
+
+headerbar .right button.close.titlebutton:hover,
+headerbar .right:dir(rtl) button.close.titlebutton:hover,
+headerbar .left button.close.titlebutton:hover,
+headerbar .left:dir(rtl) button.close.titlebutton:hover {
+    background-image: url('window-controls/button-close-hover.png');
+}
+
+headerbar .right button.close.titlebutton:checked,
+headerbar .right:dir(rtl) button.close.titlebutton:checked,
+headerbar .left button.close.titlebutton:checked,
+headerbar .left:dir(rtl) button.close.titlebutton:checked {
+    background-image: url('window-controls/button-close-pressed.png');
+}
+
+.titlebar button.close.titlebutton {
+    /* fake request     to avoid usage of regular window-close button*/
+    -gtk-icon-style: requested;
+}
+
+
+headerbar button.close.titlebutton,
+headerbar button.minimize.titlebutton,
+headerbar button.maximize.titlebutton {
+    border-width: 0px;
+    border-image: none;
+    background-color: transparent;
+}
+
+headerbar button.close.titlebutton image,
+headerbar button.minimize.titlebutton image,
+headerbar button.maximize.titlebutton image {
+        color: transparent;
+}
+

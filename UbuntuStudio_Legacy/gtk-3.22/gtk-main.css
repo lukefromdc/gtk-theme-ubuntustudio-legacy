@@ -159,6 +159,7 @@
 
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");
+@import url("window-controls.css");
 @import url("panel.css");
 @import url("apps/apps.css");
 @import url("apps/lightdm-gtk-greeter.css");
