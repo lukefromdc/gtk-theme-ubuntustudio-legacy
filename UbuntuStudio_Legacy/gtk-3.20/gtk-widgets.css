@@ -2095,6 +2095,11 @@ decoration.backdrop {
 	margin: 1px;
 }
 
+/*Fix tiled CSD windows in compiz with fake extents support */
+.tiled decoration {
+    box-shadow: none;
+	margin: 0px;
+}
 
 headerbar,
 .titlebar {
