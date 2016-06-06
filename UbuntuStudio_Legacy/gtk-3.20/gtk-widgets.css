@@ -1668,15 +1668,12 @@ osd toolbar .separator {
 
 /* used by gnome-settings-daemon/mate-settings-daemon media-keys OSD
    and Epiphany */
-.osd .trough,
+osd .trough,
 osd trough {
 	background-color: @osd_trough_bg;
-	border-style:solid;
-	border-color: #5f5f5f;
 	border-width: 1px;
 	border-radius:2px;
 }
-
 .osd .progressbar,
 .osd .progress,
 osd progressbar progress{   

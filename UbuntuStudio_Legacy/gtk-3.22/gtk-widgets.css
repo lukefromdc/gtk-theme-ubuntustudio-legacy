@@ -1671,8 +1671,6 @@ osd toolbar .separator {
 .osd .trough,
 osd trough {
 	background-color: @osd_trough_bg;
-	border-style:solid;
-	border-color: #5f5f5f;
 	border-width: 1px;
 	border-radius:2px;
 }
