@@ -1476,6 +1476,15 @@ combobox arrow {
 	background-image: none;
 	background-color: alpha(black,0.8);
 	border-radius:20px;
+	border-style:solid;
+	border-width: 3px;
+	border-color:#888a85;
+}
+
+.osd *,
+.backgroundosd  *{
+	border-radius:2px;
+	border-style: none;
 }
 
 overlayosd {
