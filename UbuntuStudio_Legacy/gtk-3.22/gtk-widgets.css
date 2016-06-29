@@ -2419,6 +2419,14 @@ dialog frame.view{
 	padding: 1px 0px 3px 0px;
 }
 
+printdialog paper{
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0px;
+	border-color: #aaaaaa;
+	background-color: #ffffff;
+}
+
 /*************
  *calendar *
  *************/
