@@ -1677,12 +1677,13 @@ osd toolbar .separator {
 
 /* used by gnome-settings-daemon/mate-settings-daemon media-keys OSD
    and Epiphany */
-osd .trough,
+.osd .trough,
 osd trough {
 	background-color: @osd_trough_bg;
 	border-width: 1px;
 	border-radius:2px;
 }
+
 .osd .progressbar,
 .osd .progress,
 osd progressbar progress{   
@@ -2154,7 +2155,7 @@ headerbar .title {
 }
 
 headerbar .subtitle {
-  font-size: 9px;
+  font-size: 90%;
 }
 
 decoration:backdrop {
@@ -2441,7 +2442,7 @@ calendar{
 	background-position: top right;
 	padding: 6px 5px 1px 4px;
 	font-stretch: Condensed;
-	font-size: 12px;
+	font-size: 120%;
 }
 
 calendar:selected:focus,
@@ -2457,6 +2458,6 @@ dialog calendar{
 	background-image: none;
 	padding:  6px 3px 1px 6px;
 	font-stretch: Condensed;
-	font-size: 12px;
+	font-size: 120%;
 }
 

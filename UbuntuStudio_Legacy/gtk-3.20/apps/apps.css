@@ -405,7 +405,6 @@ window>box>paned>notebook>stack>box>*>box.vertical>box.vertical>box.horizontal>*
 }
 
 
-
 /***********************
  * Yelp (help browser) *
  ***********************/
@@ -423,6 +422,5 @@ window>box>paned>notebook>stack>box>*>box.vertical>box.vertical>box.horizontal>*
 headerbar.primary-toolbar.toolbar{
 	background-image: none;
 }
-
 
 

@@ -6,7 +6,7 @@
 #panel_window {
 background-color:#000000; 
 color: white;
-font: bold;
+font-weight: bold;
 }
 
 #panel_window menubar {
@@ -23,7 +23,7 @@ font: bold;
 	border-color: #888a85;
 	border-width: 3px;
 	border-radius:10px;
-	font: normal;
+	font-weight: normal;
 	padding: 0px;	/*stop double borders on bottoms of some menus */
 }
 
@@ -92,6 +92,6 @@ font: bold;
 	border-color: #888a85;
 	border-width: 3px;
 	border-radius:10px;
-	font: normal;
+	font-weight: normal;
 }
 
