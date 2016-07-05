@@ -59,6 +59,18 @@
 	            inset 1px 1px alpha(black, 0.3);
 }
 
+/*suppport workaround "caja-desktop" binary based on nautilus for GTK 3.21.3 issue*/
+.caja-desktop-window  popover>grid>entry {
+	background-color:@theme_base_color;
+	color:#000000;
+	padding: 1px;
+	border-radius: 3px;
+	box-shadow: inset 2px 3px alpha(black, 0.2),
+	            inset 2px 2px alpha(black, 0.2),
+	            inset 1px 1px alpha(black, 0.3);
+}
+
+
 /*use rename entry border in caja navigation windows*/
 
 .caja-navigation-window .view .entry{
