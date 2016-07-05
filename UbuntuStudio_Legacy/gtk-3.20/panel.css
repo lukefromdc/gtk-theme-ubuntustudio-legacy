@@ -115,7 +115,7 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 .gnome-panel-menu-bar menubar menu menuitem label,
 .gnome-panel-menu-bar button menu menuitem label{
 	font-stretch:  Condensed;
-	font-size: 130%;
+	font-size: 120%;
 }
 
 /*Smaller font on other menus so they don't look ballooned*/
@@ -123,7 +123,7 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 .gnome-panel-menu-bar menuitem label,
 .mate-panel-menu-bar menuitem label{
 	font-stretch: Condensed;
-	font-size: 120%;
+	font-size: 110%;
 }
 
 
