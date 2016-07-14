@@ -1203,10 +1203,12 @@ menu menuitem:disabled{
 	border-image: none;
 }
 
+menu separator,
+menu .separator,
 menuitem.separator {
-	padding: 4px;
+	min-height: 1px;
 	border-style: none;
-	border-color: @theme_selected_bg_color;
+	background-color: shade(@theme_bg_color, 0.6);
 }
 
 .menuitem.accelerator,
