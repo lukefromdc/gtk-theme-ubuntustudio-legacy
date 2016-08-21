@@ -2442,7 +2442,7 @@ calendar{
 	background-image: -gtk-scaled(url("assets/calendar_grid.svg"));
 	background-repeat: no-repeat;
 	background-position: top right;
-	padding: 4px 4px 4px 1px;
+	padding: 6px 5px 1px 4px;
 	font-stretch: Condensed;
 	font-size: 120%;
 }
