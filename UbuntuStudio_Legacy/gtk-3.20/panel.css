@@ -1,9 +1,15 @@
 /*********************************
- * MATE Panel, Fallback Mode Panel
+ * MATE Panel, GNOME Panel
  *********************************/
 
-.mate-panel-menu-bar,  
-.gnome-panel-menu-bar{
+/*For GNOME panel in GTK 3.22 */
+/*Specify this first so it does not override anything else*/
+.gnome-panel-menu-bar {
+	background-color: transparent;
+}
+
+panel-toplevel.background.horizontal,
+.mate-panel-menu-bar  {
 	background-color:#000000;
 	color: white;
 }
@@ -217,13 +223,14 @@ background: transparent;
 }
 
 /*custom named toplevel widget */
-window#MatePanelPopupWindow, /*this is the current name from mate-panel 1.11.0 and later*/
-window#calendarwindow 		/*Deprecated widget name from early versions*/
+window#MatePanelPopupWindow, 
+gp-calendar-window
   {
 	background-color:transparent;  
 } 
 
-window#MatePanelPopupWindow frame {
+window#MatePanelPopupWindow frame,
+gp-calendar-window frame{
 	background-color: alpha(black, 0.9);
 	border-image: none;
 	border-style: solid;
@@ -233,13 +240,15 @@ window#MatePanelPopupWindow frame {
 	
 }
 
-window#MatePanelPopupWindow frame calendar {
+window#MatePanelPopupWindow frame calendar,
+gp-calendar-window frame calendar{
 	background-color:transparent;
 	color: white;
 }
 
 
-window#MatePanelPopupWindow calendar{
+window#MatePanelPopupWindow calendar,
+gp-calendar-window calendar{
 	background-image: -gtk-scaled(url("assets/calendar_grid.svg"));
 	background-repeat: no-repeat;
 	background-position: right top;
@@ -249,7 +258,9 @@ window#MatePanelPopupWindow calendar{
 }
 
 window#MatePanelPopupWindow calendar:selected:focus,
-window#MatePanelPopupWindow calendar:selected{
+window#MatePanelPopupWindow calendar:selected,
+gp-calendar-window calendar:selected:focus,
+gp-calendar-window calendar:selected{
 	background-color: transparent;
 	background-image: url("assets/calendar-selected-bg.svg");
 	background-position: center;
