@@ -429,6 +429,20 @@ headerbar.primary-toolbar.toolbar{
 }
 
 /***********************
+ * Cinnamon-settings *
+ ***********************/
+
+.cs-category-view,
+.cs-category-view iconview {
+	background-color: @theme_bg_color;
+}
+
+.cs-category-view iconview.view.cell{
+	color: #ffffff;
+}
+
+
+/***********************
  * Firefox *
  ***********************/
 /*Firefox 49 is a broken mess in GTK 3.20 or later and needs this */
