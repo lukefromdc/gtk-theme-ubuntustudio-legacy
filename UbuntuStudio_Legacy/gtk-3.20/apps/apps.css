@@ -428,4 +428,16 @@ headerbar.primary-toolbar.toolbar{
 	background-image: none;
 }
 
+/***********************
+ * Firefox *
+ ***********************/
+/*Firefox 49 is a broken mess in GTK 3.20 or later and needs this */
+/*Let's exclude as many unwanted matches as possible and if that fails keep it subtle*/
+
+window.background>widget>:not(widget):not(box):not(tab):not(notebook):not(stack):not(frame)>scrolledwindow.frame {
+	border-style: solid;
+	border-color: @theme_bg_color;
+	border-width: 1px;
+
+}
 

@@ -1,3 +1,7 @@
+3.22.0
+   *Bump version to 3.22.0 matching GTK 3.22 release-the announced FINAL GTK3 version and supposed to be stable
+   *Add a hack to fix missing borders on scrolled windows in Firefox 49 containing editable text
+
 3.21.1
   *Bump version to 3.21.1 matching maximum GTK version supported and MATE theme versioning system
   *versions distributed on archive.org have previously reached version 2.1.4 without referring to GTK version
