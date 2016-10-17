@@ -809,6 +809,13 @@ button:active:disabled,
 	color: @insensitive_fg_color;
 }
 
+button:disabled image,
+.button:disabled image,
+button:active:disabled image,
+.button:active:disabled image{
+	 opacity: 0.5;
+}
+
 /*Yelp needs this to work right*/
 button.link.text-button{ 
 	color: shade(@link_color, 0.6);
