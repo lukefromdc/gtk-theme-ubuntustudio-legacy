@@ -1210,6 +1210,13 @@ menu menuitem:disabled{
 	border-image: none;
 }
 
+menuitem:disabled image,
+.menuitem:disabled image,
+menuitem:active:disabled image,
+.menuitem:active:disabled image{
+	 opacity: 0.5;
+}
+
 menu separator,
 menu .separator,
 menuitem.separator {
