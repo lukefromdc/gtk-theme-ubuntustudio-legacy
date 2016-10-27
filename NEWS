@@ -1,3 +1,10 @@
+3.22.2
+   *Bump version to 3.22.2 matching GTK 3.22.2
+   *Add menu icon to Metacity theme to match UbuntuStudio_Legacy emerald theme
+   *GTK 3.20/3.22  grey out images in disabled menuitems
+   *GTK 3.20/3.22  make images in disabled buttons partially transparent to grey them out
+   *GTK 3.20/3.22 Fix cinnamon-control-center theming to more better match its components
+
 3.22.0
    *Bump version to 3.22.0 matching GTK 3.22 release-the announced FINAL GTK3 version and supposed to be stable
    *Add a hack to fix missing borders on scrolled windows in Firefox 49 containing editable text

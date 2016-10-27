@@ -29,9 +29,6 @@ UbuntuStudio_Legacy/gtk-3.18/assets/Makefile
 UbuntuStudio_Legacy/gtk-3.20/Makefile
 UbuntuStudio_Legacy/gtk-3.20/apps/Makefile
 UbuntuStudio_Legacy/gtk-3.20/assets/Makefile
-UbuntuStudio_Legacy/gtk-3.22/Makefile
-UbuntuStudio_Legacy/gtk-3.22/apps/Makefile
-UbuntuStudio_Legacy/gtk-3.22/assets/Makefile
 UbuntuStudio_Legacy/metacity-1/Makefile
 ])
 
