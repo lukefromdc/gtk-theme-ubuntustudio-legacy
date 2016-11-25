@@ -332,7 +332,7 @@ list, list row switch{
 	border-color: @theme_bg_color;
 }
 
-/****************
+/***************
  * Floating Bar *
  ****************/
 floating-bar {
@@ -2364,6 +2364,12 @@ placessidebar button:hover{
 	border-width:1px;
 	border-radius:3px;		
 }
+/*Show separators between sections of sidebar */
+
+placessidebar separator {
+	background-color:@theme_bg_color;
+	min-height: 1px;
+}
 
 /**********************
  *     GtkFileChooser     *
@@ -2394,8 +2400,6 @@ placessidebar  list {
 filechooser treeview.view {
 	background-image: linear-gradient(to bottom,
 					  #eeeeee,
-	                          #eeeeee 30%,
-	                          #ffffff 70%,
 					  #ffffff); 
 }
 

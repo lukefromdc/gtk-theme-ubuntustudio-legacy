@@ -1,3 +1,15 @@
+3.22.4
+
+	*Bump version to 3.22.4 matching GTK 3.22.4
+	*GTK 3.20/3.22-Fix calendar grid/font side misalignment in Ubuntu
+	*GTK 3.22-Use an overriding css file to force absolute calendar font
+
+3.22.3
+   *Bump version to 3.22.3 matching GTK 3.22.3
+   *GTK 3.20/3.22-Show separators in filechooser sidebars as in GTK2
+   *GTK 3.20/3.22-simplify and clean up pseudostriping of some treeviews
+
+
 3.22.2
    *Bump version to 3.22.2 matching GTK 3.22.2
    *Add menu icon to Metacity theme to match UbuntuStudio_Legacy emerald theme

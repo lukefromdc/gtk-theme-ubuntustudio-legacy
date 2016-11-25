@@ -8,8 +8,6 @@
 .caja-navigation-window paned paned treeview.view{                          			
 		background-image: linear-gradient(to bottom,
 					  #eeeeee,
-	                          #eeeeee 30%,
-	                          #ffffff 70%,
 					  #ffffff); 
 }
 
@@ -130,8 +128,6 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 .nemo-window scrolledwindow treeview.view{
 		background-image: linear-gradient(to bottom,
 					  #eeeeee,
-	                          #eeeeee 30%,
-	                          #ffffff 70%,
 					  #ffffff); 
 }
 
@@ -257,8 +253,6 @@ nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the s
 .nautilus-window overlay>scrolledwindow>*>treeview.view	 {                          			
 		background-image: linear-gradient(to bottom,
 					  #eeeeee,
-	                          #eeeeee 30%,
-	                          #ffffff 70%,
 					  #ffffff); 
 }
 

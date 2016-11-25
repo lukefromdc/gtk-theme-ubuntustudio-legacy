@@ -1,0 +1,10 @@
+
+/*There is no absolute font selector that is the same in GTK 3.20 and 3.22 */
+/*Thus the need for this file*/
+
+window#MatePanelPopupWindow calendar,
+gp-calendar-window calendar{
+    font-family: Sans; /*hardcode this so it never misaligns from font change*/	
+	font-size: 12pt;   /*hardcode this so it never misaligns from font change*/	
+}
+

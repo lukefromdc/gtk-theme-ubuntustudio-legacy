@@ -246,15 +246,14 @@ gp-calendar-window frame calendar{
 	color: white;
 }
 
-
 window#MatePanelPopupWindow calendar,
 gp-calendar-window calendar{
 	background-image: -gtk-scaled(url("assets/calendar_grid.svg"));
 	background-repeat: no-repeat;
 	background-position: right top;
 	padding: 6px 5px 1px 4px;
-	font-stretch: Condensed;
-	font-size: 120%;
+    font-family: Sans; /*hardcode this so it never misaligns from font change*/
+	font-size: 12px;   /*hardcode this so it never misaligns from font change*/
 }
 
 window#MatePanelPopupWindow calendar:selected:focus,

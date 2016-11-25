@@ -1,0 +1,5 @@
+/*This allows using same theme for GTK 3.22 and GTK 3.20 while hardcoding calendar
+font sizes to deal with user and distro font changes */
+
+@import url("../gtk-3.20/gtk-main.css");
+@import url("calendar-adjustment.css");
