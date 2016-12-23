@@ -1,3 +1,9 @@
+3.22.5
+
+	*Bump version to 3.22.5 matching GTK 3.22.5
+	*GTK 3.20/3.22-Support new .msd-osd-window-solid on-screen display for noncomposited volume control
+	*GTK 3.20/3.22-Use selected fg color in caja rename labels 
+
 3.22.4
 
 	*Bump version to 3.22.4 matching GTK 3.22.4

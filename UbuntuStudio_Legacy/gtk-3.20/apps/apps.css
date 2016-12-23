@@ -331,6 +331,15 @@ window#MyControlCenter #slab_section_style1 button:active{
 					  @menu_gradient_color_d); 
 }
 
+/****************
+ * Mate-settings-daemon *
+ ****************/
+
+/*For mate-settings-daemon noncomposited osd windows*/
+.msd-osd-window-solid {
+	border-radius:0px;
+}
+
 
 /****************
  * Mate-terminal *
