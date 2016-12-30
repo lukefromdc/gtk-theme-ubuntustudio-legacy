@@ -12,8 +12,10 @@
   	-GtkWindow-resize-grip-width: 10;
 	-GtkWindow-resize-grip-height: 10;
 	outline-color: @focus_border;
-	outline-style: dashed;
-	outline-offset: 2px;
+	outline-style: ridge;
+	outline-offset: 0px;
+    outline-width: 2px;
+	outline-color: alpha(@theme_selected_bg_color, 0.2);
 	-gtk-outline-radius: 2px; 
 	-gtk-icon-style: regular;  /* disable symbolic icons */
 }
@@ -467,6 +469,13 @@ entry:active {
 }
 
 
+entry:focus {
+		box-shadow: inset 0 6px alpha(@theme_selected_bg_color, 0.09),
+	            inset 0 3px alpha(@theme_selected_bg_color, 0.2),
+	            inset 0 2px alpha(@theme_selected_bg_color, 0.4),
+	            inset 1px 1px alpha(@theme_selected_bg_color, 0.6);
+}
+
 /*******************
  * Symbolic images *
  *******************/
@@ -893,6 +902,24 @@ radio:checked:hover,
 .radio:checked,
 .radio:checked:hover {
 	background-color:transparent;
+}
+
+/*set a highlight when focussed*/
+checkbutton:focus,
+checkbutton:focus:hover,
+checkbutton:focus:active,
+checkbutton:focus:hover:active,
+checkbutton:focus:checked,
+checkbutton:focus:checked:hover,
+radiobutton:focus,
+radiobutton:focus:hover,
+radiobutton:focus:active,
+radiobutton:focus:hover:active,
+radiobutton:focus:checked,
+radiobutton:focus:checked:hover
+ {
+	background-color: alpha(@theme_selected_bg_color, 0.3);
+	outline-color: transparent;
 }
 
 checkbutton:disabled,
@@ -1428,10 +1455,13 @@ combobox {
 	text-shadow: 0 -1px black;
 }
 
-combobox :hover {
+combobox:hover {
 	text-shadow: none;
 }
 
+combobox:focus {
+	outline-color: transparent;
+}
 
 combobox button{
 	background-image: linear-gradient(to bottom,	
@@ -1773,11 +1803,21 @@ switch {
 }
 
 
+switch:focus {
+	border-color: alpha(@theme_selected_bg_color, 0.5);
+}
+
+switch:focus slider {
+	outline-offset: 0px;
+}
+
+
 switch:checked {
 	color: @theme_fg_color
 }
 
-switch:hover {
+switch:hover,
+switch:focus:hover {
 	border-color: @theme_selected_bg_color;
 	color:@theme_text_color;
 }
