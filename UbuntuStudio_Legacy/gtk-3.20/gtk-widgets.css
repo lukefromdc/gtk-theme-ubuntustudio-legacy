@@ -344,7 +344,7 @@ list row switch{
 
 list row switch:focus{
 	border-image:none;
-	border-color: theme_selected_bg_color;
+	border-color: alpha(@theme_selected_bg_color, 0.7);
 }
 
 list, list row button:focus{
