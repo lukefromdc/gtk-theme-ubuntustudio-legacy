@@ -13,7 +13,7 @@
 	-GtkWindow-resize-grip-height: 10;
 	outline-color: @focus_border;
 	outline-style: ridge;
-	outline-offset: 0px;
+	outline-offset: -2px;
     outline-width: 2px;
 	outline-color: alpha(@theme_selected_bg_color, 0.2);
 	-gtk-outline-radius: 2px; 
@@ -293,6 +293,10 @@ list row{
 	border-color: alpha(@theme_bg_color, 0.2);
 }
 
+list row:focus  {
+	outline-color: alpha(@theme_selected_bg_color, 0.4);
+}
+
 list row:hover{
 	background-color:@theme_base_color;
 }
@@ -332,6 +336,21 @@ list row:hover:selected image{
 
 list, list row switch{
 	border-color: @theme_bg_color;
+}
+
+list row switch{
+	border-width: 2px;
+}
+
+list row switch:focus{
+	border-image:none;
+	border-color: theme_selected_bg_color;
+}
+
+list, list row button:focus{
+	outline-offset: -1px;
+	outline-width: 2px;
+	outline-color: alpha(@theme_selected_bg_color, 0.4);
 }
 
 /***************
@@ -916,10 +935,11 @@ radiobutton:focus:hover,
 radiobutton:focus:active,
 radiobutton:focus:hover:active,
 radiobutton:focus:checked,
-radiobutton:focus:checked:hover
+radiobutton:focus:checked:hover,
+modelbutton:focus
  {
-	background-color: alpha(@theme_selected_bg_color, 0.3);
-	outline-color: transparent;
+	background-color: alpha(@theme_selected_bg_color, 0.25);
+	outline-color: alpha(@theme_selected_bg_color, 0.1);
 }
 
 checkbutton:disabled,
@@ -1007,6 +1027,13 @@ spinbutton.vertical button:focus {
 	background-color: transparent;
 	border-style: none;
 	border-image: none;
+}
+
+spinbutton entry:focus {
+		box-shadow: inset 0 6px alpha(@theme_selected_bg_color, 0.18),
+	            inset 0 3px alpha(@theme_selected_bg_color, 0.4),
+	            inset 0 2px alpha(@theme_selected_bg_color, 0.4),
+	            inset 1px 1px alpha(@theme_selected_bg_color, 0.9);
 }
 
 /**************
@@ -1809,6 +1836,7 @@ switch:focus {
 
 switch:focus slider {
 	outline-offset: 0px;
+	outline-width: 2px;
 }
 
 
