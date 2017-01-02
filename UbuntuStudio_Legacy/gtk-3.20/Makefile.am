@@ -8,7 +8,8 @@ theme_DATA = \
 	gtk-widgets-assets.css \
 	gtk-widgets.css \
 	panel.css \
-	settings.ini
+	settings.ini \
+	window-controls.css
 
 EXTRA_DIST = $(theme_DATA)
 
