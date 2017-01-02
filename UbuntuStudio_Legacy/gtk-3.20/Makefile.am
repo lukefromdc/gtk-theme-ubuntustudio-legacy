@@ -15,7 +15,8 @@ EXTRA_DIST = $(theme_DATA)
 
 SUBDIRS = \
 	apps \
-	assets
+	assets \
+	window-controls
 
 DIST_SUBDIRS = \
 	apps \
