@@ -1,1 +1,93 @@
-/usr/share/themes/UbuntuStudio_Legacy/gtk-2.0/assets/calendar_grid.svg
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   width="300"
+   height="300"
+   viewBox="0 0 300 300"
+   sodipodi:docname="calendar_grid.svg">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="794"
+     inkscape:window-height="480"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="0.78666667"
+     inkscape:cx="150"
+     inkscape:cy="150"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <image
+     width="300"
+     height="300"
+     preserveAspectRatio="none"
+     style="image-rendering:optimizeQuality"
+     xlink:href="data:image/png;base64,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
+"
+     id="image10"
+     x="0"
+     y="0" />
+</svg>

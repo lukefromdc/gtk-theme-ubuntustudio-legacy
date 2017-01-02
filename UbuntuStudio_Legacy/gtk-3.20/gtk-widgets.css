@@ -794,6 +794,10 @@ button:hover,
 					shade(@button_gradient_color_d, 1.2));
 }
 
+button:focus{
+	outline-offset: -4px;
+}
+
 button:active,
 .button:active {
 	/* some apps need this */
@@ -925,7 +929,7 @@ radio:checked:hover,
 	background-color:transparent;
 }
 
-/*set a highlight when focussed*/
+/*Don't highlight whole box for */
 checkbutton:focus,
 checkbutton:focus:hover,
 checkbutton:focus:active,
@@ -937,19 +941,20 @@ radiobutton:focus:hover,
 radiobutton:focus:active,
 radiobutton:focus:hover:active,
 radiobutton:focus:checked,
-radiobutton:focus:checked:hover,
-modelbutton:focus{
-	outline-color: alpha(@theme_selected_bg_color, 0.1);
+radiobutton:focus:checked:hover{
+	outline-width: 0px;
 }
 
-checkbutton check:focus,
-checkbutton check:focus:hover,
-checkbutton check:focus:active,
-checkbutton check:focus:hover:active,
-checkbutton check:focus:checked,
-checkbutton check:focus:checked:hover{
-	background-color: alpha(@theme_selected_bg_color, 0.5);
-	border-radius: 2px;
+radio:focus,
+radio:focus:hover,
+radio:focus:active,
+radio:focus:hover:active,
+radio:checked:focus,
+radio:checked:focus:hover,
+radio:checked:focus:active,
+radio:checked:focus:hover:active{
+	background-color: alpha(@theme_selected_bg_color, 0.8);
+	border-radius: 8px;
 }
 
 checkbutton:disabled,
@@ -1843,6 +1848,11 @@ switch:checked {
 	color: @theme_fg_color
 }
 
+switch:focus slider{
+	outline-offset: -5px;
+	outline-color: alpha(@theme_selected_bg_color, 0.9);
+}
+
 switch:hover,
 switch:focus:hover {
 	border-color: @theme_selected_bg_color;
@@ -2356,6 +2366,13 @@ modelbutton:selected,
 	border-width: 2px;
 	border-radius: 2px;
 	border-image: url("assets/menu-border.svg") 2 2 2 2 / 2px 2px 2px 2px stretch;
+}
+
+modelbutton:focus{
+	outline-width: 1px;
+	outline-style: solid;
+	outline-color: alpha(@theme_selected_bg_color, 0.1);
+	background-color: alpha(@theme_selected_bg_color, 0.1);
 }
 
 /*************************************************************

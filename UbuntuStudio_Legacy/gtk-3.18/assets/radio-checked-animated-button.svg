@@ -1,1 +1,73 @@
-/usr/share/themes/UbuntuStudio_Legacy/gtk-2.0/assets/radio-checked-animated-button.svg
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   sodipodi:docname="radio-checked-animated-button.svg">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="762"
+     inkscape:window-height="480"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="14.75"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <image
+     width="16"
+     height="16"
+     preserveAspectRatio="none"
+     style="image-rendering:optimizeQuality"
+     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAAACeAIjtrSWXAAAACXBI
+WXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4AMIBhYlC5X+PwAAAZtJREFUOMvVk01rE2EUhZ87M3E+
+kKaaTBvTxNAUtC3VbFIKbkQ3RQQpuIy4C7jxJ/grsuxKMIu6sSIuAkJQ2tiiSJpAoFFiGyYRUpFo
+wK9mfN3XDgpZeZaXy4F7nntEKcUo0hhRIxsYxw3zlVKh3uvmDvbbYQA3dfbzhYl4cfXS8t2ju3I0
+g5Xy+qvOxlb2tpvk3PQM/i+fN/Ud1gYHzFy9/Hr9yspi4An5SqngbbzM3ssskYhN8mKzzJOnj7AM
+jTvxNO+elbP5SqkQaFDrdXM3rQjRqItlmWgihAwDpRSOY3MNm1rPywVm4O02x7991dna3galOOmM
+MT+3QDg8Big0hIetvfFAg6E/pF5r4A99BI1I5DRR1yU5lcR2TH58/4l8kmAKqfOzfe/x81OOfgJd
+DzEYfMEwdZRSTMUSNN+3mUxP9wMzyJxJFPcW0ogImiYMDw/pdLo03+5SrVW5/7HNxYl48a8YNx+s
+ZZM7TWwjhGmbiGXSmk2RuXH9D4xyXBfylVKh+sG71Wo0wiJCen6un4kl/u2R/r8y/QaCpJZTqAJu
+HwAAAABJRU5ErkJggg==
+"
+     id="image10"
+     x="0"
+     y="0" />
+</svg>

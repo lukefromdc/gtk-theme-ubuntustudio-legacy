@@ -70,6 +70,7 @@ theme_DATA = \
 	progress-vertical.svg \
 	radio-checked-animated-bg.svg \
 	radio-checked-animated-button.svg \
+	radio-checked-animated-glow-bg.svg \
 	radio-checked-insensitive.svg \
 	radio-checked.svg \
 	radio-insensitive.svg \

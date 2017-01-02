@@ -8,9 +8,12 @@ check,
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox.svg")); 
 }
 
+check:focus,
+.check:focus,
 check:hover,
 .check:hover,
-.view.check:hover {
+.view.check:hover,
+.view.check:focus {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox_glow.svg"));
 }
 
@@ -34,12 +37,17 @@ check:hover:checked,
 
 check:active,
 check:hover:active,
+check:focus:active
 .check:active,
 .check:hover:active,
+.check:focus:active,
 .view.check:active,
 check:hover:indeterminate,
 .check:hover:indeterminate,
-.view.check:hover:indeterminate
+check:focus:indeterminate,
+.check:focus:indeterminate,
+.view.check:hover:indeterminate,
+.view.check:focus:indeterminate,
 check:active:indeterminate,
 .check:active:indeterminate
 .view.check:active:indeterminate{
@@ -52,14 +60,27 @@ check:checked,
 	background-image: -gtk-scaled(url("assets/checkbox-checked-animated-bg.svg")); 
 }
 
+check:focus:checked,
+.view.check:focus:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-animated-checked.svg")); 
+	background-image: -gtk-scaled(url("assets/checkbox-animated-checked-glow-bg.svg")); 
+}
+
 check:indeterminate,
 .check:indeterminate,
 .view.check:indeterminate {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.svg")); 
 }
 
+check:focus:indeterminate,
+check:hover:indeterminate,
+check:focus:hover:indeterminate,
 check:hover:indeterminate:checked,
+check:focus:indeterminate:checked,
+check:focus:hover:indeterminate:checked,
 .check:hover:indeterminate:checked,
+.check:focus:indeterminate:checked,
+.check:focus:hover:indeterminate:checked,
 .view check:hover:indeterminate:checked{
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-glow.svg")); 
 }
@@ -94,6 +115,17 @@ radio:checked,
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked-animated-button.svg"));
 	background-image: -gtk-scaled(url("assets/radio-checked-animated-bg.svg")); 
 }
+
+radio:hover:checked,
+radio:focus:checked,
+radio:focus:hover:checked,
+.view.radio:checked,
+.view.radio:hover:checked,
+.view.radio:focus:checked,
+.view.radio:focus:hover:checked {
+	background-image: -gtk-scaled(url("assets/radio-checked-animated-glow-bg.svg")); 
+}
+
 
 radio:active,
 .radio:active,

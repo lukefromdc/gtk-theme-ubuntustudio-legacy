@@ -1,1 +1,67 @@
-/usr/share/themes/UbuntuStudio_Legacy/gtk-2.0/assets/button-selected.svg
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   width="35"
+   height="30"
+   sodipodi:docname="button-hover.png">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview4"
+     showgrid="false"
+     inkscape:zoom="7.8666667"
+     inkscape:cx="17.5"
+     inkscape:cy="15"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <image
+     width="35"
+     height="30"
+     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAeCAIAAAApXzB9AAAAA3NCSVQICAjb4U/gAAABJklEQVRI
+id2WvU7DQBCEd/fOJ5x0kfwXRQgaeIEgUqeh9utSQIsUiQKaSKZEgAClw/Kd74fC6ah3C+YB7tPO
+zo4O27Z9fXv/OhzGcQQGZVlWLBarZYNXm00I8Xq9ns9nHKSfvn/Y7bRSeH5xebPdGpPFGDlIRGSd
+u7271977PD9xznFgACCEMMtz7z0xAf6KEFAAg4ByM2kASCmllPgY0+MECKyYIwnhPyZCck8gsicA
+QhRxD0XvCaHve+89I0Nr0ZTrKeXc2xLtPdlEICKre4h4TITU5Ur2HrBnDwGAlFIhBE4MhBCUUqQU
+yZD05Bv75SJQVRT77sVahzyy1u27ri5Lvayrj8/vx6dnps+lMaYui6YqtbW2qYqz0xURS1/EGK21
+wzD8AnZlgHkc9kT0AAAAAElFTkSuQmCC
+"
+     id="image10"
+     x="0"
+     y="0" />
+</svg>

@@ -1,1 +1,23 @@
-/usr/share/themes/UbuntuStudio_Legacy/gtk-2.0/assets/generic-border.svg
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg33222" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="16px" width="16px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs id="defs33224">
+  <linearGradient id="linearGradient3851" y2="13.463" gradientUnits="userSpaceOnUse" x2="8" y1="1.5372" x1="8">
+   <stop id="stop3847" style="stop-color:#b2b6b2" offset="0"/>
+   <stop id="stop3849" style="stop-color:#bdbfbd" offset="1"/>
+  </linearGradient>
+ </defs>
+ <metadata id="metadata33227">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="rect17861-5" style="opacity:.6;color:#000000;stroke:#fff;fill:none" d="m15.5 4v9c0 1.385-1.115 2.5-2.5 2.5h-10c-1.385 0-2.5-1.115-2.5-2.5v-9"/>
+  <rect id="rect17861" style="color:#000000;stroke:url(#linearGradient3851);fill:none" rx="2.5" ry="2.5" height="14" width="15" y=".5" x=".5"/>
+ </g>
+</svg>
