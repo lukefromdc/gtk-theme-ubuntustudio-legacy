@@ -795,7 +795,7 @@ button:hover,
 }
 
 button:focus{
-	outline-offset: -4px;
+	outline-width: 0px;
 }
 
 button:active,
@@ -1328,6 +1328,19 @@ toolbar{
 	-GtkWidget-window-dragging: true;
 }
 
+toolbar button:focus,
+primary-toolbar button:focus{
+	outline-width: 2px;
+}
+
+/*use only outlines for focus on toolbar buttons */
+
+toolbar button:focus:not(:hover),
+toolbar.primary-toolbar button:focus:not(:hover),
+toolbar.primary-toolbar button.text-button:focus:not(:hover),
+toolbar.primary-toolbar toolbar button:focus:not(:hover){
+	border-image: none;
+}
 
 /********************
  * Primary Toolbars *

@@ -313,6 +313,7 @@ scale.vertical trough:disabled  {
  ***********/
 
 button,
+combobox button.combo:focus:not(:hover), /*Caja needs this*/
 toolbar,
 inline-toolbar.toolbar,
 toolbar button:hover,
@@ -360,6 +361,7 @@ button:active:disabled {
 	border-image: url("assets/button-border-pressed-insensitive.svg") 3 / 3px stretch;
 }
 
+button:focus,
 button.default:not(:disabled),
 notebook .button.default:not(:disabled) {
 	border-image: url("assets/button-border-default.svg") 3 / 3px stretch;
