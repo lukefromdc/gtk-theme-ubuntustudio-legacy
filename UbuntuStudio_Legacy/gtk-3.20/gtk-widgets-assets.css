@@ -360,9 +360,9 @@ button:active:disabled {
 	border-image: url("assets/button-border-pressed-insensitive.svg") 3 / 3px stretch;
 }
 
-button.default,
-notebook .button.default {
-	border-image: url("assets/button-border-dark.svg") 3 / 3px stretch;
+button.default:not(:disabled),
+notebook .button.default:not(:disabled) {
+	border-image: url("assets/button-border-default.svg") 3 / 3px stretch;
 }
 
 button.default:active,

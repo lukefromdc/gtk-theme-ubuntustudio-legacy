@@ -2,6 +2,7 @@ themedir = $(datadir)/themes/UbuntuStudio_Legacy/gtk-3.20/assets
 
 theme_DATA = \
 	button-border-dark.svg \
+	button-border-default.svg \
 	button-border-insensitive.svg \
 	button-border-pressed-insensitive.svg \
 	button-border-pressed.svg \
