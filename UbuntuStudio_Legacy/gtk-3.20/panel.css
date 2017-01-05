@@ -9,10 +9,11 @@
 }
 
 panel-toplevel.background.horizontal,
-.mate-panel-menu-bar.background  {
+.mate-panel-menu-bar  {
 	background-color:#000000;
 	color: white;
 	outline-offset: 1px;
+	outline-color: @theme_selected_bg_color;
 }
 
 /*Theme wnckpager and wncktasklist drag handles for subtle visibility*/
@@ -180,8 +181,8 @@ button#showdesktop-button, button#clock-applet-button
 	border-width: 1px 0px;
 	border-style: solid;
 	border-color: transparent;
-	background-image: linear-gradient(shade(@theme_bg_color,1.1),
-                                      shade(@theme_bg_color,1.1));
+	background-image: linear-gradient(alpha(white,0.35),
+                                      alpha(white,0.35));
 }
 
 .wnck-pager:selected {
