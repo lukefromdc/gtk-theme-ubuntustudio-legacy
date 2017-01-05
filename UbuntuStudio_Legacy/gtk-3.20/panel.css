@@ -9,9 +9,10 @@
 }
 
 panel-toplevel.background.horizontal,
-.mate-panel-menu-bar  {
+.mate-panel-menu-bar.background  {
 	background-color:#000000;
 	color: white;
+	outline-offset: 1px;
 }
 
 /*Theme wnckpager and wncktasklist drag handles for subtle visibility*/
@@ -148,7 +149,15 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 	background-image: none;
 	border-width: 1px;
 	background-color:alpha(@theme_bg_color, 0.20);
-
+}
+	/*for keyboard focus */
+.mate-panel-menu-bar button, .gnome-panel-menu-bar button{
+	outline-offset: -2px;
+	outline-width: 2px;
+}
+	/*These already get a highlight border so suppress outline */
+#tasklist-button:focus,#tasklist-button:checked:focus {
+	outline-width: 0px;
 }
 
 /*transparency on clock and show desktop buttons to follow main panel background*/
@@ -158,20 +167,27 @@ button#showdesktop-button, button#clock-applet-button
 	background-color: transparent;
 	background-image:none;
 	border-width: 0px;
-	padding: 0px;
 	border-image:none;
 	border-style: none;
 }
 
+#clock-applet-button{
+	padding: 4px; /*any less and outlines touch text or get cut off */
+}
+
 /*WnckPager is unnamed in GTK inspector so try this*/
-
-
-.wnck-pager {
-    background-color: shade(@theme_bg_color,1.1);
+.wnck-pager{
+	border-width: 1px 0px;
+	border-style: solid;
+	border-color: transparent;
+	background-image: linear-gradient(shade(@theme_bg_color,1.1),
+                                      shade(@theme_bg_color,1.1));
 }
 
 .wnck-pager:selected {
-    background-color: @theme_selected_fg_color;
+	background-color:transparent;
+	background-image: linear-gradient(@theme_selected_fg_color,
+                                      @theme_selected_fg_color);
 }
 
 na-tray-applet {
