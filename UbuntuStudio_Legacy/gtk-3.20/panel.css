@@ -172,8 +172,10 @@ button#showdesktop-button, button#clock-applet-button
 	border-style: none;
 }
 
-#clock-applet-button{
-	padding: 4px; /*any less and outlines touch text or get cut off */
+
+
+#clock-applet-button label{
+	padding: 4px;  /*any less and outlines touch text or get cut off */
 }
 
 /*WnckPager is unnamed in GTK inspector so try this*/
