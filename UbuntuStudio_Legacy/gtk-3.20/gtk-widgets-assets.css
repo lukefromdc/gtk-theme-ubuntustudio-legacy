@@ -313,7 +313,7 @@ scale.vertical trough:disabled  {
  ***********/
 
 button,
-combobox button.combo:focus:not(:hover), /*Caja needs this*/
+toolbar combobox button.combo:focus:not(:hover), /*Caja needs this-*/
 toolbar,
 inline-toolbar.toolbar,
 toolbar button:hover,
