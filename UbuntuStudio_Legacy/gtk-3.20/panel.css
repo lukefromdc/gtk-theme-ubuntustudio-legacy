@@ -161,9 +161,9 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 	outline-width: 0px;
 }
 
-/*transparency on clock and show desktop buttons to follow main panel background*/
+/*transparency on clock, disk mounting, and show desktop buttons to follow main panel background*/
 
-button#showdesktop-button, button#clock-applet-button
+button#showdesktop-button, button#clock-applet-button,  button#drive-button
 {
 	background-color: transparent;
 	background-image:none;
