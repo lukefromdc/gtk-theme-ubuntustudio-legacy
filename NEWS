@@ -1,12 +1,16 @@
+3.22.9
+	*GTK 3.20/22: reduce CSD min/max/close padding to more closely match metacity theme
+	*Bump version to 3.22.8 matching GTK 3.22.9
+
 3.22.8
-	*Bump version to 3.22.8 matching GTK 3.22.8
 	*GTK 3.20/22 Remove unintended border from mate-panel drivemount buttons
+	*Bump version to 3.22.8 matching GTK 3.22.8
 
 3.22.6
-	*Bump version to 3.22.6 matching GTK 3.22.6
 	*Support keyboard navigation with focus highlights and outlines
 	*Fix build issues that left out window-controls directory and window-controls.css
 	*Continue supporting GTK 3.20, 3.18 and 3.16/14 as well as 3.22
+	*Bump version to 3.22.6 matching GTK 3.22.6
 
 3.22.5
 

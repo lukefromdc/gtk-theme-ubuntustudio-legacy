@@ -14,6 +14,14 @@ headerbar .left:dir(rtl) button.close.titlebutton {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 14px 14px;
+	padding: 2px;
+}
+
+headerbar .right button.close.titlebutton,
+headerbar .right:dir(rtl) button.close.titlebutton,
+headerbar .left button.close.titlebutton,
+headerbar .left:dir(rtl) button.close.titlebutton{
+	margin-right: 8px;
 }
 
 /* Set correct layout with 
