@@ -2283,7 +2283,7 @@ headerbar  button
 	color: @theme_base_color;
 	border-image: none;
 	border-color: transparent;
-	padding: 12px 12px 12px 12px;  
+	padding: 6px;
 }
 
 headerbar  button:backdrop {
