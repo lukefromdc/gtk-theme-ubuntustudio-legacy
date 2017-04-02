@@ -1,6 +1,10 @@
+3.22.11
+	*GTK 3.20/22: -Support upcoming css style class for mate-keyboard-layout-view
+	*Bump version to 3.22.11 matching GTK 3.22.11
+
 3.22.9
 	*GTK 3.20/22: reduce CSD min/max/close padding to more closely match metacity theme
-	*Bump version to 3.22.8 matching GTK 3.22.9
+	*Bump version to 3.22.9 matching GTK 3.22.9
 
 3.22.8
 	*GTK 3.20/22 Remove unintended border from mate-panel drivemount buttons

@@ -352,6 +352,23 @@ window.background.mate-terminal box.vertical {
 }
 
 
+/*****************************
+ * MATE keyboard layout view *
+ *****************************/
+
+/* mate-keyboard-layout-view, mate-keyboard-layout-chooser */
+/* this way it styles only the border of the keys, the bg of the map itself
+   use the .view class from code */
+
+matekbd-keyboard-drawing {
+    background-color: shade (@theme_bg_color, 1.0);
+}
+
+matekbd-keyboard-drawing:selected {
+        background-color: @theme_selected_bg_color;
+        color: @theme_selected_fg_color;
+}
+
 /***********************
  * Gnome-tweak-tool *
  ***********************/
