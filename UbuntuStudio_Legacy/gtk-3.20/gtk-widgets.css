@@ -120,7 +120,6 @@ view, .view, entry, .entry {
 	caret-color:#000000;
 }
 /*hide carot when window is not selected*/
-/*do NOT use .view to avoid creating caja desktop flashes*/
 /*works in gedit, pluma, etc*/
 
 view:backdrop, entry:backdrop, .entry:backdrop {
@@ -148,7 +147,7 @@ frame {
  ***************/
 
 textview text,
-textview text:backdrop {   /*backdrop-limit white flashes on standard builds of caja*/
+textview text:backdrop {
 	color: black;
 	background-color:@theme_base_color; }
 
