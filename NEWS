@@ -1,6 +1,9 @@
+3.22.12
+	*GTK 3.20/22: fix theming of ccsm (compizconfig-settings-manager) in compiz-reloaded
+	*GTK 3.20/22-Remove old comment only relevant to very old Caja versions
+
 3.22.11
 	*GTK 3.20/22: -Support upcoming css style class for mate-keyboard-layout-view
-	*Bump version to 3.22.11 matching GTK 3.22.11
 
 3.22.9
 	*GTK 3.20/22: reduce CSD min/max/close padding to more closely match metacity theme

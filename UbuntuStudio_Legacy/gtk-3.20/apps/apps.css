@@ -450,6 +450,20 @@ headerbar.primary-toolbar.toolbar{
 	color: #ffffff;
 }
 
+/****************************
+ *CCSM (for compiz-reloaded*
+ ****************************/
+.ccsm-window .frame.view{
+	background-color: @theme_bg_color;
+}
+
+.ccsm-window button.flat:not(:hover):not(:active):not(:selected){
+	background-image: none;
+	border-image: none;
+	border-color: transparent;
+
+}
+
 
 /***********************
  * Firefox *
