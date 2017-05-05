@@ -23,11 +23,19 @@
  * Base States *
  ***************/
 
-/*use .background instead of just * because the latter causes many bugs */
+/*use .background instead of just * for bg color to avoid many bugs */
 
+/*Special case fg color for Libreoffice/Firefox which read toplevel
+  fg color, then use it over base color to avoid white on white text*/
 .background {
 	background-color: @theme_bg_color;
-	color:@theme_fg_color;
+	color: black;
+}
+
+/* Anything else inherits normal white fg color */
+* .background,
+.background>*{
+	color: @theme_fg_color;
 }
 
 *:hover {
@@ -1951,6 +1959,13 @@ grid,
 grid:disabled {
 	background-image: none;
 	background-color: transparent;
+}
+
+/*Ensure Libreoffice/Firefox hack never
+  turns normal labels or images black*/
+label,
+image {
+	color: @theme_bg_color;
 }
 
 /* These are for Evolution, whose new version can also
