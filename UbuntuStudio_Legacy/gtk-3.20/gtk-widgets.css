@@ -1965,7 +1965,7 @@ grid:disabled {
   turns normal labels or images black*/
 label,
 image {
-	color: @theme_bg_color;
+	color: @theme_fg_color;
 }
 
 /* These are for Evolution, whose new version can also
