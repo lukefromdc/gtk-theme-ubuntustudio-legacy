@@ -108,7 +108,8 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 
 ***************************/
 
-.nemo-window scrolledwindow {
+.nemo-window scrolledwindow.view,
+.nemo-window scrolledwindow.nemo-places-sidebar {
 	background-color: @theme_base_color;
 }
 
@@ -210,10 +211,6 @@ window>grid>paned>box>paned>box>notebook>stack>box>overlay>scrolledwindow .entry
 	color: @theme_fg_color;
 }
 
-.nemo-window overlay>scrolledwindow {
-	background-color: @theme_base_color;
-}
-
 .nemo-desktop .entry:backdrop,
 .nemo-desktop.view .entry:backdrop {
 	box-shadow: none;
@@ -258,6 +255,11 @@ nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the s
 /*anything disabled-keep it readable*/
 .nautilus-window overlay>scrolledwindow>*>treeview:disabled {
 	color: @theme_bg_color;
+}
+
+/*Fix ugly white corners over list view scrollbars*/
+.nautilus-list-view scrolledwindow{
+	background-color:transparent;
 }
 
 
