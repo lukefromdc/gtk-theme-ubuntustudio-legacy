@@ -1,0 +1,278 @@
+/**************************
+ * Client Side Decoration *
+
+ *headerbar*
+
+ **************************/
+
+/*mostly taken from Adwaita except the border radius */
+decoration {
+	border-radius: 7px 7px 0px 0px;
+	border-width: 1px;
+	box-shadow:  0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.23);
+	/* this is used for the resize cursor area */
+	margin: 5px;
+	padding: 0px;
+}
+
+/*Limit CSD shadow extent to deal with any WM  CSD/GtkFrameExtent issues */
+.csd decoration {
+	border-radius: 7px 7px 0px 0px;
+	border-width: 1px;
+	box-shadow:  0 3px 3px 1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.23);
+	/* this is used for the resize cursor area */
+	margin: 5px;
+    padding: 0px;
+}
+
+headerbar button:not(.appmenu):not(.titlebutton){
+	padding: 8px;
+}
+
+headerbar button.appmenu, .csd button.titlebutton{
+	padding: 2px 4px;
+}
+
+.popup decoration {
+	border-radius:0px;
+	border-width: 0px;
+	box-shadow:  0 3px 3px 0px rgba(0, 0, 0, 0.7);
+	margin: 0px;
+}
+
+/*mostly taken from Adwaita except the border radius */
+decoration.backdrop {
+	border-radius: 7px 7px 0px 0px;
+	border-width: 1px;
+	box-shadow:  0 3px 9px 1px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+	/* this is used for the resize cursor area */
+	margin: 5px;
+}
+
+
+/*ported from Ravit65's Gtk3.16/3.18 fix for CSD apps w/o compositing */
+.solid-csd decoration {
+    box-shadow: none;
+	border-width: 1px;
+	border-image: none;
+	border-color: @theme_bg_color;
+	margin: 1px;
+}
+
+/*Fix tiled CSD windows in compiz with fake extents support if app sets .tiled */
+.tiled decoration {
+    box-shadow: none;
+	margin: 0px;
+}
+
+headerbar,
+.titlebar {
+	text-shadow: 1px 1px lighter (@bg_color);
+	border-radius: 7px 7px 0px 0px;
+	background-image: url('window-controls/decoration-csd.png');
+}
+
+headerbar:backdrop {
+	text-shadow: 1px 1px lighter (@bg_color);
+	border-radius: 7px 7px 0px 0px;
+	background-image: none;
+	background-color:@theme_bg_color;
+}
+
+headerbar .title {
+  font-weight: Bold;
+}
+
+headerbar .subtitle {
+  font-size: 90%;
+}
+
+decoration:backdrop {
+  text-shadow: none;
+  background-image: none;
+  background-color: @bg_color;
+}
+
+
+headerbar  button {
+	background-image:none;
+	background-color: transparent;
+	color: @theme_base_color;
+	border-image: none;
+	border-color: transparent;
+	padding: 6px;
+}
+
+headerbar  button:backdrop {
+  background-image: none;
+
+  border-image: none;
+  -gtk-icon-shadow: none;
+}
+
+headerbar  button:hover {
+	background-image: linear-gradient(to bottom,
+					shade(@button_gradient_color_a, 1.2),
+	                                shade(@button_gradient_color_b, 1.2) 50%,
+	                                shade(@button_gradient_color_c, 1.2) 50%,
+					shade(@button_gradient_color_d, 1.2));
+	color: @theme_base_color;
+
+}
+
+headerbar  button:active {
+	background-image: linear-gradient(to bottom,
+					shade(@button_gradient_color_a, 1.1),
+	                                shade(@button_gradient_color_b, 1.2) 50%,
+	                                shade(@button_gradient_color_c, 1.3) 50%,
+					shade(@button_gradient_color_d, 1.4));
+	color: @theme_base_color;
+
+}
+
+headerbar  button:disabled {
+	background-image: none;
+	background-color: transparent;
+	color: @theme_text_color;
+	border-image: none;
+	border-color: transparent;
+        border-style: none;
+}
+
+headerbar  button.text-button {
+	border-width: 1px;
+	border-color: alpha(black,0.4);
+}
+
+headerbar  button.minimize.titlebutton,
+headerbar  button.maximize.titlebutton,
+headerbar  button.close.titlebutton,
+headerbar .right button.minimize.titlebutton,
+headerbar .right:dir(rtl) button.minimize.titlebutton,
+headerbar .left button.minimize.titlebutton,
+headerbar .left:dir(rtl) button.minimize.titlebutton,
+headerbar .right button.maximize.titlebutton,
+headerbar .right:dir(rtl) button.maximize.titlebutton,
+headerbar .left button.maximize.titlebutton,
+headerbar .left:dir(rtl) button.maximize.titlebutton,
+headerbar .right button.close.titlebutton,
+headerbar .right:dir(rtl) button.close.titlebutton,
+headerbar .left button.close.titlebutton,
+headerbar .left:dir(rtl) button.close.titlebutton {
+    color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+}
+
+headerbar .right button.close.titlebutton,
+headerbar .right:dir(rtl) button.close.titlebutton,
+headerbar .left button.close.titlebutton,
+headerbar .left:dir(rtl) button.close.titlebutton{
+	margin-right: 8px;
+}
+
+/* Set correct layout with 
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <':minimize,maximize,close'>}" for
+     buttons on the right or
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <'close,maximize,minimize:'>}"
+    for buttons on the left */
+
+/* minimize */
+
+/*default for Metacity which does not set left/right */
+headerbar  button.minimize.titlebutton,
+/*Everything else*/
+headerbar .right button.minimize.titlebutton,
+headerbar .right:dir(rtl) button.minimize.titlebutton,
+headerbar .left button.minimize.titlebutton,
+headerbar .left:dir(rtl) button.minimize.titlebutton {
+    background-image: url('window-controls/button-minimize-normal.png');
+}
+
+headerbar button.minimize.titlebutton:hover,
+headerbar .right button.minimize.titlebutton:hover,
+headerbar .right:dir(rtl) button.minimize.titlebutton:hover,
+headerbar .left button.minimize.titlebutton:hover,
+headerbar .left:dir(rtl) button.minimize.titlebutton:hover {
+    background-image: url('window-controls/button-minimize-hover.png');
+}
+
+headerbar button.minimize.titlebutton:active,
+headerbar .right button.minimize.titlebutton:active,
+headerbar .right:dir(rtl) button.minimize.titlebutton:active,
+headerbar .left button.minimize.titlebutton:active,
+headerbar .left:dir(rtl) button.minimize.titlebutton:active {
+    background-image: url('window-controls/button-minimize-pressed.png');
+}
+
+/* maximize */
+headerbar  button.maximize.titlebutton,
+headerbar .right button.maximize.titlebutton,
+headerbar .right:dir(rtl) button.maximize.titlebutton,
+headerbar .left button.maximize.titlebutton,
+headerbar .left:dir(rtl) button.maximize.titlebutton {
+    background-image: url('window-controls/button-maximize-normal.png');
+}
+
+headerbar button.maximize.titlebutton:hover,
+headerbar .right button.maximize.titlebutton:hover,
+headerbar .right:dir(rtl) button.maximize.titlebutton:hover,
+headerbar .left button.maximize.titlebutton:hover,
+headerbar .left:dir(rtl) button.maximize.titlebutton:hover {
+    background-image: url('window-controls/button-maximize-hover.png');
+}
+
+headerbar  button.maximize.titlebutton:active,
+headerbar .right button.maximize.titlebutton:active,
+headerbar .right:dir(rtl) button.maximize.titlebutton:active,
+headerbar .left button.maximize.titlebutton:active,
+headerbar .left:dir(rtl) button.maximize.titlebutton:active {
+    background-image: url('window-controls/button-maximize-pressed.png');
+}
+
+/* close */
+headerbar  button.close.titlebutton,
+headerbar .right button.close.titlebutton,
+headerbar .right:dir(rtl) button.close.titlebutton,
+headerbar .left button.close.titlebutton,
+headerbar .left:dir(rtl) button.close.titlebutton {
+    background-image: url('window-controls/button-close-normal.png');
+}
+
+headerbar  button.close.titlebutton:hover,
+headerbar .right button.close.titlebutton:hover,
+headerbar .right:dir(rtl) button.close.titlebutton:hover,
+headerbar .left button.close.titlebutton:hover,
+headerbar .left:dir(rtl) button.close.titlebutton:hover {
+    background-image: url('window-controls/button-close-hover.png');
+}
+
+headerbar  button.close.titlebutton:active,
+headerbar  button.close.titlebutton:active,
+headerbar .right button.close.titlebutton:active,
+headerbar .right:dir(rtl) button.close.titlebutton:active,
+headerbar .left button.close.titlebutton:active,
+headerbar .left:dir(rtl) button.close.titlebutton:active {
+    background-image: url('window-controls/button-close-pressed.png');
+}
+
+headerbar button.close.titlebutton,
+headerbar button.minimize.titlebutton,
+headerbar button.maximize.titlebutton {
+    border-width: 0px;
+    border-image: none;
+    background-color: transparent;
+}
+
+headerbar button.close.titlebutton image,
+headerbar button.minimize.titlebutton image,
+headerbar button.maximize.titlebutton image {
+        color: transparent;
+}
+
+.titlebar button.close.titlebutton image{
+    /* fake request to avoid usage of regular window-close button*/
+	/* Note that this has to go in the image, not the button to work*/
+    -gtk-icon-style: requested;
+}

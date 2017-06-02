@@ -12,6 +12,7 @@ SUBDIRS =    \
 	gtk-3.18 \
 	gtk-3.20 \
 	gtk-3.22 \
+	gtk-4.0 \
 	metacity-1
 
 DIST_SUBDIRS = \
@@ -20,6 +21,7 @@ DIST_SUBDIRS = \
 	gtk-3.18 \
 	gtk-3.20 \
 	gtk-3.22 \
+	gtk-4.0 \
 	metacity-1
 
 CLEANFILES = index.theme

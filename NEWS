@@ -1,6 +1,7 @@
 3.22.15
 	*GTK 3.20/22- fix white squares over Nemo/Nautilus treeview scrollbars
 	*GTK 3.20/22-fix white on white text in Libreoffice, some Firefox widgets
+	*GTK 4.0-add initial support as of 6-2-2017
 
 3.22.12
 	*GTK 3.20/22- fix theming of ccsm (compizconfig-settings-manager) in compiz-reloaded

@@ -1,0 +1,482 @@
+
+/***************************
+		* Caja  *
+
+***************************/
+
+/*zebra-stripe Caja list views, must be done for EVERY row as odd/even does not work  */
+.caja-navigation-window paned paned treeview.view{                          			
+		background-image: linear-gradient(to bottom,
+					  #eeeeee,
+					  #ffffff); 
+}
+
+/*list view selected colors*/
+.caja-navigation-window paned paned treeview.view:selected{
+	background-image: linear-gradient(to bottom,
+					  @menu_gradient_color_a,
+	                                  @menu_gradient_color_b 50%,
+	                                  @menu_gradient_color_c 50%,
+					  @menu_gradient_color_d); 
+	color: @theme_fg_color;
+}
+
+/*anything disabled-keep it readable*/
+.caja-navigation-window paned paned treeview:disabled {
+	color: @theme_bg_color;
+}
+
+
+.caja-canvas-item {
+	border-radius: 3px;
+}
+
+.caja-desktop .caja-canvas-item {
+    color: white;
+    text-shadow: 1px 1px alpha(#000000, 0.6);
+    border-color:#000000;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+}
+
+.caja-canvas-item:active,
+.caja-canvas-item:selected {
+    background-color: @theme_selected_bg_color;
+}
+
+/*Theme caja rename entry, use no border on desktop*/
+
+.caja-desktop  .entry {
+	background-color:@theme_base_color;
+	color:#000000;
+	padding: 6px;
+	border-radius: 3px;
+	box-shadow: inset 2px 3px alpha(black, 0.2),
+	            inset 2px 2px alpha(black, 0.2),
+	            inset 1px 1px alpha(black, 0.3);
+}
+
+
+/*use rename entry border in caja navigation windows*/
+
+.caja-navigation-window .view .entry{
+	background-color:@theme_base_color;
+	color:#000000;
+	padding: 6px;
+	border-color:#000000;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	box-shadow: inset 2px 3px alpha(black, 0.2),
+	            inset 2px 2px alpha(black, 0.2),
+	            inset 1px 1px alpha(black, 0.3);
+}
+
+.caja-navigation-window .view .entry:backdrop {
+	box-shadow: none;
+}
+
+.caja-desktop .entry:selected,
+.caja-desktop .entry:active, 
+.caja-navigation-window .view .entry:selected,
+.caja-navigation-window .view .entry:active { 
+	background-color: @theme_selected_bg_color;
+	color: @theme_selected_fg_color;
+}
+
+
+/*theme the Caja trashbar, infobar*/
+#caja-extra-view-widget { 
+	background-color: @info_bg_color;
+}
+
+/*Caja Backgrounds and Emblems dialog*/
+window.background>box>box>box>scrolledwindow>viewport.frame {
+    background-color: @theme_base_color;
+}
+
+/*Caja sidebar */
+/*fix information pane unreadable labels*/
+.caja-side-pane notebook stack box>box>label{
+	color:@theme_text_color;
+}
+
+ 
+/***************************
+		* Nemo *
+
+***************************/
+
+.nemo-window scrolledwindow.view,
+.nemo-window scrolledwindow.nemo-places-sidebar {
+	background-color: @theme_base_color;
+}
+
+/*Nemo treeviews*/
+
+.nemo-window scrolledwindow treeview.view{
+		background-image: linear-gradient(to bottom,
+					  #eeeeee,
+					  #ffffff); 
+}
+
+.nemo-window scrolledwindow treeview.view:selected,
+.nemo-window scrolledwindow treeview.view:active{
+	background-image: linear-gradient(to bottom,
+					  @menu_gradient_color_a,
+	                                  @menu_gradient_color_b 50%,
+	                                  @menu_gradient_color_c 50%,
+					  @menu_gradient_color_d); 
+	color: @theme_fg_color;
+}
+
+/*anything disabled-keep it readable*/
+.nemo-window scrolledwindow treeview:disabled {
+	color: @theme_bg_color;
+}
+
+ /*nemo sidebar*/
+
+.nemo-window treeview.places-treeview.view{
+	padding: 2px;
+    background-image: none;
+	border-width: 0px;
+}
+
+/*May match some other text buttons but this is only way until nemo supports GTK 3.20 */
+/*2nd line is RIGHT way when Federa patch for GTK 20 gets merged*/
+
+.nemo-window>grid>box>box>toolbar.primary-toolbar button.text-button,
+.nemo-window  toolbar.primary-toolbar button.text-button{
+	color: @theme_fg_color;
+	background-image: none;
+	background-color: transparent;
+	border-color: #222222;
+	border-width: 1px;
+	border-radius: 2px;
+
+}
+
+/*Nemo canvas items*/
+
+.nemo-canvas-item{
+	border-radius: 3px;
+}
+
+.nemo-desktop .nemo-canvas-item{
+    color: white;
+    text-shadow: 1px 1px alpha(#000000, 0.6);
+    border-color:#000000;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+}
+
+/*Nemo rename entries*/
+/*use border in nemo rename entry other than on the desktop*/
+
+window>grid>paned>box>paned>box>notebook>stack>box>overlay>scrolledwindow .entry,
+.nemo-window  .view .entry{
+	background-color:@theme_base_color;
+	color:#000000;
+	padding: 6px;
+	border-color:#000000;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+	box-shadow: inset 2px 3px alpha(black, 0.2),
+	            inset 2px 2px alpha(black, 0.2),
+	            inset 1px 1px alpha(black, 0.3);
+}
+
+/*No border when on the desktop*/
+.nemo-desktop.view .entry {
+	background-color:@theme_base_color;
+	color:#000000;
+	padding: 6px;
+	border-color:transparent;
+	border-width: 0px;
+	border-radius: 3px;
+	box-shadow: inset 2px 3px alpha(black, 0.2),
+	            inset 2px 2px alpha(black, 0.2),
+	            inset 1px 1px alpha(black, 0.3);
+}
+
+.nemo-window scrolledwindow .entry:selected,
+.nemo-window scrolledwindow .entry:active,
+.nemo-window  .view .entry:selected,
+.nemo-window  .view .entry:active { 
+	background-color: @theme_selected_bg_color;
+	color: @theme_fg_color;
+}
+
+.nemo-desktop .entry:backdrop,
+.nemo-desktop.view .entry:backdrop {
+	box-shadow: none;
+}
+
+
+/***************************
+		* Nautilus *
+
+***************************/
+
+/*Requires Nautilus 3.20 or later to not
+put the navigation window folder on the background*/
+
+.nautilus-window scrolledwindow {
+	background-color: @theme_base_color;
+}		
+
+nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the separate desktop binary*/
+.nautilus-desktop-window scrolledwindow { 				 /*Nautilus with the separate desktop binary*/
+	background-color: transparent;
+}
+
+/*Nautilus treeviews*/
+
+.nautilus-window overlay>scrolledwindow>*>treeview.view	 {                          			
+		background-image: linear-gradient(to bottom,
+					  #eeeeee,
+					  #ffffff); 
+}
+
+.nautilus-window overlay>scrolledwindow>*>treeview.view:selected,
+.nautilus-window overlay>scrolledwindow>*>treeview.view:active{
+	background-image: linear-gradient(to bottom,
+					  @menu_gradient_color_a,
+	                                  @menu_gradient_color_b 50%,
+	                                  @menu_gradient_color_c 50%,
+					  @menu_gradient_color_d); 
+	color: @theme_fg_color;
+}
+
+/*anything disabled-keep it readable*/
+.nautilus-window overlay>scrolledwindow>*>treeview:disabled {
+	color: @theme_bg_color;
+}
+
+/*Fix ugly white corners over list view scrollbars*/
+.nautilus-list-view scrolledwindow{
+	background-color:transparent;
+}
+
+
+.nautilus-canvas-item {
+	border-radius: 3px;
+}
+
+.nautilus-desktop .nautilus-canvas-item{
+    color: white;
+    text-shadow: 1px 1px alpha(#000000, 0.6);
+    border-color:#000000;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 3px;
+}
+
+.nautilus-canvas-item:active,
+.nautilus-canvas-item:selected {
+    background-color: @theme_selected_bg_color;
+}
+
+.nautilus-window list row {
+	padding:2px;
+}
+
+
+/***********************
+ * SpaceFM *
+ ***********************/
+/*This is the only way to support SpaceFM in GTK 3.20 right now */
+/*Be advised Debian's SpaceFM build does not work with GTK 3.22 for rendering the desktop */
+
+window>box.vertical>paned.vertical>paned.vertical>paned.horizontal>notebook>stack>box>paned>scrolledwindow {
+	background-color: @theme_base_color;
+}
+/***********************
+ * Mate-Control-Center *
+ ***********************/
+
+/* background */
+window#MyControlCenter  scrolledwindow .view,
+window#MyControlCenter  scrolledwindow .view>box{
+    background-color: shade(@theme_bg_color, 1.05);
+}
+
+
+window#MyControlCenter #slab_section_style2 button:not(:hover) {
+	background-color:transparent;
+	background-image: none;
+	border-image: none;
+	border-color:transparent;
+}
+
+window#MyControlCenter #slab_section_style1 button{
+	background-image: none;
+	border-image:none;
+	border-color: transparent;
+	background-color:transparent;
+	padding: 4px 2px;
+}
+
+window#MyControlCenter #slab_section_style1 button:hover,
+window#MyControlCenter #slab_section_style1 button:selected,
+window#MyControlCenter #slab_section_style1 button:active{
+	padding: 4px 2px;
+	border-color: alpha(@theme_text_color, 0.5);
+	background-image: linear-gradient(to bottom,
+					  @menu_gradient_color_a,
+	                                  @menu_gradient_color_b 50%,
+	                                  @menu_gradient_color_c 50%,
+					  @menu_gradient_color_d); 
+}
+
+/****************
+ * Mate-settings-daemon *
+ ****************/
+
+/*For mate-settings-daemon noncomposited osd windows*/
+.msd-osd-window-solid {
+	border-radius:0px;
+}
+
+
+/****************
+ * Mate-terminal *
+ ****************/
+
+/* workaround for broken size with gtk+-3.20 by raveit65  */
+window.background.mate-terminal box.vertical {
+    min-width: 640px;
+    min-height: 380px;
+}
+
+
+/*****************************
+ * MATE keyboard layout view *
+ *****************************/
+
+/* mate-keyboard-layout-view, mate-keyboard-layout-chooser */
+/* this way it styles only the border of the keys, the bg of the map itself
+   use the .view class from code */
+
+matekbd-keyboard-drawing {
+    background-color: shade (@theme_bg_color, 1.0);
+}
+
+matekbd-keyboard-drawing:selected {
+        background-color: @theme_selected_bg_color;
+        color: @theme_selected_fg_color;
+}
+
+/***********************
+ * Gnome-tweak-tool *
+ ***********************/
+
+.tweak-group row label,
+.tweak-group-startup row label,
+.tweak-group row:hover label,
+.tweak-group-startup row:hover label{
+	color:@theme_fg_color;
+}
+
+.tweak-group viewport row.activatable box label{
+	color:@theme_text_color;
+}
+
+.tweak-category:selected,
+.tweak-category:active { 
+	background-image: linear-gradient(to bottom,
+					  @menu_gradient_color_a,
+	                                  @menu_gradient_color_b 50%,
+	                                  @menu_gradient_color_c 50%,
+					  @menu_gradient_color_d); 
+	color: @theme_fg_color;
+}
+
+
+box.vertical>stack.main-container expander *,
+.tweak-category:selected label,
+.tweak-category:active label{
+	color:@theme_fg_color;
+}
+
+
+#ShellExtensionTweakGroup.tweak-group row label,
+#ShellExtensionTweakGroup.tweak-group row:hover label{
+	color:@theme_text_color;
+}
+
+
+/***********************
+ * Gnome-disks *
+ ***********************/
+
+/*this is a hack for a widget with no name containing an unlabelled label (no css node)*/
+
+window>box>paned>notebook>stack>box>*>box.vertical>box.vertical>box.horizontal>*>* {
+	color:#000000;	
+}
+
+
+/***********************
+ * Yelp (help browser) *
+ ***********************/
+
+.yelp-find-frame {
+	color: black;
+	border-width: 10px;
+	border-style: solid;
+	border-color: red;
+}
+
+/*Get the CSD theme off the headerbar when it's within an SSD window!*/
+/*FIXME -what else does this affect*/
+
+headerbar.primary-toolbar.toolbar{
+	background-image: none;
+}
+
+/***********************
+ * Cinnamon-settings *
+ ***********************/
+
+.cs-category-view,
+.cs-category-view iconview {
+	background-color: @theme_bg_color;
+}
+
+.cs-category-view iconview.view.cell{
+	color: #ffffff;
+}
+
+/****************************
+ *CCSM (for compiz-reloaded*
+ ****************************/
+.ccsm-window .frame.view{
+	background-color: @theme_bg_color;
+}
+
+.ccsm-window button.flat:not(:hover):not(:active):not(:selected){
+	background-image: none;
+	border-image: none;
+	border-color: transparent;
+
+}
+
+
+/***********************
+ * Firefox *
+ ***********************/
+/*Firefox 49 is a broken mess in GTK 3.20 or later and needs this */
+/*Let's exclude as many unwanted matches as possible and if that fails keep it subtle*/
+
+window.background>widget>:not(widget):not(box):not(tab):not(notebook):not(stack):not(frame)>scrolledwindow.frame {
+	border-style: solid;
+	border-color: @theme_bg_color;
+	border-width: 1px;
+
+}
+

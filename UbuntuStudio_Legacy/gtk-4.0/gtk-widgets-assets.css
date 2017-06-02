@@ -1,0 +1,457 @@
+/***************************
+ * Radio and Check Buttons *
+ ***************************/
+
+check, 
+radio{
+	min-width: 16px;
+	min-height: 16px;
+}
+
+check,
+.check,
+.view.check {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox.svg")); 
+}
+
+check:focus,
+.check:focus,
+check:hover,
+.check:hover,
+.view.check:hover,
+.view.check:focus {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox_glow.svg"));
+}
+
+check:disabled,
+.check:disabled{
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-insensitive.svg")); 
+}
+
+.view.check:disabled{
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-insensitive-view.svg")); 
+} 
+
+
+check:hover:checked,
+.check:hover:checked,
+.view.check:hover:active,
+.view.check:hover:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-animated-checked.svg"));
+	background-image: -gtk-scaled(url("assets/checkbox-animated-checked-glow-bg.svg")); 
+}
+
+check:active,
+check:hover:active,
+check:focus:active
+.check:active,
+.check:hover:active,
+.check:focus:active,
+.view.check:active,
+check:hover:indeterminate,
+.check:hover:indeterminate,
+check:focus:indeterminate,
+.check:focus:indeterminate,
+.view.check:hover:indeterminate,
+.view.check:focus:indeterminate,
+check:active:indeterminate,
+.check:active:indeterminate
+.view.check:active:indeterminate{
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-animated-checked-glow-bg.svg")); 
+}
+
+check:checked,
+.view.check:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-animated-checked.svg")); 
+	background-image: -gtk-scaled(url("assets/checkbox-checked-animated-bg.svg")); 
+}
+
+check:focus:checked,
+.view.check:focus:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-animated-checked.svg")); 
+	background-image: -gtk-scaled(url("assets/checkbox-animated-checked-glow-bg.svg")); 
+}
+
+check:indeterminate,
+.check:indeterminate,
+.view.check:indeterminate {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.svg")); 
+}
+
+check:focus:indeterminate,
+check:hover:indeterminate,
+check:focus:hover:indeterminate,
+check:hover:indeterminate:checked,
+check:focus:indeterminate:checked,
+check:focus:hover:indeterminate:checked,
+.check:hover:indeterminate:checked,
+.check:focus:indeterminate:checked,
+.check:focus:hover:indeterminate:checked,
+.view check:hover:indeterminate:checked{
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-glow.svg")); 
+}
+
+check:indeterminate:disabled,
+.check:indeterminate:disabled,
+.view.check:indeterminate:disabled {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-insensitive.svg")); 
+}
+
+check:active:disabled, 
+check:checked:disabled,
+.check:active:disabled, 
+.check:checked:disabled, 
+.view.check:active:disabled, 
+.view.check:checked:disabled {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-insensitive.svg")); 
+}
+
+radio,
+.radio,
+.view.radio,
+radio:hover,
+.radio:hover,
+.view.radio:hover{
+	-gtk-icon-source: -gtk-scaled(url("assets/radio.svg")); 
+}
+
+
+radio:checked,
+.view.radio:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked-animated-button.svg"));
+	background-image: -gtk-scaled(url("assets/radio-checked-animated-bg.svg")); 
+}
+
+radio:hover:checked,
+radio:focus:checked,
+radio:focus:hover:checked,
+.view.radio:checked,
+.view.radio:hover:checked,
+.view.radio:focus:checked,
+.view.radio:focus:hover:checked {
+	background-image: -gtk-scaled(url("assets/radio-checked-animated-glow-bg.svg")); 
+}
+
+
+radio:active,
+.radio:active,
+.view.radio:active
+radio:active:hover,
+.radio:active:hover,
+.view.radio:active:hover{
+	-gtk-icon-source:-gtk-scaled(url("assets/radio-checked-animated-bg.svg")); 
+}
+
+radio:active:disabled, 
+radio:checked:disabled,
+.radio:active:disabled, 
+.radio:checked:disabled,
+.view.radio:active:disabled,
+.view.radio:checked:disabled {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked-insensitive.svg"));
+}
+
+
+radio:indeterminate,
+.radio:indeterminate,
+.view.radio:indeterminate {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.svg")); 
+}
+
+radio:indeterminate:disabled,
+.radio:indeterminate:disabled  {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-mixed-insensitive.svg")); 
+}
+
+
+menuitem check, menuitem radio, menuitem:hover radio, menuitem:hover check,
+menuitem .check, menuitem .radio, menuitem:hover .radio, menuitem:hover .check {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-menuitem.svg"));
+	background-image: none;
+}
+
+menuitem radio:checked, menuitem:hover radio:checked,
+menuitem .radio:checked, menuitem:hover .radio:checked{
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-menuitem-checked.svg")); 
+	background-image: none;
+}
+
+menuitem check:checked, menuitem:hover check:checked,
+menuitem .check:checked, menuitem:hover .check:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-menuitem-checked.svg")); 
+	background-image: none;
+}
+
+/*animate most check and radio buttons, code borrowed from Adwaita */
+
+@keyframes check_check{
+  from {
+    -gtk-icon-transform: scale(0, 1); }
+  to {
+    -gtk-icon-transform: unset; } }
+@keyframes check_radio {
+  from {
+    -gtk-icon-transform: scale(0); }
+  to {
+    -gtk-icon-transform: unset; } }
+@keyframes check_indeterminate {
+  from {
+    -gtk-icon-transform: scale(1, 0); }
+  to {
+    -gtk-icon-transform: unset; } }
+check:checked {
+  animation: check_check 400ms; }
+
+radio:checked {
+  animation: check_radio 400ms; }
+
+check:not(:indeterminate):checked {
+  animation: check_check 400ms; }
+
+radio:not(:indeterminate):checked {
+  animation: check_radio 400ms; }
+
+check:indeterminate:checked, radio:indeterminate:checked {
+  animation: check_indeterminate 400ms; }
+
+menu menuitem check:not(:indeterminate):checked,
+menu menuitem radio:not(:indeterminate):checked,
+menu menuitem check:indeterminate:checked:active,
+menu menuitem radio:indeterminate:checked {
+  animation: none; }
+
+/***********
+ * Entries *
+ ***********/
+
+entry,
+switch.trough {
+    border-image: url("assets/entry-border-dark.svg") 1 / 1px stretch;
+}
+
+switch.trough:active {
+    border-image: url("assets/switch-trough-active.svg") 1 / 1px stretch;
+}
+
+
+/***********
+ * Sliders *
+ ***********/
+
+scale.horizontal slider {
+	background-image: url("assets/knob_horizontal.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 16px;
+    min-width: 16px;
+}
+
+scale.horizontal slider:disabled{
+	background-image: url("assets/scale-slider-horizontal-insensitive-dark.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 16px;
+    min-width: 16px;
+}
+
+scale.vertical slider {
+	background-image: url("assets/knob_vertical.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 16px;
+    min-width: 16px;
+	
+}
+
+scale.vertical slider:disabled {
+	background-image: url("assets/scale-slider-vertical-insensitive-dark.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 16px;
+    min-width: 16px;
+}
+
+scale.horizontal trough {
+	border-style: none;
+	border-radius: 3px;
+	background-color: transparent;
+	background-image: url("assets/scale_trough.svg");
+	background-position: center;
+	box-shadow: none; 
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+scale.vertical trough {
+ 	border-style: none;
+	border-radius: 3px;
+	background-color: transparent;
+	background-image: url("assets/scale_trough_vert.svg");
+	background-position: center;
+	box-shadow: none;
+	margin-top: 8px;
+	margin-bottom: 8px; 
+}
+
+scale trough:disabled {
+	border-style: none;
+	border-radius: 3px;
+	background-color: transparent;
+	background-image: url("assets/scale_trough_insensitive.svg");
+	background-position: center;
+	margin-left: 8px;
+	margin-right: 8px; 
+}
+
+scale.vertical trough:disabled  {
+	border-style: solid;
+	border-radius: 3px;
+	background-color:alpha(@theme_bg_color,0.0);
+	background-image: url("assets/scale_trough_vertical_insensitive.svg");
+	box-shadow: none;
+	margin-top: 8px;
+	margin-bottom: 8px;   
+}
+
+
+/***********
+ * Buttons *
+ ***********/
+
+button,
+toolbar combobox button.combo:focus:not(:hover), /*Caja needs this-*/
+toolbar,
+inline-toolbar.toolbar,
+toolbar button:hover,
+toolbar.primary-toolbar button:hover,
+toolbar.primary-toolbar button.text-button:hover,
+toolbar.primary-toolbar toolbar button:hover,
+toolbar combobox button,toolbar
+toolbar.primary-toolbar toolbar combobox .button,
+switch.slider,
+titlebar .titlebutton:hover {
+	border-image: url("assets/button-border-dark.svg") 3 / 3px stretch;
+}
+
+switch.slider:active {
+	border-image: url("assets/switch-border-active.svg") 2 / 2px stretch;
+}
+
+button:checked,
+button:active,
+button:hover:active,
+toolbar button:active,
+toolbar button:checked,
+toolbar.primary-toolbar button:active,
+toolbar.primary-toolbar button:checked,
+toolbar.primary-toolbar toolbar .button:active,
+toolbar.primary-toolbar toolbar .button:checked,
+toolbar button:hover:active,
+toolbar button:hover:checked,
+toolbar.primary-toolbar button:hover:active,
+toolbar.primary-toolbar button:hover:checked,
+toolbar.primary-toolbar toolbar .button:hover:active,
+toolbar.primary-toolbar toolbar .button:hover:checked,
+toolbar.primary-toolbar.toolbar .button:hover:active,
+toolbar.primary-toolbar.toolbar .button:hover:checked,
+titlebar .titlebutton:active,
+titlebar .titlebutton:checked {
+	border-image: url("assets/button-border-pressed.svg") 3 / 3px stretch;
+}
+
+button:disabled {
+	border-image: url("assets/button-border-insensitive.svg") 3 / 3px stretch;
+}
+
+button:active:disabled {
+	border-image: url("assets/button-border-pressed-insensitive.svg") 3 / 3px stretch;
+}
+
+button:focus,
+button.default:not(:disabled),
+notebook .button.default:not(:disabled) {
+	border-image: url("assets/button-border-default.svg") 3 / 3px stretch;
+}
+
+button.default:active,
+notebook .button.default:active {
+	border-image: url("assets/button-border-pressed.svg") 3 / 3px stretch;
+}
+
+column-header .button,
+treeview .button {
+	border-image: url("assets/column-header-border-dark.svg") 2 0 2 1 / 2px 0px 2px 1px stretch;
+}
+
+/*********************
+ * Notebook and Tabs *
+ *********************/
+
+notebook {
+    border-image: url("assets/notebook-border-dark.svg") 1 1 1 1 / 1px 1px 1px 1px stretch;
+}
+
+notebook tab {
+	border-image: url("assets/tab-border.svg") 2 / 2px stretch;
+}
+
+notebook tab:checked {
+	border-image: url("assets/tab-active-border.svg") 2 / 2px stretch;
+}
+
+notebook header.left tab:checked{
+	border-image: url("assets/tab-active-border-left.svg") 2 / 2px stretch;
+}
+
+notebook header.right tab:checked {
+	border-image: url("assets/tab-active-border-right.svg") 2 / 2px stretch;
+}
+
+notebook header.bottom tab:checked {
+	border-image: url("assets/tab-active-border-bottom.svg") 2 / 2px stretch;
+}
+
+/***************
+ * Scroll Bars *
+ ***************/
+
+scrollbar.slider {
+	border-image: url("assets/scrollbar-slider-border-dark.svg") 2 / 2px stretch;
+}
+
+scrollbar.slider.vertical {
+	border-image: url("assets/scrollbar-slider-border-vertical.svg") 2 / 2px stretch;
+}
+scrollbar.vertical button.up {
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+scrollbar.vertical button.down {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+scrollbar.horizontal button.up {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
+
+scrollbar.horizontal button.down {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+/*for Firefox (FIXME-will this cause unwanted matches?*/
+.check:checked  {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.svg")); 
+}
+
+.check:checked:hover,
+.check:active:hover  {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-glow.svg")); 
+}
+
+.radio:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked.svg"));
+}
+
+.button {
+	border-image: url("assets/button-border-dark.svg") 3 / 3px stretch;
+}

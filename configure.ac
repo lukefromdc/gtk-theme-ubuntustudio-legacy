@@ -1,6 +1,6 @@
 AC_PREREQ(2.53)
 
-AC_INIT([gtk-theme-ubuntustudio-legacy], [3.22.8], [https://github.com/lukefromdc])
+AC_INIT([gtk-theme-ubuntustudio-legacy], [3.22.15], [https://github.com/lukefromdc])
 
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz tar-ustar check-news])
 
@@ -31,6 +31,10 @@ UbuntuStudio_Legacy/gtk-3.22/Makefile
 UbuntuStudio_Legacy/gtk-3.20/apps/Makefile
 UbuntuStudio_Legacy/gtk-3.20/assets/Makefile
 UbuntuStudio_Legacy/gtk-3.20/window-controls/Makefile
+UbuntuStudio_Legacy/gtk-4.0/Makefile
+UbuntuStudio_Legacy/gtk-4.0/apps/Makefile
+UbuntuStudio_Legacy/gtk-4.0/assets/Makefile
+UbuntuStudio_Legacy/gtk-4.0/window-controls/Makefile
 UbuntuStudio_Legacy/metacity-1/Makefile
 ])
 
