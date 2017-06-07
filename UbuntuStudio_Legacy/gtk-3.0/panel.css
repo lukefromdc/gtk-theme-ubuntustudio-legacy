@@ -38,6 +38,11 @@ PanelWidget * * {
 	background-color:transparent;
 }
 
+/*Ensure menu bar background stays transparent */
+.mate-panel-menu-bar PanelMenuBar {
+	background-color: transparent;
+}
+
 /*******************
  * MATE Panel Menus *
  ******************/

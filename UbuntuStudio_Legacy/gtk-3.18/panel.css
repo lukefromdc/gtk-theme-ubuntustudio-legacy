@@ -9,6 +9,11 @@
 	color: white;
 }
 
+/*Ensure menu bar background stays transparent */
+.mate-panel-menu-bar PanelMenuBar {
+	background-color: transparent;
+}
+
 /*Theme drag handles for subtle visibility*/
 
 PanelWidget * {
@@ -33,7 +38,7 @@ PanelWidget * * {
 .gnome-panel-menu-bar .menu,
 .mate-panel-menu-bar .menu,
 .menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
-	background-color: alpha(black,0.7); 
+	background-color: alpha(black,0.4); /*this renders dark for some reason*/
 	border-image: none;
 	border-style: solid;
 	border-color: #888a85;
