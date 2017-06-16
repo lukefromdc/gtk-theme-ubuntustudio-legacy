@@ -1119,23 +1119,23 @@ scrollbar.vertical .slider {
 
 
 
-scrollbar:hover slider,
-scrollbar:hover .slider{
+scrollbar slider:hover,
+scrollbar.slider:hover{
 	background-image: url("assets/holes_tiny_glow_horiz.svg"),
 	                  linear-gradient(to right,
 	                                  @slider_gradient_color_a,
 	                                  @slider_gradient_color_b);
 }
 
-scrollbar.vertical:hover slider,
-scrollbar.vertical:hover .slider{
+scrollbar.vertical slider:hover,
+scrollbar.vertical .slider:hover{
 	background-image: url("assets/holes_tiny_glow_vert.svg"),
 	                   linear-gradient(to right,
 	                                  @slider_gradient_color_a,
 	                                  @slider_gradient_color_b);
 }
-scrollbar:hover:active slider,
-scrollbar:hover:active .slider{
+scrollbar slider:hover:active,
+scrollbar .slider:hover:active{
 	color: @theme_fg_color;
 	border-style: solid;
 	background-image: url("assets/holes_tiny_glow_horiz.svg"),
@@ -1144,8 +1144,8 @@ scrollbar:hover:active .slider{
 	                                  @slider_gradient_color_b);
 }
 
-scrollbar.vertical:hover:active slider,
-scrollbar.vertical:hover:active .slider{
+scrollbar.vertical slider:hover:active,
+scrollbar.vertical .slider:hover:active{
 	background-image: url("assets/holes_tiny_glow_vert.svg"),
 	                  linear-gradient(to bottom,
 	                                  @slider_gradient_color_a,
@@ -1153,6 +1153,7 @@ scrollbar.vertical:hover:active .slider{
 }
 
 scrollbar button,
+scrollbar button:disabled,
 scrollbar .button{
 	background-image: none;
 	background-color:@theme_bg_color;
