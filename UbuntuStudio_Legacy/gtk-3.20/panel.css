@@ -2,15 +2,21 @@
  * MATE Panel, GNOME Panel
  *********************************/
 
-/*For GNOME panel in GTK 3.22 */
-/*Specify this first so it does not override anything else*/
-.gnome-panel-menu-bar {
+/*Default to transparent*/
+.gnome-panel-menu-bar,
+.mate-panel-menu-bar{
 	background-color: transparent;
 }
 
+/*Theme panel toplevel and applets (GtkPlugs)*/
+/*Note that plugs render over the desktop, NOT the panel BG */
+
 panel-toplevel.background.horizontal,
-.mate-panel-menu-bar  {
-	background-color:#000000;
+PanelToplevel.mate-panel-menu-bar,
+#PanelPlug.mate-panel-menu-bar  {
+	background-image: url("assets/panel.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: white;
 	outline-offset: 1px;
 	outline-color: @theme_selected_bg_color;
