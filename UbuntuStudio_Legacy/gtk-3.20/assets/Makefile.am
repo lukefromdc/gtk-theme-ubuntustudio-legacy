@@ -59,6 +59,7 @@ theme_DATA = \
 	menuitem-border-dark.svg \
 	menuitem-hiver-border-dark.svg \
 	notebook-border-dark.svg \
+	panel.png \
 	pane-separator-grip-hover.png \
 	pane-separator-grip-hover.svg \
 	pane-separator-grip.png \
