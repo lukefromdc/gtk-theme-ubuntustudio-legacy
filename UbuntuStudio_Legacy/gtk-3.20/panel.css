@@ -13,10 +13,8 @@
 
 panel-toplevel.background.horizontal,
 PanelToplevel.mate-panel-menu-bar,
-#PanelPlug.mate-panel-menu-bar  {
+#PanelPlug{
 	background-image: url("assets/panel.png");
-	background-repeat: no-repeat;
-	background-size: cover;
 	color: white;
 	outline-offset: 1px;
 	outline-color: @theme_selected_bg_color;
