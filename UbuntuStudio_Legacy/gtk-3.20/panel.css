@@ -252,10 +252,6 @@ gp-calendar-window
 	background-color:transparent;  
 } 
 
-gp-calendar-window{
-	background-color:transparent;
-}
-
 window#MatePanelPopupWindow frame,
 gp-calendar-window frame{
 	background-color: alpha(black, 0.9);
@@ -267,17 +263,20 @@ gp-calendar-window frame{
 	
 }
 
-window#MatePanelPopupWindow frame calendar,
-gp-calendar-window frame calendar{
-	background-color:transparent;
-	color: white;
+window#MatePanelPopupWindow calendar{
+	background-image: -gtk-scaled(url("assets/calendar_grid_330.svg"));
+}
+
+gp-calendar-window calendar{
+	background-image: -gtk-scaled(url("assets/calendar_grid.svg"));
 }
 
 window#MatePanelPopupWindow calendar,
 gp-calendar-window calendar{
-	background-image: -gtk-scaled(url("assets/calendar_grid.svg"));
 	background-repeat: no-repeat;
 	background-position: right top;
+	background-color: transparent;
+	color: white;
 	padding: 6px 5px 1px 4px;
     font-family: Sans; /*hardcode this so it never misaligns from font change*/
 	font-size: 12px;   /*hardcode this so it never misaligns from font change*/

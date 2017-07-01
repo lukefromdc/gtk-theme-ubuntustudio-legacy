@@ -1,19 +1,14 @@
 /*********************************
  * MATE Panel, Fallback Mode Panel
  *********************************/
-
-.mate-panel-menu-bar,
-.gnome-panel-menu-bar {
-	background-color:black;
-	background-image: none;
+/*Default to transparent*/
+.gnome-panel-menu-bar,
+.mate-panel-menu-bar{
         background-color: transparent;
-	color: white;
 }
 
-/*Ensure menu bar background stays transparent */
-.mate-panel-menu-bar PanelMenuBar {
-	background-color: transparent;
-}
+/*Theme panel toplevel and applets (GtkPlugs)*/
+/*Note that plugs render over the desktop, NOT the panel BG */
 
 panel-toplevel.background.horizontal,
 PanelToplevel.mate-panel-menu-bar,
@@ -24,6 +19,18 @@ PanelToplevel.mate-panel-menu-bar,
         outline-color: @theme_selected_bg_color;
 }
 
+
+/*Keep box-shadow off anything from the panel*/
+.gnome-panel-menu-bar,
+.gnome-panel-menu-bar,
+.gnome-panel-menu-bar .window-frame, 
+.mate-panel-menu-bar .window-frame
+.gnome-panel-menu-bar .window-frame.csd,
+.mate-panel-menu-bar .window-frame.csd,
+.gnome-panel-menu-bar .window-frame.csd.popup,
+.mate-panel-menu-bar .window-frame.csd.popup {
+		box-shadow: none; 
+}
 
 /*Theme drag handles for subtle visibility*/
 
@@ -37,41 +44,57 @@ PanelWidget * * {
 	background-color:transparent;
 }
 
+/*Ensure menu bar background stays transparent */
+.mate-panel-menu-bar PanelMenuBar {
+	background-color: transparent;
+}
+
 /*******************
  * MATE Panel Menus *
  ******************/
 
-/* Set up transparent black menu backgrounds with gray borders */
+ /*Make backgrounds of main menus slightly transparent black */
 
-/* Applying the transparent bg here forces a much lower alpha value */
-/* due to multiple application but falls back gracefully when compositing is not available */
+	/*NOTE: alpha value gets applied BOTH to menu and menushell for doubled opacity*/
 
-.gnome-panel-menu-bar .menu,
 .mate-panel-menu-bar .menu,
-.menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
-	background-color: alpha(black,0.75);
+.mate-panel-menu-bar .menu,
+.menu#cpufreq-menu /*For hacked Ubuntu indicator-cupfreq until it catches up */
+ {
+	background-color: alpha(black,0.7);
 	border-image: none;
 	border-style: solid;
 	border-color: #888a85;
 	border-width: 3px 3px 3px 3px;
 	border-radius:10px;
-	padding: 0px;	/*stop double borders on bottoms of some menus */
+	font: normal;	
+	padding: 0px 0px 0px 0px;  /*Kill double borders on some menus */
 }
 
-/*Keep box-shadow off anything from the panel*/
 
-/*menu alpha could be set up here at 0.9-but this would*/
-/*cause ugly fallback issues when compositing not available*/
+ /*Font used on panel itself and "custom menu bar" */
 
-.gnome-panel-menu-bar .window-frame.csd.popup,
-.mate-panel-menu-bar .window-frame.csd.popup
-{     
-	box-shadow: none;  
+.mate-panel-menu-bar, .gnome-panel-menu-bar  {
+	font: bold;
 }
 
-/*Keep selected menuitem image off main panel "custom menu bar"*/
+/*Open up the main menu size a bit*/
+/*This speeds up main menu navigation*/
 
-gnome-panel-menu-bar .menubar > .menuitem:hover,
+.mate-panel-menu-bar .menubar .menu .menuitem,
+.mate-panel-menu-bar .button .menu .menuitem {
+	font: Condensed 12;
+	padding: 2px 8px;
+}
+
+/*Smaller font on other menus so they don't look ballooned*/
+
+.mate-panel-menu-bar .menu .menuitem {
+	font: Condensed 11;
+}
+
+/*Keep selected menuitem image off main panel menubar*/
+
 .mate-panel-menu-bar .menubar > .menuitem:hover{
 	background-image:none;
 	background-color:transparent;
@@ -79,37 +102,12 @@ gnome-panel-menu-bar .menubar > .menuitem:hover,
 	border-width: 0px;
 }
 
-/*Font used on panel itself and "custom menu bar" */
-
-.mate-panel-menu-bar .label, .gnome-panel-menu-bar .label {
-	font: bold;
-}
-
-/*Open up the main menu size a bit*/
-/*This speeds up main menu navigation*/
-
-.gnome-panel-menu-bar .menubar .menu .menuitem .label,
-.gnome-panel-menu-bar .button .menu .menuitem .label,
-.mate-panel-menu-bar .menubar .menu .menuitem .label,
-.mate-panel-menu-bar .button .menu .menuitem .label{
-	font: Condensed 12;
-	padding: 2px 8px;
-}
-
-/*Smaller font on other menus so they don't look ballooned*/
-
-.gnome-panel-menu-bar .menu .menuitem .label,
-.mate-panel-menu-bar .menu .menuitem .label{
-	font: Condensed 11;
-}
-
-
 /*****************************
  * Window list and Buttons *
  *****************************/
 
 /*window list button theme somewhere between GNOME and Cinnamon/GNOME */
-WnckTasklist .button,
+
 .mate-panel-menu-bar .button, .gnome-panel-menu-bar .button,
 .mate-panel-menu-bar .button:active, .gnome-panel-menu-bar .button:active {
 	border-color: #333333;
@@ -140,20 +138,19 @@ WnckPager, WnckTasklist  {
 
 }
 
-#clock-applet-button,
 ClockBox * {
 	color: white;
 	font: bold;
 	background-color:transparent;
-	background-image: none;
 }
 
 /*******************
  * MATE Volume Control and Power Manager's brightness slider *
  ******************/
+/*Set up the volume control and brightness slider frames to look like the menu theme */
 
-.mate-panel-menu-bar .frame,		 /*older hacked versions of mate-media only*/
-.mate-panel-applet-slider .frame{    /*Current mate-media 1.11.0 and later*/
+.mate-panel-applet-slider .frame,
+.mate-panel-menu-bar .frame{ 
 	background-color: alpha(black, 0.8);
 	border-image: none;
 	border-style: solid;
@@ -164,17 +161,13 @@ ClockBox * {
 	margin: 0px;
 }
 
-.mate-panel-menu-bar .frame .frame,
-.mate-panel-applet-slider .frame .frame{ 
+.mate-panel-applet-slider .frame .frame,
+.mate-panel-menu-bar .frame .frame{ 
 	background-color:transparent;
 	border-image: none;
 	border-style:none;
 	border-radius:0px;
 	padding: 0px;
-}
-/*support fix for gtk3 themes that do not explicitly support MATE */
-.mate-panel-applet-slider {
-background: transparent;
 }
 
 /*******************
@@ -208,7 +201,11 @@ GtkCalendar {
 }
 
 GtkCalendar:selected {
-	background-color:alpha(@theme_selected_bg_color,0.7);
+	background-color: transparent;
+	background-image: url("assets/calendar-selected-bg.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	text-shadow: 1px 1px alpha(@theme_fg_color, 0.3);
 	font: bold;
 }
 
@@ -221,6 +218,12 @@ GtkCalendar.view {
 	padding: 2px;
     background-color:transparent;
 	background-image: url("assets/calendar_grid.svg");
+	background-repeat: no-repeat;
+}
+
+#MatePanelPopupWindow GtkCalendar.view{
+	background-image: -gtk-scaled(url("assets/calendar_grid_340.svg"));
+	background-repeat: no-repeat;
 }
 
 GtkCalendar.header {
