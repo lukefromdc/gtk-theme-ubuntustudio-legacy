@@ -1,3 +1,7 @@
+3.22.16
+	*All GTK 3 versions use original UbuntuStudio style mate/gnome panel background image
+	*All GTK 3 versions adjustments for recent mate-panel clock/calendar popup changes
+
 3.22.15
 	*GTK 3.20/22- fix white squares over Nemo/Nautilus treeview scrollbars
 	*GTK 3.20/22-fix white on white text in Libreoffice, some Firefox widgets

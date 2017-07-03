@@ -9,7 +9,7 @@ MATE GTK3 user notes:
 transparent panel menu theme requires compositing in marco, metacity, or compiz
 
 Mate-Panel calendar week numbers should be turned OFF in panel clock preferences
-In the gtk3.14/16/18 version of this theme they cannot be distinguished from the days of the month and in the gtk3.20 version the calendar grid renders over them and Sun through Friday and picks up a gtk rendering error.
+In this theme they cannot be distinguished from the days of the month and the calendar grid renders over both them and Sun through Friday and picks up a gtk rendering error. On top of all else the spacing between numbers changes when week numbers are enabled on the latest mate-panel builds
 
 GENERAL:
 
