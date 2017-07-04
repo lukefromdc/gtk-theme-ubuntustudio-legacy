@@ -2,15 +2,19 @@
  * MATE Panel, GNOME Panel
  *********************************/
 
-/*For GNOME panel in GTK 3.22 */
-/*Specify this first so it does not override anything else*/
-.gnome-panel-menu-bar {
+/*Default to transparent*/
+.gnome-panel-menu-bar,
+.mate-panel-menu-bar{
 	background-color: transparent;
 }
 
+/*Theme panel toplevel and applets (GtkPlugs)*/
+/*Note that plugs render over the desktop, NOT the panel BG */
+
 panel-toplevel.background.horizontal,
-.mate-panel-menu-bar  {
-	background-color:#000000;
+PanelToplevel.mate-panel-menu-bar,
+#PanelPlug{
+	background-image: url("assets/panel.png");
 	color: white;
 	outline-offset: 1px;
 	outline-color: @theme_selected_bg_color;
@@ -181,16 +185,26 @@ button#showdesktop-button, button#clock-applet-button,  button#drive-button
 /*WnckPager in both gnome-panel and mate-panel*/
 wnck-pager,
 .wnck-pager{
-	border-width: 1px 0px;
-	border-style: solid;
 	border-color: transparent;
-	background-image: linear-gradient(alpha(white,0.35),
-                                      alpha(white,0.35));
-}wnck-pager:selected,
+	border-width: 0px;
+	border-style: none;
+	background-image: linear-gradient(to bottom,
+									transparent,
+									shade(@theme_bg_color, 1.1) 5%,
+									shade(@theme_bg_color, 1.1) 95%,
+									transparent);
+}
+
+wnck-pager:selected,
 .wnck-pager:selected {
-	background-color:transparent;
-	background-image: linear-gradient(@theme_selected_fg_color,
-                                      @theme_selected_fg_color);
+	border-color: transparent;
+	border-width: 0px;
+	border-style: none;
+	background-image: linear-gradient(to bottom,
+									transparent,
+									@theme_selected_fg_color 5%,
+									@theme_selected_fg_color 95%,
+									transparent);
 }
 
 na-tray-applet {
@@ -248,10 +262,6 @@ gp-calendar-window
 	background-color:transparent;  
 } 
 
-gp-calendar-window{
-	background-color:transparent;
-}
-
 window#MatePanelPopupWindow frame,
 gp-calendar-window frame{
 	background-color: alpha(black, 0.9);
@@ -263,20 +273,23 @@ gp-calendar-window frame{
 	
 }
 
-window#MatePanelPopupWindow frame calendar,
-gp-calendar-window frame calendar{
-	background-color:transparent;
-	color: white;
+window#MatePanelPopupWindow calendar{
+	background-image: -gtk-scaled(url("assets/calendar_grid_330.svg"));
+}
+
+gp-calendar-window calendar{
+	background-image: -gtk-scaled(url("assets/calendar_grid.svg"));
 }
 
 window#MatePanelPopupWindow calendar,
 gp-calendar-window calendar{
-	background-image: -gtk-scaled(url("assets/calendar_grid.svg"));
 	background-repeat: no-repeat;
 	background-position: right top;
+	background-color: transparent;
+	color: white;
 	padding: 6px 5px 1px 4px;
-    font-family: Sans; /*hardcode this so it never misaligns from font change*/	
-	font-size: 12pt;   /*hardcode this so it never misaligns from font change*/	
+    font-family: Sans; /*hardcode this so it never misaligns from font change*/
+	font-size: 12px;   /*hardcode this so it never misaligns from font change*/
 }
 
 window#MatePanelPopupWindow calendar:selected:focus,
