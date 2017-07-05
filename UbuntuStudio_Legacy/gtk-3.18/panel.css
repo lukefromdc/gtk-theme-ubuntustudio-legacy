@@ -18,7 +18,14 @@
 panel-toplevel.background.horizontal,
 PanelToplevel.mate-panel-menu-bar,
 #PanelPlug{
-        background-image: url("assets/panel.png");
+	background-image: linear-gradient(to bottom,
+						#303030,
+						#1f1f1f 22%,
+						#141414 32%,
+						#040404 50%,
+						#141414 68%,
+						#1f1f1f 78%,
+						#303030);
         color: white;
         outline-offset: 1px;
         outline-color: @theme_selected_bg_color;
