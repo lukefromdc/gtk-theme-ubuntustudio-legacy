@@ -10,7 +10,7 @@
 /*Theme panel toplevel and applets (GtkPlugs)*/
 /*Note that plugs render over the desktop, NOT the panel BG */
 
-panel-toplevel.background.horizontal,
+panel-toplevel.background,
 PanelToplevel.mate-panel-menu-bar,
 #PanelPlug{
 	background-image: linear-gradient(to bottom,
@@ -21,11 +21,24 @@ PanelToplevel.mate-panel-menu-bar,
 						#141414 68%,
 						#1f1f1f 78%,
 						#303030);
-        color: white;
-        outline-offset: 1px;
-        outline-color: @theme_selected_bg_color;
+	color: white;
+	outline-offset: 1px;
+	outline-color: @theme_selected_bg_color;
 }
 
+/*Handle the vertical panel case, just like theming a scrollbar */
+panel-toplevel.background.vertical,
+PanelToplevel.mate-panel-menu-bar.vertical,
+#PanelPlug.vertical{
+	background-image: linear-gradient(to right,
+						#303030,
+						#1f1f1f 22%,
+						#141414 32%,
+						#040404 50%,
+						#141414 68%,
+						#1f1f1f 78%,
+						#303030);
+}
 
 /*Keep box-shadow off anything from the panel*/
 .gnome-panel-menu-bar,
