@@ -42,7 +42,7 @@ PanelToplevel.mate-panel-menu-bar.vertical,
 }
 
 /*Theme wnckpager and wncktasklist drag handles for subtle visibility*/
-MatePanelAppletFrameDBus{
+MatePanelAppletFrameDBus>MatePanelAppletFrameDBus{
 	background-color:alpha(@theme_bg_color, 0.2 );
 }
 

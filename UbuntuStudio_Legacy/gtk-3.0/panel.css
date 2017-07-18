@@ -54,14 +54,8 @@ PanelToplevel.mate-panel-menu-bar.vertical,
 
 /*Theme drag handles for subtle visibility*/
 
-PanelWidget * {
-
+MatePanelAppletFrameDBus>MatePanelAppletFrameDBus {
 	background-color:alpha(@theme_bg_color, 0.3 );
-}
-
-PanelWidget * * {
-
-	background-color:transparent;
 }
 
 /*Ensure menu bar background stays transparent */
