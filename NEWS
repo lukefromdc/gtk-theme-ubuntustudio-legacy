@@ -1,3 +1,13 @@
+3.22.17
+	*GTK4:fix deprecated style properties
+	*GTK4:fix makefile for window controls
+	*mate-panel: Fix drag handle rendering with in-process applets
+	*mate/gnome panel: Reorient backgrounds in vertical panels
+	*mate-panel/gnome-panel: use gradient to define background image
+	*mate-panel/gnome-panel: fix for libwnck-3-0 3.24
+	*Fix makefiles so new files get into builds
+	*GTK 3.18-fix too-light mate-panel menu transparency with current GTK 3.18 versions
+
 3.22.16
 	*All GTK 3 versions use original UbuntuStudio style mate/gnome panel background image
 	*All GTK 3 versions adjustments for recent mate-panel clock/calendar popup changes
