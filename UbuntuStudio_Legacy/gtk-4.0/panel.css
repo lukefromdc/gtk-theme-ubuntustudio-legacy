@@ -227,11 +227,11 @@ wnck-pager:selected,
 									@theme_selected_fg_color 95%,
 									transparent);
 }
-
+/* This won't work in GTK4 if MATE ever builds against it
 na-tray-applet {
     -NaTrayApplet-icon-padding: 1px;
 }
-
+*/
 /*******************
  * MATE Volume Control and Power Manager's brightness slider *
  ******************/

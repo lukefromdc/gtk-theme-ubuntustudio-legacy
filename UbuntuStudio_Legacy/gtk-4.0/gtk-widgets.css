@@ -1,16 +1,5 @@
 * {
 	padding: 0;
-	-GtkToolButton-icon-spacing: 4;
-	-GtkTextView-error-underline-color:  @error_color;
-	-GtkToolItemGroup-expander-size: 12;
-	-GtkTreeView-expander-size: 13;
-	-GtkTreeView-horizontal-separator: 4;
-	-GtkWidget-text-handle-width: 20;
-	-GtkWidget-text-handle-height: 24;
-	-GtkDialog-button-spacing: 4;
-	-GtkDialog-action-area-border: 0;
-  	-GtkWindow-resize-grip-width: 10;
-	-GtkWindow-resize-grip-height: 10;
 	outline-style: dotted;
 	outline-offset: -3px;
 	outline-color: alpha(@theme_selected_bg_color, 0.6);
@@ -1204,7 +1193,6 @@ menubar {
 	background-color: shade(@theme_bg_color,0.75);
 	border-width: 0px;
 	border-style: none;
-	-GtkWidget-window-dragging: true;
 }
 
 menuitem,
@@ -1324,9 +1312,6 @@ toolbar{
         background-image: linear-gradient(to bottom,
 	                                  shade(@theme_bg_color,1.1),
 	                                  shade(@theme_bg_color,0.9));
-
-	                                 
-	-GtkWidget-window-dragging: true;
 }
 
 toolbar button:focus,
@@ -1503,10 +1488,6 @@ inline-toolbartoolbar {
  **************/
 
 combobox {
-
-	-combobox-arrow-scaling: 0.5;
-	-combobox-shadow-type: none;
-
 	padding: 0;
 	text-shadow: 0 -1px black;
 }
@@ -1551,8 +1532,6 @@ combobox button:hover image {
 
 combobox separator {
     /* always disable separators */
-    -GtkWidget-horizontal-separator: 0;
-    -GtkWidget-vertical-separator: 0;
 }
 
 /* compensation for combo shadow */
@@ -1729,8 +1708,6 @@ osd toolbar {
 	                                  @osd_toolbar_bg_b 63%,
 	                                  @osd_toolbar_bg_c);
 	background-color: transparent;
-
-	-GtkToolbar-button-relief: normal;
 }
 
 .osd toolbar button
@@ -1911,8 +1888,6 @@ switch slider:disabled {
 statusbar {
 	padding: 0px;
 	color: @theme_fg_color;
-	-statusbar-shadow-type: none;
-
 }
 
 statusbar frame  {
@@ -2093,6 +2068,7 @@ expander arrow:active{
 
 expander arrow {
 	min-height: 16px;
+	min-width: 16px;
 	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic")
 } 
 
@@ -2179,7 +2155,6 @@ EogScrollView, /* Eog */
 CheeseThumbView /* Cheese */
 {
 	background-color: @chrome_bg_color;
-	-EogScrollView-shadow-type: none;
 }
 
 
