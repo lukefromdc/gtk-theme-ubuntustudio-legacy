@@ -166,12 +166,24 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
  * Window list and Buttons *
  *****************************/
 
+.mate-panel-menu-bar button, .gnome-panel-menu-bar button,
+.mate-panel-menu-bar button:checked, .gnome-panel-menu-bar button:checked{
+	border-color: transparent;
+	border-style: none;
+	background-image: none;
+	border-image: none;
+	border-image-width: 0px;
+	border-width: 0px;
+	background-color: transparent;
+	min-width: 16px;
+	min-height: 16px;
+}
+/*Most panel buttons */
+
+
 /*window list button theme somewhere between GNOME and Cinnamon/GNOME */
 
-
-.mate-panel-menu-bar button, .gnome-panel-menu-bar button,
-.mate-panel-menu-bar button:checked, .gnome-panel-menu-bar button:checked,
-#tasklist-button,#tasklist-button:checked  { /*for gnome-panel*/
+#tasklist-button,#tasklist-button:checked  {
 	border-color: #333333;
 	border-style: solid;
 	background-image: none;
