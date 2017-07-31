@@ -48,6 +48,15 @@ MatePanelAppletFrameDBus>MatePanelAppletFrameDBus{
 	background-color:alpha(@theme_bg_color, 0.2 );
 }
 
+/*Stop jumping cpufreq labels with bold text*/
+#PanelApplet>widget>box>box>label{
+	min-width: 35px;
+}
+/*Stop jumping hardware monitor labels with bold text */
+#PanelApplet>grid>label{
+	min-width: 45px;
+}
+
 /*******************
  * MATE Panel Menus *
  ******************/
