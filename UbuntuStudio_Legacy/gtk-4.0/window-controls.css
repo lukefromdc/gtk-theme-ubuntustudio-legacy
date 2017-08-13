@@ -68,6 +68,14 @@ decoration.backdrop {
 	margin: 0px;
 }
 
+/*Theme this as a toolbar when NOT in an actual CSD window */
+headerbar,
+.titlebar{
+        background-image: linear-gradient(to bottom,
+	                                  shade(@theme_bg_color,1.1),
+	                                  shade(@theme_bg_color,0.9));
+}
+
 headerbar,
 .titlebar {
 	text-shadow: 1px 1px lighter (@bg_color);
