@@ -1,3 +1,7 @@
+3.22.18
+	*GTK3.22/GTK4: Theme headerbar as toolbar if not in actual CSD window
+	*GTK 3.20/22:: mate-panel: remove dictionary applet border
+
 3.22.17
 	*GTK4:fix deprecated style properties
 	*GTK4:fix makefile for window controls
