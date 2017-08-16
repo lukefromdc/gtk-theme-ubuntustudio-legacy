@@ -2455,3 +2455,16 @@ dialog calendar{
 	font-size: 120%;
 }
 
+/*************
+ *Gtk-about dialog *
+ *************/
+
+/*Credits window */
+
+dialog>box>box>stack>box>scrolledwindow * {
+	color: black;
+}
+
+dialog>box>box>stack>box>scrolledwindow link {
+	color: shade(@link_color, 0.4);
+}
