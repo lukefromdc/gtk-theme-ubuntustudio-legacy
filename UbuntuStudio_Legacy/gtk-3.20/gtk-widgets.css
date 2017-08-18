@@ -1193,7 +1193,67 @@ scrollbar.slider.vertical.fine-tune:hover:active {
 	                                   @slider_gradient_color_a,
 	                                   @slider_gradient_color_b);
 }
+/*Compensate for optical illusion created by SSD window border*/
+scrollbar.vertical{
+	border-left-style: solid;
+	border-left-width: 3px;
+	border-color:@theme_bg_color;
+}
 
+scrollbar.vertical trough{
+	margin-right: 1px;
+}
+
+
+/*CSD windows don't have normal borders so different compensation needed */
+.csd scrollbar.horizontal{
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-color:@theme_bg_color;
+}
+
+.csd scrollbar.horizontal trough{
+	margin-bottom: 2px;
+}
+
+.csd scrollbar.vertical{
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-color:@theme_bg_color;
+}
+
+.csd scrollbar.vertical trough{
+	margin-right: 2px;
+}
+
+/*Not with the .frame style class on the scrolledwindow unless .view also used*/
+/*This leaves the borders for Caja and Nemo without specifying this again     */
+
+scrolledwindow.frame:not(.view) scrollbar.horizontal{
+	border-top-style: none;
+	border-top-width: 0px;
+	border-bottom-style: solid;
+	border-bottom-width: 0px;
+}
+
+scrolledwindow.frame:not(.view) scrollbar.horizontal trough{
+	margin-bottom: 0px;
+}
+
+scrolledwindow.frame:not(.view) scrollbar.vertical{
+	border-left-style: none;
+	border-left-width: 0px;
+	border-right-style: solid;
+	border-right-width: 0px;
+}
+
+scrolledwindow.frame:not(.view) scrollbar.vertical trough{
+	margin-right: 0px;
+}
 
 /*********
  * Menus *
@@ -2344,6 +2404,37 @@ placessidebar separator {
 	background-color:@theme_bg_color;
 	min-height: 1px;
 }
+
+/*narrow scrollbars in sidebar */
+
+placessidebar scrollbar slider,
+placessidebar scrollbar button,
+.sidebar scrollbar slider,
+.sidebar scrollbar button{
+	min-width: 8px;
+}
+
+placessidebar scrollbar.vertical,
+.sidebar scrollbar.vertical{
+	border-left-style: none;
+	border-left-width: 0px;
+}
+
+placessidebar scrollbar.vertical,
+.sidebar scrollbar.vertical trough{
+	margin-right: 0px;
+}
+
+placessidebar.frame scrollbar.vertical{
+	border-left-style: solid;
+	border-left-width: 3px;
+	border-right-style: solid;
+	border-right-width: 0px;
+	border-color: @theme_bg_color;
+}
+
+
+
 
 /**********************
  *     GtkFileChooser     *

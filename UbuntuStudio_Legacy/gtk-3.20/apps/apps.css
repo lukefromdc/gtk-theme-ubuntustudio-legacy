@@ -102,7 +102,21 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 	color:@theme_text_color;
 }
 
- 
+.caja-side-pane scrollbar slider,
+.caja-side-pane scrollbar button{
+	min-width: 8px;
+}
+
+.caja-side-pane scrollbar.vertical{
+	border-left-style: none;
+	border-left-width: 0px;
+}
+
+.caja-side-pane scrollbar.vertical trough{
+	margin-right: 0px;
+}
+
+
 /***************************
 		* Nemo *
 
@@ -143,6 +157,23 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
     background-image: none;
 	border-width: 0px;
 }
+
+.nemo-places-sidebar scrollbar slider,
+.nemo-places-sidebar  scrollbar button{
+	min-width: 8px;
+}
+
+.nemo-places-sidebar  scrollbar.vertical{
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-color:@theme_bg_color;
+}
+
+.nemo-places-sidebar  scrollbar.vertical trough{
+	margin-right: 0px;
+}
+
+
 
 /*May match some other text buttons but this is only way until nemo supports GTK 3.20 */
 /*2nd line is RIGHT way when Federa patch for GTK 20 gets merged*/
@@ -216,7 +247,6 @@ window>grid>paned>box>paned>box>notebook>stack>box>overlay>scrolledwindow .entry
 	box-shadow: none;
 }
 
-
 /***************************
 		* Nautilus *
 
@@ -227,7 +257,20 @@ put the navigation window folder on the background*/
 
 .nautilus-window scrolledwindow {
 	background-color: @theme_base_color;
-}		
+}	
+
+.nautilus-window scrolledwindow scrollbar.vertical{
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-color:@theme_bg_color;
+}
+
+.nautilus-window scrolledwindow scrollbar.vertical trough{
+	margin-right: 1px;
+}
+
 
 nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the separate desktop binary*/
 .nautilus-desktop-window scrolledwindow { 				 /*Nautilus with the separate desktop binary*/
