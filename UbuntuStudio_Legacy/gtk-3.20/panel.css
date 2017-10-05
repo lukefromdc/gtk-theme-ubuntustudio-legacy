@@ -50,8 +50,9 @@ MatePanelAppletFrameDBus>MatePanelAppletFrameDBus{
 
 /*Stop jumping cpufreq labels with bold text*/
 #PanelApplet>widget>box>box>label{
-	min-width: 30px;
+	min-width: 30px; /*can't go wider so have to condense the panel font*/
 }
+
 /*Stop jumping hardware monitor labels with bold text */
 #PanelApplet>grid>label{
 	min-width: 45px;
@@ -145,6 +146,7 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 
 .mate-panel-menu-bar  label, .gnome-panel-menu-bar  label{
 	font-weight: bold;
+	font-stretch: condensed; /*This saves space with bold text & makes cpufreq applet text fit*/
 }
 
 .mate-panel-menu-bar menu label, .gnome-panel-menu-bar menu label{
@@ -296,6 +298,7 @@ background: transparent;
 #clock-applet-button:hover {
 	color: white;
 	font-weight: bold;
+	font-stretch: condensed;
 	background-color:transparent;
 }
 
