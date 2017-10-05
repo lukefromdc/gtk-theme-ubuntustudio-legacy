@@ -50,7 +50,7 @@ MatePanelAppletFrameDBus>MatePanelAppletFrameDBus{
 
 /*Stop jumping cpufreq labels with bold text*/
 #PanelApplet>widget>box>box>label{
-	min-width: 35px;
+	min-width: 30px;
 }
 /*Stop jumping hardware monitor labels with bold text */
 #PanelApplet>grid>label{
