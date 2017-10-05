@@ -1,3 +1,7 @@
+3.22.21
+	*GTK 3.22/3.20 mate-panel: reduce label width to prevent truncation
+	*GTK 3.22/3.20:smaller sidebar scrollbars, fix view scrollbar centering
+	*GTK 3.22/20: fix Gtk-About dialog white on white text
 3.22.18
 	*GTK3.22/GTK4: Theme headerbar as toolbar if not in actual CSD window
 	*GTK 3.20/22:: mate-panel: remove dictionary applet border
