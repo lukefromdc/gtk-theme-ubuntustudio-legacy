@@ -509,6 +509,15 @@ headerbar.primary-toolbar.toolbar{
 
 }
 
+/**********************************
+ * nm-applet (network-manager-gnome *
+ **********************************/
+
+/*Keep the border image off password dialog entry areas*/
+dialog>box>box>box>grid>box>notebook{
+	border-image: none;
+}
+
 
 /***********************
  * Firefox *
