@@ -257,20 +257,32 @@ put the navigation window folder on the background*/
 
 .nautilus-window scrolledwindow {
 	background-color: @theme_base_color;
+	margin-right:0px;
 }	
 
-.nautilus-window scrolledwindow scrollbar.vertical{
-	border-left-style: solid;
-	border-left-width: 2px;
+.nautilus-window notebook scrolledwindow:not(.view) scrollbar.vertical{
+	margin-right: 0px;
 	border-right-style: solid;
 	border-right-width: 2px;
-	border-color:@theme_bg_color;
+	border-right-color: @theme_bg_color;
+	border-left-width: 2px;
+	border-left-style: solid;
+	border-left-color: @theme_bg_color;
 }
 
-.nautilus-window scrolledwindow scrollbar.vertical trough{
-	margin-right: 1px;
+.nautilus-window notebook scrolledwindow:not(.view) scrollbar.horizontal{
+	margin-bottom: 0px;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: @theme_bg_color;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: @theme_bg_color;
 }
 
+.nautilus-window notebook scrolledwindow:not(.view) scrollbar.horizontal{
+	margin-bottom: 0px;
+}
 
 nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the separate desktop binary*/
 .nautilus-desktop-window scrolledwindow { 				 /*Nautilus with the separate desktop binary*/
@@ -328,6 +340,25 @@ nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the s
 	padding:2px;
 }
 
+/***********************
+ * Pluma*
+ ***********************/
+
+/*Remove notebook border and center scrollbars */
+
+.pluma-window notebook {
+	border-style: none;
+	border-image: none;
+}
+
+.pluma-window notebook scrolledwindow:not(.view) scrollbar.vertical{
+	margin-right: 1px;
+
+}
+
+.pluma-window notebook scrolledwindow:not(.view) scrollbar.horizontal{
+	margin-bottom: 1px;
+}
 
 /***********************
  * SpaceFM *
@@ -517,7 +548,6 @@ headerbar.primary-toolbar.toolbar{
 dialog>box>box>box>grid>box>notebook{
 	border-image: none;
 }
-
 
 /***********************
  * Firefox *

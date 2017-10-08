@@ -1105,7 +1105,7 @@ scrollbar .slider {
 	border-image:none;
 	border-color:transparent;
 	min-width: 40px;
-	min-height: 12px;
+	min-height: 14px;
 }
 
 scrollbar.vertical slider,
@@ -1120,7 +1120,7 @@ scrollbar.vertical .slider {
 	border-image:none;
 	border-color:transparent;
 	background-clip: border-box;
-	min-width: 12px;
+	min-width: 14px;
 	min-height: 40px;
 }
 
@@ -1168,12 +1168,22 @@ scrollbar .button {
 	border-image: none;
 	border-style: none;
 	border-width: 0px;
-	border-radius: 0px;
+	border-radius: 3px;
 	min-width: 10px;
 	min-height: 10px;
 	padding: 0px;
 }
+/*Workaround for Yelp scrollbar redraw bug caused my minumum height */
+/*Also ensure arrow icons same size vertical and horizontal */
+scrollbar.horizontal button{
+	min-height: 0px;
+	min-width: 14px;
+}
 
+scrollbar.vertical button{
+	min-height: 14px;
+	min-width: 0px;
+}
 
 scrollbar.slider:disabled {
 	background-image: none;
@@ -1193,24 +1203,43 @@ scrollbar.slider.vertical.fine-tune:hover:active {
 	                                   @slider_gradient_color_a,
 	                                   @slider_gradient_color_b);
 }
-/*Compensate for optical illusion created by SSD window border*/
-scrollbar.vertical{
+
+/*Align scrollbars within notebooks */
+
+notebook scrolledwindow:not(.view) scrollbar.vertical{
+	margin-right: 2px;
+}
+
+notebook scrolledwindow:not(.view) scrollbar.horizontal{
+	margin-bottom: 2px;
+}
+
+/*Compensate for ssd window decoration acting as scrollbar border */
+notebook scrolledwindow.view scrollbar.vertical{
+	border-right-style: solid;
+	border-right-width: 0px;
 	border-left-style: solid;
-	border-left-width: 3px;
+	border-left-width: 1px;
 	border-color:@theme_bg_color;
 }
 
-scrollbar.vertical trough{
-	margin-right: 1px;
+/*Compensate for ssd window decoration acting as scrollbar border */
+notebook scrolledwindow.view scrollbar.horizontal{
+	border-bottom-style: solid;
+	border-bottom-width: 0px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-color:@theme_bg_color;
 }
 
 
 /*CSD windows don't have normal borders so different compensation needed */
+
 .csd scrollbar.horizontal{
 	border-top-style: solid;
-	border-top-width: 1px;
+	border-top-width: 0px;
 	border-bottom-style: solid;
-	border-bottom-width: 2px;
+	border-bottom-width: 1px;
 	border-color:@theme_bg_color;
 }
 
@@ -1220,40 +1249,21 @@ scrollbar.vertical trough{
 
 .csd scrollbar.vertical{
 	border-left-style: solid;
-	border-left-width: 1px;
+	border-left-width: 0px;
 	border-right-style: solid;
-	border-right-width: 2px;
+	border-right-width: 1px;
 	border-color:@theme_bg_color;
 }
 
-.csd scrollbar.vertical trough{
-	margin-right: 2px;
+ /* the small square between scrollbars!!!
+scrolledwindow junction,
+scrolledwindow.frame junction {
+	background-image: none;
+	background-color: @theme_bg_color;
+	border-style: none;
+	border-radius: 0;
 }
-
-/*Not with the .frame style class on the scrolledwindow unless .view also used*/
-/*This leaves the borders for Caja and Nemo without specifying this again     */
-
-scrolledwindow.frame:not(.view) scrollbar.horizontal{
-	border-top-style: none;
-	border-top-width: 0px;
-	border-bottom-style: solid;
-	border-bottom-width: 0px;
-}
-
-scrolledwindow.frame:not(.view) scrollbar.horizontal trough{
-	margin-bottom: 0px;
-}
-
-scrolledwindow.frame:not(.view) scrollbar.vertical{
-	border-left-style: none;
-	border-left-width: 0px;
-	border-right-style: solid;
-	border-right-width: 0px;
-}
-
-scrolledwindow.frame:not(.view) scrollbar.vertical trough{
-	margin-right: 0px;
-}
+*/
 
 /*********
  * Menus *
