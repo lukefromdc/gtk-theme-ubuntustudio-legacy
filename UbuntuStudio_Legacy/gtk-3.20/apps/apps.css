@@ -97,14 +97,25 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 }
 
 /*Caja sidebar */
+
+.caja-side-pane notebook{
+	border-image: none;
+	border-width: 0px;
+}
+
 /*fix information pane unreadable labels*/
 .caja-side-pane notebook stack box>box>label{
 	color:@theme_text_color;
 }
 
+.caja-side-pane scrolledwindow,
+.caja-side-pane scrollbar{
+	margin-right: 0px;
+}
+
 .caja-side-pane scrollbar slider,
 .caja-side-pane scrollbar button{
-	min-width: 8px;
+	min-width: 10px;
 }
 
 .caja-side-pane scrollbar.vertical{

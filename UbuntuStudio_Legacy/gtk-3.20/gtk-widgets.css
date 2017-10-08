@@ -1263,6 +1263,7 @@ scrolledwindow.frame junction {
 	border-style: none;
 	border-radius: 0;
 }
+
 */
 
 /*********
@@ -2421,7 +2422,7 @@ placessidebar scrollbar slider,
 placessidebar scrollbar button,
 .sidebar scrollbar slider,
 .sidebar scrollbar button{
-	min-width: 8px;
+	min-width: 10px;
 }
 
 placessidebar scrollbar.vertical,
