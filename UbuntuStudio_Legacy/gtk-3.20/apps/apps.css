@@ -108,25 +108,18 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 	color:@theme_text_color;
 }
 
-.caja-side-pane scrolledwindow,
-.caja-side-pane scrollbar{
-	margin-right: 0px;
-}
+/*Smaller scrollbars in sidebar */
 
 .caja-side-pane scrollbar slider,
 .caja-side-pane scrollbar button{
 	min-width: 10px;
 }
 
-.caja-side-pane scrollbar.vertical{
-	border-left-style: none;
-	border-left-width: 0px;
-}
+/*Scale the separator to match the scrollbar */
 
-.caja-side-pane scrollbar.vertical trough{
-	margin-right: 0px;
+.caja-navigation-window paned separator{
+	min-width: 4px;
 }
-
 
 /***************************
 		* Nemo *
@@ -161,30 +154,19 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 	color: @theme_bg_color;
 }
 
- /*nemo sidebar*/
+/*nemo sidebar*/
 
 .nemo-window treeview.places-treeview.view{
-	padding: 2px;
+	padding: 1px;
     background-image: none;
 	border-width: 0px;
 }
 
-.nemo-places-sidebar scrollbar slider,
-.nemo-places-sidebar  scrollbar button{
-	min-width: 8px;
+/*Scale the separator to match the scrollbar */
+
+.nemo-window paned separator{
+	min-width: 4px;
 }
-
-.nemo-places-sidebar  scrollbar.vertical{
-	border-left-style: solid;
-	border-left-width: 2px;
-	border-color:@theme_bg_color;
-}
-
-.nemo-places-sidebar  scrollbar.vertical trough{
-	margin-right: 0px;
-}
-
-
 
 /*May match some other text buttons but this is only way until nemo supports GTK 3.20 */
 /*2nd line is RIGHT way when Federa patch for GTK 20 gets merged*/
@@ -271,26 +253,6 @@ put the navigation window folder on the background*/
 	margin-right:0px;
 }	
 
-.nautilus-window notebook scrolledwindow:not(.view) scrollbar.vertical{
-	margin-right: 0px;
-	border-right-style: solid;
-	border-right-width: 2px;
-	border-right-color: @theme_bg_color;
-	border-left-width: 2px;
-	border-left-style: solid;
-	border-left-color: @theme_bg_color;
-}
-
-.nautilus-window notebook scrolledwindow:not(.view) scrollbar.horizontal{
-	margin-bottom: 0px;
-	border-bottom-style: solid;
-	border-bottom-width: 2px;
-	border-bottom-color: @theme_bg_color;
-	border-top-width: 2px;
-	border-top-style: solid;
-	border-top-color: @theme_bg_color;
-}
-
 .nautilus-window notebook scrolledwindow:not(.view) scrollbar.horizontal{
 	margin-bottom: 0px;
 }
@@ -348,7 +310,12 @@ nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the s
 }
 
 .nautilus-window list row {
-	padding:2px;
+	padding: 0px;
+}
+
+/*Scale the separator to match the scrollbar */
+.nautilus-window paned separator{
+	min-width: 4px;
 }
 
 /***********************

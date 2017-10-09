@@ -1150,6 +1150,43 @@ scrolledwindow overshoot.right {
 scrollbar,
 scrollbar:hover {
 	background-color:@theme_bg_color;
+	border-style:solid;
+}
+
+/*Compensate for ssd window decoration acting as scrollbar border */
+scrollbar.vertical{
+	border-right-style: none;
+	border-right-width: 0px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-color:@theme_bg_color;
+}
+
+/*Compensate for ssd window decoration acting as scrollbar border */
+scrollbar.horizontal{
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-color:@theme_bg_color;
+}
+
+/*Symmetrical borders for CSD windows as scrollbars can be very edge */
+.csd scrollbar.vertical{
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-color:@theme_bg_color;
+}
+
+/*Symmetrical borders for CSD windows as scrollbars can be very edge */
+.csd scrollbar.horizontal{
+	border-bottom-style: none;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-color:@theme_bg_color;
 }
 
 scrollbar trough,
@@ -1295,24 +1332,6 @@ scrollbar.slider.vertical.fine-tune:hover:active {
 	                  linear-gradient(to bottom,
 	                                   @slider_gradient_color_a,
 	                                   @slider_gradient_color_b);
-}
-
-/*Compensate for ssd window decoration acting as scrollbar border */
-notebook scrolledwindow.view scrollbar.vertical{
-	border-right-style: solid;
-	border-right-width: 0px;
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-color:@theme_bg_color;
-}
-
-/*Compensate for ssd window decoration acting as scrollbar border */
-notebook scrolledwindow.view scrollbar.horizontal{
-	border-bottom-style: solid;
-	border-bottom-width: 0px;
-	border-top-style: solid;
-	border-top-width: 1px;
-	border-color:@theme_bg_color;
 }
 
 /*********
@@ -2456,34 +2475,18 @@ placessidebar separator {
 
 /*narrow scrollbars in sidebar */
 
+placessidebar scrollbar.vertical,
+.csd placessidebar scrollbar.vertical{
+	border-right-style: none;
+	border-right-width: 0px;
+}
+
 placessidebar scrollbar slider,
 placessidebar scrollbar button,
 .sidebar scrollbar slider,
 .sidebar scrollbar button{
 	min-width: 10px;
 }
-
-placessidebar scrollbar.vertical,
-.sidebar scrollbar.vertical{
-	border-left-style: none;
-	border-left-width: 0px;
-}
-
-placessidebar scrollbar.vertical,
-.sidebar scrollbar.vertical trough{
-	margin-right: 0px;
-}
-
-placessidebar.frame scrollbar.vertical{
-	border-left-style: solid;
-	border-left-width: 3px;
-	border-right-style: solid;
-	border-right-width: 0px;
-	border-color: @theme_bg_color;
-}
-
-
-
 
 /**********************
  *     GtkFileChooser     *
