@@ -1,5 +1,5 @@
 * {
-	padding: 0;
+	padding: 0px;
 	-GtkToolButton-icon-spacing: 4;
 	-GtkTextView-error-underline-color:  @error_color;
 	-GtkToolItemGroup-expander-size: 12;
@@ -11,6 +11,7 @@
 	-GtkDialog-action-area-border: 0;
   	-GtkWindow-resize-grip-width: 10;
 	-GtkWindow-resize-grip-height: 10;
+	-GtkScrolledWindow-scrollbar-spacing: 0; /*Fix offset junctions */
 	outline-style: dotted;
 	outline-offset: -3px;
 	outline-color: alpha(@theme_selected_bg_color, 0.6);
@@ -1058,6 +1059,23 @@ spinbutton entry:focus {
 	            inset 1px 1px alpha(@theme_selected_bg_color, 0.9);
 }
 
+/********************
+ * scrolled windows *
+ ********************/
+
+scrolledwindow {
+    color: @theme_text_color;
+	border-image: none;
+	border-style:none;
+	border-width: 0px;
+}
+
+ /* the small square between scrollbars */
+scrolledwindow junction,
+scrolledwindow.frame junction {
+	background-color: @theme_bg_color;
+}
+
 /**************
  * Scrollbars *
  **************/
@@ -1211,16 +1229,6 @@ scrollbar.slider.vertical.fine-tune:hover:active {
 	                                   @slider_gradient_color_b);
 }
 
-/*Align scrollbars within notebooks */
-
-notebook scrolledwindow:not(.view) scrollbar.vertical{
-	margin-right: 2px;
-}
-
-notebook scrolledwindow:not(.view) scrollbar.horizontal{
-	margin-bottom: 2px;
-}
-
 /*Compensate for ssd window decoration acting as scrollbar border */
 notebook scrolledwindow.view scrollbar.vertical{
 	border-right-style: solid;
@@ -1238,40 +1246,6 @@ notebook scrolledwindow.view scrollbar.horizontal{
 	border-top-width: 1px;
 	border-color:@theme_bg_color;
 }
-
-
-/*CSD windows don't have normal borders so different compensation needed */
-
-.csd scrollbar.horizontal{
-	border-top-style: solid;
-	border-top-width: 0px;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	border-color:@theme_bg_color;
-}
-
-.csd scrollbar.horizontal trough{
-	margin-bottom: 2px;
-}
-
-.csd scrollbar.vertical{
-	border-left-style: solid;
-	border-left-width: 0px;
-	border-right-style: solid;
-	border-right-width: 1px;
-	border-color:@theme_bg_color;
-}
-
- /* the small square between scrollbars!!!
-scrolledwindow junction,
-scrolledwindow.frame junction {
-	background-image: none;
-	background-color: @theme_bg_color;
-	border-style: none;
-	border-radius: 0;
-}
-
-*/
 
 /*********
  * Menus *
@@ -2005,17 +1979,6 @@ statusbar frame  {
 	background-image: none;
 	border-image: none;
 	border-width: 0px 0px;
-}
-
-/*************
- * scrolled windows *
- *************/
-
-scrolledwindow {
-    color: @theme_text_color;
-	border-image: none;
-	border-style:none;
-	border-width: 0px;	
 }
 
 /*************

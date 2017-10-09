@@ -355,20 +355,17 @@ nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the s
  * Pluma*
  ***********************/
 
-/*Remove notebook border and center scrollbars */
+/*Remove notebook border */
 
-.pluma-window notebook {
+.pluma-window notebook{
 	border-style: none;
 	border-image: none;
 }
 
-.pluma-window notebook scrolledwindow:not(.view) scrollbar.vertical{
-	margin-right: 1px;
+/*Remove excess "border" inside scrollbars from incompletely expanded textview*/
 
-}
-
-.pluma-window notebook scrolledwindow:not(.view) scrollbar.horizontal{
-	margin-bottom: 1px;
+.pluma-window notebook scrolledwindow{
+	background-color: @theme_base_color;
 }
 
 /***********************
