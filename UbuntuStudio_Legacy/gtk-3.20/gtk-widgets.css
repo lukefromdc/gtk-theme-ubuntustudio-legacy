@@ -1374,8 +1374,70 @@ menuitem .check, menuitem .radio {
   min-width: 16px;
 }
 
+/* scroll arrows and submenu arrows */
 
-/* scroll arrows */
+menu menuitem arrow,
+.menu menuitem arrow,
+.context-menu menuitem arrow {
+	min-height: 16px; min-width: 16px;
+}
+
+menu menuitem arrow:dir(ltr),
+.menu menuitem arrow:dir(ltr),
+.context-menu menuitem arrow:dir(ltr){
+	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+	margin-left: 10px;
+}
+
+menu menuitem arrow:dir(rtl),
+.menu menuitem arrow:dir(rtl),
+.context-menu menuitem arrow:dir(rtl) {
+	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+	margin-right: 10px;
+}
+
+menu > arrow, .menu > arrow,
+.context-menu > arrow {
+	min-height: 16px;
+	min-width: 16px;
+	padding: 2px;
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+menu > arrow.top,
+.menu > arrow.top,
+.context-menu > arrow.top {
+	margin-top: -6px;
+	border-bottom: 1px solid #888a85;
+	-gtk-icon-source:
+	-gtk-icontheme("pan-up-symbolic");
+}
+
+menu > arrow.bottom,
+.menu > arrow.bottom,
+.context-menu > arrow.bottom {
+	margin-bottom: -6px;
+	border-top: 1px solid #888a85;
+	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+menu > arrow:hover,
+.menu > arrow:hover,
+.context-menu > arrow:hover {
+	background-color:alpha(@theme_selected_bg_color, 0.5);
+}
+
+menu > arrow:disabled,
+.menu > arrow:disabled,
+.context-menu > arrow:disabled {
+	color: transparent;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+/* Menu buttons */
+
 menu button {
 	border-image: none;
 	color: @theme_fg_color;
