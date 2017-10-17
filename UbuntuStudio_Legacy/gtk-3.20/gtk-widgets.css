@@ -1379,7 +1379,8 @@ menuitem .check, menuitem .radio {
 menu menuitem arrow,
 .menu menuitem arrow,
 .context-menu menuitem arrow {
-	min-height: 16px; min-width: 16px;
+	min-height: 16px;
+	min-width: 16px;
 }
 
 menu menuitem arrow:dir(ltr),
@@ -1408,24 +1409,27 @@ menu > arrow, .menu > arrow,
 menu > arrow.top,
 .menu > arrow.top,
 .context-menu > arrow.top {
-	margin-top: -6px;
+	margin-top: 0px;
+	margin-bottom: 6px;
+	padding: 1px;
 	border-bottom: 1px solid #888a85;
-	-gtk-icon-source:
-	-gtk-icontheme("pan-up-symbolic");
+	-gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
 menu > arrow.bottom,
 .menu > arrow.bottom,
 .context-menu > arrow.bottom {
-	margin-bottom: -6px;
+    margin-top: 6px;
+	margin-bottom: -3px; /*fill in bottom of menu under scrollbar*/
+	padding: 1px;
 	border-top: 1px solid #888a85;
 	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
-
 menu > arrow:hover,
 .menu > arrow:hover,
 .context-menu > arrow:hover {
-	background-color:alpha(@theme_selected_bg_color, 0.5);
+	background-color: @theme_selected_bg_color;
+	color: @theme_fg_color;
 }
 
 menu > arrow:disabled,
@@ -1433,7 +1437,8 @@ menu > arrow:disabled,
 .context-menu > arrow:disabled {
 	color: transparent;
 	background-color: transparent;
-	border-color: transparent;
+	border-color: alpha(#888a85, 0.5);
+	color: alpha(@theme_fg_color, 0.3);
 }
 
 /* Menu buttons */
