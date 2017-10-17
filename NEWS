@@ -1,3 +1,13 @@
+3.22.24
+	*GTK 3.22/3.20: clean up menu scrollbar theming
+	*GTK 3.22/3.20: Fix menu scrollbars and arrows
+	*GTK 3.22/20: scrollbar and sidebar cleanups
+	*GTK 3.22/3.20: ensure Libreoffice horiz scrollbar steppers work
+		*At the cost of partial horiz scrollbar rendering in Yelp
+	*GTK 3.22/3.20: Clean up Caja sidepane scrollbars a bit
+	* GTK 3.22/3.20 nm-applet: remove inner border from password dialog
+	*GTK 3.22/3.20 mate-panel: condense bold font on panel
+
 3.22.21
 	*GTK 3.22/3.20 mate-panel: reduce label width to prevent truncation
 	*GTK 3.22/3.20:smaller sidebar scrollbars, fix view scrollbar centering
