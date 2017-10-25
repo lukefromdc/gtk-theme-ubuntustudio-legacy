@@ -803,7 +803,8 @@ button:hover,
 }
 
 button:focus{
-	outline-width: 0px;
+	outline-style: solid;
+	outline-color: alpha(@theme_selected_bg_color, 0.4);
 }
 
 button:active,
@@ -1537,17 +1538,17 @@ toolbar{
         background-image: linear-gradient(to bottom,
 	                                  shade(@theme_bg_color,1.1),
 	                                  shade(@theme_bg_color,0.9));
-
-	                                 
 	-GtkWidget-window-dragging: true;
 }
 
+/*use dotted outlines for focus on toolbar buttons      */
+/*and darken them a bit due to borderless buttons here  */
+
 toolbar button:focus,
 primary-toolbar button:focus{
-	outline-width: 2px;
+	outline-style: dotted;
+	outline-color: alpha(@theme_selected_bg_color, 0.7);
 }
-
-/*use only outlines for focus on toolbar buttons */
 
 toolbar button:focus:not(:hover),
 toolbar.primary-toolbar button:focus:not(:hover),
