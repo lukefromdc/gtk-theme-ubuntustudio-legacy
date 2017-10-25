@@ -121,6 +121,21 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 	min-width: 4px;
 }
 
+/*Theme the combobox button to match GTK2 version      */
+/*Normal button bg image excluded from toolbar buttons */
+/*Bring it back for this one                           */
+
+.caja-navigation-window button.combo{
+	background-image: linear-gradient(to bottom,
+				@button_gradient_color_a,
+					@button_gradient_color_b 50%,
+					@button_gradient_color_c 50%,
+				@button_gradient_color_d);
+
+	outline-style:solid;
+	outline-color: alpha(@theme_selected_bg_color, 0.4);
+}
+
 /***************************
 		* Nemo *
 
