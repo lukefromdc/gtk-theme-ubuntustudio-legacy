@@ -936,7 +936,6 @@ radio:checked:hover,
 	background-color:transparent;
 }
 
-/*Don't highlight whole box for */
 checkbutton:focus,
 checkbutton:focus:hover,
 checkbutton:focus:active,
@@ -949,21 +948,10 @@ radiobutton:focus:active,
 radiobutton:focus:hover:active,
 radiobutton:focus:checked,
 radiobutton:focus:checked:hover{
-	outline-width: 0px;
+	outline-width: 2px;
+	outline-offset:0px;
+	outline-color: alpha(@theme_selected_bg_color, 0.5);
 }
-
-radio:focus,
-radio:focus:hover,
-radio:focus:active,
-radio:focus:hover:active,
-radio:checked:focus,
-radio:checked:focus:hover,
-radio:checked:focus:active,
-radio:checked:focus:hover:active{
-	background-color: alpha(@theme_selected_bg_color, 0.8);
-	border-radius: 8px;
-}
-
 checkbutton:disabled,
 .checkbutton:disabled, 
 radiobutton:disabled,
