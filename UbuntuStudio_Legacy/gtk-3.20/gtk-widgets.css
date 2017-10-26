@@ -869,18 +869,16 @@ button.link.text-button label, button.link label{
 	color: @link_color;
 }
 
-/*
- button.destructive-action {
-	padding: 2px 4px 2px 4px;
-	background-color: red;
+button.destructive-action {
 	color: @theme_fg_color;
 	background-image: linear-gradient(to bottom,	
-					alpha(@button_gradient_color_a,0.5),
-	                                alpha(@button_gradient_color_b,0.5) 50%,
-	                                alpha(@button_gradient_color_c,0.5) 50%,
- 					alpha(@button_gradient_color_d,0.5));
+	                                  #cc1111,
+	                                      shade(#cc1111,1.1) 50%,
+	                                      shade(#cc1111,0.9) 50%,
+	                                  #cc1111);
+	outline-color: alpha(@theme_selected_bg_color, 0.8);
 }
-*/
+
 /*****************
  * Check and Radio buttons  *
  *****************/
