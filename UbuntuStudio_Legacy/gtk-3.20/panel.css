@@ -157,7 +157,7 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 
 .gnome-panel-menu-bar menuitem label,
 .mate-panel-menu-bar menuitem label{
-	font-stretch: ensed;
+	font-stretch: condensed;
 	font-size: 110%;
 }
 
