@@ -516,18 +516,26 @@ headerbar.primary-toolbar.toolbar{
 	color: #ffffff;
 }
 
-/****************************
- *CCSM (for compiz-reloaded*
- ****************************/
+/********************************************
+ *CCSM (GTK 3 version as in compiz-reloaded)*
+ ********************************************/
+
+/*Match mate-control-center*/
+.ccsm-window>box,
 .ccsm-window .frame.view{
+	background-color: shade(@theme_bg_color, 1.05);
+}
+
+/*ccsm sidebar*/
+.ccsm-window>box.horizontal>box.vertical{
 	background-color: @theme_bg_color;
 }
+
 
 .ccsm-window button.flat:not(:hover):not(:active):not(:selected){
 	background-image: none;
 	border-image: none;
 	border-color: transparent;
-
 }
 
 /**********************************
