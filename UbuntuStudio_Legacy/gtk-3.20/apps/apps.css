@@ -439,10 +439,28 @@ matekbd-keyboard-drawing:selected {
  * Gnome-tweak-tool *
  ***********************/
 
+.tweak-group row,
+.tweak-group>row:focus,
+.tweak-group>row:hover,
+.tweak-group>row:active
+.tweak-group>row:hover:focus,
+.tweak-group>row:active:focus,
+.tweak-group>row:hover:active:focus{
+	background-color: shade(@theme_bg_color,0.9);
+	background-image: none;
+	border-image: none;
+	border-color:transparent;
+}
+
+
 .tweak-group row label,
 .tweak-group-startup row label,
 .tweak-group row:hover label,
-.tweak-group-startup row:hover label{
+.tweak-group-startup row:hover label,
+.tweak-group row image,
+.tweak-group-startup row image,
+.tweak-group row:hover image,
+.tweak-group-startup row:hover image{
 	color:@theme_fg_color;
 }
 
