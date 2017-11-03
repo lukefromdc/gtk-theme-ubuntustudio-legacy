@@ -550,16 +550,23 @@ headerbar.primary-toolbar.toolbar{
 	background-color: @theme_bg_color;
 }
 
-
+/*ccsm main window*/
 .ccsm-window button.flat:not(:hover):not(:active):not(:selected){
 	background-image: none;
 	border-image: none;
 	border-color: transparent;
 }
 
+/*Keep the theme the same in expander-controlled sections*/
 .ccsm-window expander,
 .ccsm-window expander *{
 	color: @theme_fg_color;
+}
+
+/*Spinbuttons have white label backgrounds so set their text dark*/
+.ccsm-window spinbutton,
+.ccsm-window expander spinbutton{
+	color: @theme_text_color;
 }
 
 /**********************************
