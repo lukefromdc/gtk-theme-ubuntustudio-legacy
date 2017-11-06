@@ -151,6 +151,29 @@ frame {
     border-width: 0px;
 }
 
+frame.border-inset> border,
+frame.border-outset> border,
+frame.border-ridge> border,
+frame.border-groove> border,
+.frame.border-inset> border,
+.frame.border-outset> border,
+.frame.border-ridge> border,
+.frame.border-groove> border{
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: shade(@theme_bg_color, 0.8);
+}
+
+frame > border.flat,
+.frame.flat {
+	border-style: none;
+}
+
+
 /***************
  * textview*
  ***************/
@@ -1518,12 +1541,13 @@ menubutton menu{
 /************
  * Toolbars *
  ************/
-toolbar{
+toolbar,
+.primary-toolbar{
 	color: @theme_fg_color;
-        padding: 7px;
-        background-image: linear-gradient(to bottom,
-	                                  shade(@theme_bg_color,1.1),
-	                                  shade(@theme_bg_color,0.9));
+	padding: 7px;
+	background-image: linear-gradient(to bottom,
+	                             shade(@theme_bg_color,1.1),
+	                             shade(@theme_bg_color,0.9));
 	-GtkWidget-window-dragging: true;
 }
 
@@ -1531,7 +1555,7 @@ toolbar{
 /*and darken them a bit due to borderless buttons here  */
 
 toolbar button:focus,
-primary-toolbar button:focus{
+.primary-toolbar button:focus{
 	outline-style: dotted;
 	outline-color: alpha(@theme_selected_bg_color, 0.7);
 }
@@ -1546,7 +1570,8 @@ toolbar.primary-toolbar toolbar button:focus:not(:hover){
 /********************
  * Primary Toolbars *
  ********************/
-toolbar:disabled {
+toolbar:disabled,
+.primary-toolbar:disabled {
 	background-image: none;
 	background-color: shade(@theme_bg_color, 0.97);
 }
@@ -1559,31 +1584,31 @@ toolbar  button.image-button:not(hover),
 toolbar  button button.image-button,
 toolbar  button.text-button.image-button:not(hover),
 toolbar  button.text-button.image-button:disabled,
-primary-toolbar button.image-button,
-primary-toolbar toolbar  button.image-button,
-primary-toolbar toolbar  button.image-button,
+.primary-toolbar button.image-button,
+.primary-toolbar toolbar  button.image-button,
+.primary-toolbar toolbar  button.image-button,
 toolbar  button.image-button:disabled,
-primary-toolbar button.image-button:disabled,
-primary-toolbar toolbar  button.image-button:disabled,
-primary-toolbar toolbar  button.image-button:disabled,
+.primary-toolbar button.image-button:disabled,
+.primary-toolbar toolbar  button.image-button:disabled,
+.primary-toolbar toolbar  button.image-button:disabled,
 toolbar  button.image-button:disabled:hover,
-primary-toolbar button.image-button:disabled:hover,
-primary-toolbar toolbar  button.image-button:disabled:hover {
-        border-image: none;
+.primary-toolbar button.image-button:disabled:hover,
+.primary-toolbar toolbar  button.image-button:disabled:hover {
+	border-image: none;
 	color: @theme_fg_color;
 	border-color: transparent;
 	background-image: none;
 	background-color: transparent;
 }
 
-primary-toolbar toolbar button.text-button,
+.primary-toolbar toolbar button.text-button,
 toolbar button.text-button:disabled,
-primary-toolbar button.text-button:disabled,
-primary-toolbar toolbar button.text-button:disabled,
-primary-toolbar toolbar button.text-button:disabled,
+.primary-toolbar button.text-button:disabled,
+.primary-toolbar toolbar button.text-button:disabled,
+.primary-toolbar toolbar button.text-button:disabled,
 toolbar button.text-button:disabled:hover,
-primary-toolbar button.text-button:disabled:hover,
-primary-toolbar toolbar button.text-button:hover{
+.primary-toolbar button.text-button:disabled:hover,
+.primary-toolbar toolbar button.text-button:hover{
 
 	color: @theme_fg_color;
 	border-width: 1px;
@@ -1595,12 +1620,12 @@ primary-toolbar toolbar button.text-button:hover{
 }
 
 toolbar  button.text-button:selected,
-primary-toolbar button.text-button:selected,
-primary-toolbar toolbar button.text-button:selected,
-primary-toolbar toolbar button.text-button:selected,
+.primary-toolbar button.text-button:selected,
+.primary-toolbar toolbar button.text-button:selected,
+.primary-toolbar toolbar button.text-button:selected,
 toolbar  button.text-button:selected:hover,
-primary-toolbar button.text-button:selected:hover,
-primary-toolbar toolbar  button.text-button:selected:hover,
+.primary-toolbar button.text-button:selected:hover,
+.primary-toolbar toolbar  button.text-button:selected:hover,
 toolbar  button.text-button.image-button:hover{	
 	color: @theme_fg_color;
 	background-image:  linear-gradient(to bottom,
@@ -1614,8 +1639,8 @@ toolbar  button.text-button.image-button:hover{
 
 toolbar button:active,
 toolbar  button.text-button:active,
-primary-toolbar button:active,
-primary-toolbar toolbar  button:active{
+.primary-toolbar button:active,
+.primary-toolbar toolbar  button:active{
 	color: @theme_fg_color;
 	background-image: linear-gradient(to bottom,
 	                                  shade(@button_gradient_color_b, 0.97),
@@ -1623,8 +1648,8 @@ primary-toolbar toolbar  button:active{
 }
 
 toolbar  button:hover:active,
-primary-toolbar button:hover:active,
-primary-toolbar toolbar button:hover:active{
+.primary-toolbar button:hover:active,
+.primary-toolbar toolbar button:hover:active{
 	color: @theme_fg_color;
 	background-image: linear-gradient(to bottom,
 	                                  @button_gradient_color_b,
@@ -1632,9 +1657,9 @@ primary-toolbar toolbar button:hover:active{
 }
 
 toolbar button:hover,
-primary-toolbar button:hover,
-primary-toolbar toolbar button:hover,
-primary-toolbar toolbar button:hover {
+.primary-toolbar button:hover,
+.primary-toolbar toolbar button:hover,
+.primary-toolbar toolbar button:hover {
 	color: @theme_fg_color;
 	background-image: linear-gradient(to bottom,
 	                                  shade(@button_gradient_color_a, 1.1),
@@ -1642,7 +1667,8 @@ primary-toolbar toolbar button:hover {
 
 }
 
-toolbar button:disabled {
+toolbar button:disabled,
+.primary-toolbar button:disabled {
 
 	border-image: none;
 	background-image: none;
@@ -1660,13 +1686,6 @@ toolbar separatortoolitem {
 	border-width: 1px;
 	border-color: shade(@theme_bg_color, 0.85);
 }
-
-toolbar button:disabled {
-	background-color: transparent;
-	color: shade(@theme_text_color, 0.8);
-
-}
-
 
 /* progressbars on primary toolbar entries are special */
 toolbar entry progressbar {
@@ -1686,16 +1705,15 @@ toolbar entry progressbar {
 /*******************
  * Inline toolbars *
  *******************/
-inline-toolbartoolbar {
+.inline-toolbar{
 	border-radius: 0px;
 	border-width: 3px;
 	border-style: solid;
-	background-image: none;
-        background-color: transparent;
+	background-color: transparent;
 
-	/*background-image: linear-gradient(to bottom,
+	background-image: linear-gradient(to bottom,
 	                                  @button_gradient_color_a,
-	                                  @button_gradient_color_b); */
+	                                  @button_gradient_color_b);
 }
 
 /**************
