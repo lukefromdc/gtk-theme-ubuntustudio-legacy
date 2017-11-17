@@ -12,7 +12,7 @@ theme_DATA = \
 	button-selected.svg \
 	button.svg \
 	calendar_grid.svg \
-	calendar_grid_330.svg \
+	calendar_grid_rescalable.svg \
 	calendar-selected-bg.svg \
 	checkbg.svg \
 	checkbox-animated-checked-glow-bg.svg \

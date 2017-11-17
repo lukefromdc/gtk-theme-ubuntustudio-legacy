@@ -27,7 +27,6 @@ UbuntuStudio_Legacy/gtk-3.18/Makefile
 UbuntuStudio_Legacy/gtk-3.18/apps/Makefile
 UbuntuStudio_Legacy/gtk-3.18/assets/Makefile
 UbuntuStudio_Legacy/gtk-3.20/Makefile
-UbuntuStudio_Legacy/gtk-3.22/Makefile
 UbuntuStudio_Legacy/gtk-3.20/apps/Makefile
 UbuntuStudio_Legacy/gtk-3.20/assets/Makefile
 UbuntuStudio_Legacy/gtk-3.20/window-controls/Makefile
