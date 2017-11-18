@@ -1,3 +1,7 @@
+3.22.26
+	GTK 3.22/3.20: Allow MATE/gnome panel calendar fonts to scale with user fonts
+	GTK 3.22/3.20: Fix .primary-toolbar buttons for file-roller etc
+
 3.22.25
 	GTK 3.22/3.20: fix spinbuttons in ccsm for compiz-reloaded
     GTK 3.22/3.20: tweaks for gnome-tweak-tool
