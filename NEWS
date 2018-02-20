@@ -1,3 +1,6 @@
+3.22.27
+	GTK 3.22/3.20:  CSD: fix theme of unfocussed(backdrop) headerbar
+
 3.22.26
 	GTK 3.22/3.20: Allow MATE/gnome panel calendar fonts to scale with user fonts
 	GTK 3.22/3.20: Fix .primary-toolbar buttons for file-roller etc
