@@ -40,16 +40,6 @@ headerbar button.appmenu, .csd button.titlebutton{
 	margin: 0px;
 }
 
-/*mostly taken from Adwaita except the border radius */
-decoration.backdrop {
-	border-radius: 7px 7px 0px 0px;
-	border-width: 1px;
-	box-shadow:  0 3px 9px 1px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
-	/* this is used for the resize cursor area */
-	margin: 5px;
-}
-
-
 /*ported from Ravit65's Gtk3.16/3.18 fix for CSD apps w/o compositing */
 .solid-csd decoration {
 	border-radius: 0px;
@@ -91,7 +81,7 @@ headerbar,
 	background-image: url('window-controls/decoration-csd.png');
 }
 
-headerbar:backdrop {
+headerbar:backdrop, .csd headerbar:backdrop,.csd .titlebar:backdrop  {
 	text-shadow: 1px 1px lighter (@bg_color);
 	border-radius: 7px 7px 0px 0px;
 	background-image: none;
