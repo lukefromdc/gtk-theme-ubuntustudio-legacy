@@ -15,16 +15,6 @@ decoration {
 	padding: 0px;
 }
 
-/*Limit CSD shadow extent to deal with any WM  CSD/GtkFrameExtent issues */
-.csd decoration {
-	border-radius: 7px 7px 0px 0px;
-	border-width: 1px;
-	box-shadow:  0 3px 3px 1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.23);
-	/* this is used for the resize cursor area */
-	margin: 5px;
-    padding: 0px;
-}
-
 headerbar button:not(.appmenu):not(.titlebutton){
 	padding: 8px;
 }
@@ -51,8 +41,19 @@ headerbar button.appmenu, .csd button.titlebutton{
 }
 
 
-.solid-csd headerbar,
+.solid-csd headerbar{
+	background-image: url('window-controls/decoration-csd.png');
+	border-radius: 0px;
+	box-shadow: none;
+	border-width: 0px;
+	margin: 0px;
+	border-image: none;
+}
+
+
 .solid-csd headerbar:backdrop {
+	background-image: none;
+	background-color: @theme_bg_color;
 	border-radius: 0px;
 	box-shadow: none;
 	border-width: 0px;
