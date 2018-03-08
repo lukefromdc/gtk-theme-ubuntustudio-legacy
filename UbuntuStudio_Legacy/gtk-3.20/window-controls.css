@@ -61,10 +61,8 @@ headerbar button.appmenu, .csd button.titlebutton{
 	border-image: none;
 }
 
-/*Fix tiled CSD windows in compiz with fake extents support if app sets .tiled */
 .tiled decoration {
-	box-shadow: none;
-	margin: 0px;
+	border-radius: 0px
 }
 
 /*Theme this as a toolbar when NOT in an actual CSD window */
