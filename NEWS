@@ -1,3 +1,6 @@
+3.22.28
+	GTK 3.22/3.20: CSD: remove broken code that interfered with work on compiz-reloaded
+
 3.22.27
 	GTK 3.22/3.20:  CSD: fix theme of unfocussed(backdrop) headerbar
 
