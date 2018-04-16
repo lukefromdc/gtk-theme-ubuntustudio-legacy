@@ -1,3 +1,7 @@
+3.22.29
+	Mate-Panel: adjust for new default tray/window list drag handles
+    Updates from this point forward are for GTK 3.22/3.20 unless otherwise stated
+
 3.22.28
 	GTK 3.22/3.20: CSD: remove broken code that interfered with work on compiz-reloaded
 
