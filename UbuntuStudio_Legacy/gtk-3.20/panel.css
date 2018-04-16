@@ -46,6 +46,7 @@ PanelToplevel.mate-panel-menu-bar.vertical,
 /*This is double for a handle, keep this off in-process applets*/
 MatePanelAppletFrameDBus>MatePanelAppletFrameDBus{
 	background-color:alpha(@theme_bg_color, 0.2 );
+	background-image: none;
 }
 
 /*******************
