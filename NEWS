@@ -1,3 +1,7 @@
+3.22.30
+	Mate-Terminal: Fix tabs going transparent after mate-terminal commit e1b834a2bf684ac4a7d4b33fbf216d65896889c6
+	Mate-Panel: use new default applet drag handle theme provided in latest mate-panel builds
+
 3.22.29
 	Mate-Panel: adjust for new default tray/window list drag handles
     Updates from this point forward are for GTK 3.22/3.20 unless otherwise stated

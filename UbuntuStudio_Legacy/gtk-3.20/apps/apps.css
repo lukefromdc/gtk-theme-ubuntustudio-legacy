@@ -417,6 +417,12 @@ window.background.mate-terminal box.vertical {
     min-height: 380px;
 }
 
+/* Fix tabs going transparent */
+/*workaround for https://github.com/mate-desktop/mate-terminal/issues/240 */
+window.mate-terminal notebook {
+	background-color: @theme_bg_color;
+}
+
 
 /*****************************
  * MATE keyboard layout view *
