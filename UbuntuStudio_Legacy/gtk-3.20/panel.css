@@ -124,12 +124,13 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 .mate-panel-menu-bar  menuitem:disabled *,
 .gnome-panel-menu-bar menuitem:disabled,
 .gnome-panel-menu-bar  menuitem:disabled{
-	background-image:none;
-	background-color:transparent;
 	border-image:none;
 	border-width: 0px;
 }
 
+.mate-panel-menu-bar menuitem.xrandr-applet:disabled>box>label{
+	color: black;
+}
 
 /*Font used on panel itself and "custom menu bar" */
 

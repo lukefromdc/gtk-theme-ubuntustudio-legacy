@@ -2143,7 +2143,7 @@ statusbar frame  {
 /*************
  * images and labels *
  *************/
-
+/* None of this should be needed anymore
 image,
 image:hover,
 image:active,
@@ -2161,7 +2161,7 @@ grid:disabled {
 	background-image: none;
 	background-color: transparent;
 }
-
+*/
 /*Ensure Libreoffice/Firefox hack never
   turns normal labels or images black*/
 label,
@@ -2194,22 +2194,6 @@ htmlexpander label {
 html:active {
 	color: #ffffff;
 }
-
-/* Does not work in gtk3.20!
-EShellWindow *:active {
-	background-color: #717175;
-}
-
-EShellWindow  button *:active {
-	background-color: transparent;
-}
-
-EShellWindow:disabled { 
-	background-color: @theme_bg_color;
-}
-
-*/
-
 
 /*****************
  * Color Chooser *
