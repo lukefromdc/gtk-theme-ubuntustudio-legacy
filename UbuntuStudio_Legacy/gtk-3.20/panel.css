@@ -67,6 +67,7 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 
 /*round the outside corners of top and bottom menuitems to fit inside the border */
 
+
 .gnome-panel-menu-bar * menuitem:first-child,
 .mate-panel-menu-bar * menuitem:first-child {
 	border-radius: 10px 10px 3px 3px;
@@ -128,8 +129,11 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 	border-width: 0px;
 }
 
+/*for mate-settings-daemon's xrandr applet popup menu*/
 .mate-panel-menu-bar menuitem.xrandr-applet:disabled>box>label{
 	color: black;
+	border-width: 1px;
+	border-color: #888a85;
 }
 
 /*Font used on panel itself and "custom menu bar" */
