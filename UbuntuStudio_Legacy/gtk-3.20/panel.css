@@ -136,6 +136,11 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 	border-color: #888a85;
 }
 
+.mate-panel-menu-bar menuitem.xrandr-applet.monitor-off:disabled>box>label{
+	color: alpha(black, 0.6);
+    border-color: #222420;
+}
+
 /*Font used on panel itself and "custom menu bar" */
 
 .mate-panel-menu-bar  label, .gnome-panel-menu-bar  label{
