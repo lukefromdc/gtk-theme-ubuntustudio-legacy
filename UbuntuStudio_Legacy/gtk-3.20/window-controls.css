@@ -73,11 +73,14 @@ headerbar,
 	                                  shade(@theme_bg_color,0.9));
 }
 
+window>widget>.titlebar,/*for Firefox CSD*/
 .csd headerbar,
 .csd .titlebar {
 	text-shadow: 1px 1px lighter (@bg_color);
 	border-radius: 7px 7px 0px 0px;
 	background-image: url('window-controls/decoration-csd.png');
+	background-repeat: repeat-x;
+	background-color: shade(@theme_bg_color,0.75);
 }
 
 headerbar:backdrop, .csd headerbar:backdrop,.csd .titlebar:backdrop  {
