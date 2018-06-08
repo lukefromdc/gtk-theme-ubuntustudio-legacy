@@ -4,13 +4,16 @@
 
 
 #panel_window {
-background-color:#000000; 
-color: white;
-font-weight: bold;
+	background-color: alpha(black, 0.9);
+	color: white;
+	font-weight: bold;
+    border-radius: 0px;
+    border-width: 0px;
+    border-style: none;
 }
 
 #panel_window menubar {
-	background-color:transparent; 
+	background-color: transparent;
 }
 
 #panel_window menubar window {
@@ -24,13 +27,30 @@ font-weight: bold;
 	border-width: 3px;
 	border-radius:10px;
 	font-weight: normal;
-	padding: 0px;	/*stop double borders on bottoms of some menus */
 }
 
-#panel_window menubar menuitem {
-	background-color: transparent;
-	box-shadow: 0px 0px 0px 0px alpha(black, 0.0);
+#panel_window menubar menuitem,
+#panel_window menubar menuitem:selected,
+#panel_window menubar menuitem:active {
+	padding: 4px 8px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 2px;
 }
+
+/*round the outside corners of top and bottom menuitems to fit inside the border */
+#panel_window menuitem:first-child{
+	border-radius: 14px 14px 3px 3px;
+	border-image: none;
+	border-color:transparent;
+}
+
+#panel_window  menuitem:last-child {
+	border-radius: 3px 3px 14px 14px;
+	border-image: none;
+	border-color:transparent;
+}
+
 
 #login_window
 	{
@@ -57,8 +77,7 @@ font-weight: bold;
 #shutdown_dialog,
 #restart_dialog
  {
-    /*background-color:alpha (black, 0.9);*/
-	background-color:black;
+    background-color:alpha (black, 0.9);
     color: white;
 	border-style: solid;
 	border-color: #888a85;
@@ -95,3 +114,15 @@ font-weight: bold;
 	font-weight: normal;
 }
 
+/*round the outside corners of top and bottom menuitems to fit inside the border */
+#login_window #user_combobox menu menuitem:first-child{
+	border-radius: 14px 14px 3px 3px;
+	border-image: none;
+	border-color:transparent;
+}
+
+#login_window #user_combobox menu  menuitem:last-child {
+	border-radius: 3px 3px 14px 14px;
+	border-image: none;
+	border-color:transparent;
+}
