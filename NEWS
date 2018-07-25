@@ -1,3 +1,13 @@
+3.23.1
+	We now support GTK 3.23/3.24, no changes specifically for it needed yet
+	Fix white on white icons/text in emoji pickers
+	lightdm: adjust greeter theme for latest version
+	CSD: support Firefox 60 and later CSD option
+	mate-xrandr-applet-popup: adjust for latest git master
+	mate xrandr-applet-popup: fine-tune monitor label borders
+    disabled items: remove no longer needed code
+
+
 3.22.30
 	Mate-Terminal: Fix tabs going transparent after mate-terminal commit e1b834a2bf684ac4a7d4b33fbf216d65896889c6
 	Mate-Panel: use new default applet drag handle theme provided in latest mate-panel builds
