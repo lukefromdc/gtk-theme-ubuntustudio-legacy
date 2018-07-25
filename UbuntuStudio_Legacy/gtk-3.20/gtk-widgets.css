@@ -2665,3 +2665,31 @@ dialog>box>box>stack>box>scrolledwindow * {
 dialog>box>box>stack>box>scrolledwindow link {
 	color: shade(@link_color, 0.4);
 }
+
+/***************
+ *Emoji pickers *
+ ***************/
+
+popover.emoji-picker entry.search{
+	border-style: solid;
+	border-image: none;
+	border-width: 2px;
+	border-color: @theme_bg_color;
+}
+
+popover.emoji-picker{
+	background-color: @theme_bg_color;
+}
+
+popover.emoji-picker .view{
+	background-color: transparent;
+}
+
+.emoji-picker flowbox{
+	background-color:@theme_base_color;
+}
+
+
+.emoji label{
+	color: black;
+}
