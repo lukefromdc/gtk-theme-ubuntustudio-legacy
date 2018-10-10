@@ -342,3 +342,9 @@ gp-calendar-window calendar:selected{
 	background-position: top center;
 	text-shadow: 1px 1px alpha(@theme_fg_color, 0.3);
 }
+
+/*mate-volume-control*/
+/*A symbolic icon is used here and will be gray without this*/
+GvcMixerDialog image{
+	-gtk-icon-style: symbolic;
+}
