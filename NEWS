@@ -1,3 +1,5 @@
+3.24.0
+	GTK3.20/22/24: Fix mic/speaker icons in mate-volume-control mixer dialog
 3.23.1
 	We now support GTK 3.23/3.24, no changes specifically for it needed yet
 	Fix white on white icons/text in emoji pickers
