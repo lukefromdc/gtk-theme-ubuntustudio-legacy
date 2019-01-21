@@ -1,3 +1,7 @@
+3.24.3
+    Bump version to match latest GTK version
+	caja-property-browser(backgrounds and emblems): fix invisible text
+
 3.24.0
 	GTK3.20/22/24: Fix mic/speaker icons in mate-volume-control mixer dialog
 3.23.1
