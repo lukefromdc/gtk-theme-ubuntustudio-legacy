@@ -1,3 +1,12 @@
+3.24.4
+	Bump version to match latest GTK version
+	Show hover on treeviews, refactor sidebar treeviews and lists
+		*Show hover on treeviews and lists in a manner consistant with mate/menta themes
+		*Clean up nemo treeview and sidebar code, removing old hacks not needed with any recent version of Nemo
+		*refactor placessidebar and stacksidebar code a bit
+		*Remove button backgrounds from Nautilus sidebar eject buttons and similar buttons
+		*Make button borders for hover/pressed work on Nautilus sidebar eject buttons and similar buttons
+
 3.24.3
     Bump version to match latest GTK version
 	caja-property-browser(backgrounds and emblems): fix invisible text
