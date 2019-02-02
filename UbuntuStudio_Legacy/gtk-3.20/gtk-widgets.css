@@ -213,8 +213,14 @@ treeview.view:disabled * {
 }
 
 
+
 treeview:hover {
-	background-color:@theme_fg_color;
+	background-color: @theme_fg_color;
+	background-image: linear-gradient(to bottom,
+					  alpha(@menu_gradient_color_a, 0.5),
+	                                  alpha(@menu_gradient_color_b, 0.5) 50%,
+	                                  alpha(@menu_gradient_color_c, 0.5) 50%,
+					  alpha(@menu_gradient_color_d, 0.5)); 
 	color:@theme_text_color;
 }
 treeview:active,
@@ -321,15 +327,6 @@ list row{
 	border-style: solid;
 	border-width: 1px;
 	border-color: alpha(@theme_bg_color, 0.2);
-}
-
-list row:focus  {
-	outline-width: 0px;
-	background-image: linear-gradient(to bottom,
-					  alpha(@menu_gradient_color_a, 0.2),
-	                                  alpha(@menu_gradient_color_b, 0.2) 50%,
-	                                  alpha(@menu_gradient_color_c, 0.3) 50%,
-					  alpha(@menu_gradient_color_d, 0.3)); 
 }
 
 list row:hover{
@@ -2463,11 +2460,24 @@ placessidebar label   {
 }
 
 placessidebar list row,
-placessidebar list row:hover{
+stacksidebar list row,
+placessidebar list row:focus,
+stacksidebar list row:focus {
 	border-style:solid;
 	border-image:none;	
 	border-width: 0px;
 	background-color: @theme_base_color;
+}
+
+placessidebar list row:hover,
+stacksidebar list row:hover{
+	background-color: @theme_base_color;
+	background-image: linear-gradient(to bottom,
+					  alpha(@menu_gradient_color_a, 0.5),
+	                                  alpha(@menu_gradient_color_b, 0.5) 50%,
+	                                  alpha(@menu_gradient_color_c, 0.5) 50%,
+					  alpha(@menu_gradient_color_d, 0.5)); 
+	color:@theme_text_color;
 }
 
 stacksidebar list row,
@@ -2502,26 +2512,16 @@ stacksidebar list row:active image{
 	color:@theme_fg_color;
 }
 
-placessidebar button{
+/*hover/active border images defined in gtk-widgets-assets.css*/
+placessidebar list row .image-button.sidebar-button,
+stacksidebar list row .image-button.sidebar-button{
 	background-color: transparent;
 	background-image: none;
-	border-style:none;
+	border-style:solid;
+	border-color:transparent;
 	border-image:none;	
 }  
 
-placessidebar button:hover{
-	background-color: transparent;
-	background-image: linear-gradient(to bottom,
-					  @menu_gradient_color_a,
-	                                  @menu_gradient_color_b 50%,
-	                                  @menu_gradient_color_c 50%,
-					  @menu_gradient_color_d);
-	border-style:solid;
-	border-image:none;
-	border-color: #222222;
-	border-width:1px;
-	border-radius:3px;		
-}
 /*Show separators between sections of sidebar */
 
 placessidebar separator {

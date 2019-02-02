@@ -376,6 +376,17 @@ treeview .button {
 	border-image: url("assets/column-header-border-dark.svg") 2 0 2 1 / 2px 0px 2px 1px stretch;
 }
 
+/*sidebar buttons not controlled by a hardcoded icon*/
+placessidebar list row .image-button.sidebar-button:hover,
+stacksidebar list row .image-button.sidebar-button:hover{
+	border-image: url("assets/button-border-dark.svg") 3 / 3px stretch;
+}
+
+placessidebar list row .image-button.sidebar-button:active,
+stacksidebar list row .image-button.sidebar-button:active{
+	border-image: url("assets/button-border-pressed.svg") 3 / 3px stretch;
+}
+
 /*********************
  * Notebook and Tabs *
  *********************/

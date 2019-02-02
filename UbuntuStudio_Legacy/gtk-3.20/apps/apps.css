@@ -4,14 +4,29 @@
 
 ***************************/
 
-/*zebra-stripe Caja list views, must be done for EVERY row as odd/even does not work  */
-.caja-navigation-window paned paned treeview.view{                          			
-		background-image: linear-gradient(to bottom,
+/*zebra-stripe Caja list views, must be done for EVERY row as odd/even does not work: 
+  Unfortunately rows in treeviews do not get a cssnode of any kind for theming and 
+  do not seem to be exposed in any way. Yet the treeview model as rendered for the user
+  is based on selectable rows. Use a hackish workaround as a result*/
+
+.caja-navigation-window paned paned treeview.view {
+	background-image: linear-gradient(to bottom,
 					  #eeeeee,
 					  #ffffff); 
 }
 
-/*list view selected colors*/
+/*list view "row" hover background lighter than for selected row*/
+.caja-navigation-window paned paned treeview:hover {
+	background-color: @theme_base_color;
+	background-image: linear-gradient(to bottom,
+					  alpha(@menu_gradient_color_a, 0.5),
+	                                  alpha(@menu_gradient_color_b, 0.5) 50%,
+	                                  alpha(@menu_gradient_color_c, 0.5) 50%,
+					  alpha(@menu_gradient_color_d, 0.5)); 
+	color:@theme_text_color;
+}
+
+/*list view selected "row" background */
 .caja-navigation-window paned paned treeview.view:selected{
 	background-image: linear-gradient(to bottom,
 					  @menu_gradient_color_a,
@@ -160,6 +175,17 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 					  #ffffff); 
 }
 
+/*list view hover colors*/
+.nemo-window scrolledwindow  treeview:hover {
+	background-color:@theme_base_color;
+	background-image: linear-gradient(to bottom,
+					  alpha(@menu_gradient_color_a, 0.5),
+	                                  alpha(@menu_gradient_color_b, 0.5) 50%,
+	                                  alpha(@menu_gradient_color_c, 0.5) 50%,
+					  alpha(@menu_gradient_color_d, 0.5)); 
+	color:@theme_text_color;
+}
+
 .nemo-window scrolledwindow treeview.view:selected,
 .nemo-window scrolledwindow treeview.view:active{
 	background-image: linear-gradient(to bottom,
@@ -183,16 +209,22 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 	border-width: 0px;
 }
 
+.nemo-window treeview.places-treeview.view:hover{
+	background-color: @theme_fg_color;
+	background-image: linear-gradient(to bottom,
+					  alpha(@menu_gradient_color_a, 0.4),
+	                                  alpha(@menu_gradient_color_b, 0.4) 50%,
+	                                  alpha(@menu_gradient_color_c, 0.4) 50%,
+					  alpha(@menu_gradient_color_d, 0.4)); 
+	color:@theme_text_color;
+}
+
 /*Scale the separator to match the scrollbar */
 
 .nemo-window paned separator{
 	min-width: 4px;
 }
 
-/*May match some other text buttons but this is only way until nemo supports GTK 3.20 */
-/*2nd line is RIGHT way when Federa patch for GTK 20 gets merged*/
-
-.nemo-window>grid>box>box>toolbar.primary-toolbar button.text-button,
 .nemo-window  toolbar.primary-toolbar button.text-button{
 	color: @theme_fg_color;
 	background-image: none;
@@ -221,7 +253,6 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 /*Nemo rename entries*/
 /*use border in nemo rename entry other than on the desktop*/
 
-window>grid>paned>box>paned>box>notebook>stack>box>overlay>scrolledwindow .entry,
 .nemo-window  .view .entry{
 	background-color:@theme_base_color;
 	color:#000000;
@@ -289,6 +320,17 @@ nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the s
 		background-image: linear-gradient(to bottom,
 					  #eeeeee,
 					  #ffffff); 
+}
+
+/*list view hover colors*/
+.nautilus-window overlay>scrolledwindow>*>treeview:hover {
+	background-color: @theme_base_color;
+	background-image: linear-gradient(to bottom,
+					  alpha(@menu_gradient_color_a, 0.5),
+	                                  alpha(@menu_gradient_color_b, 0.5) 50%,
+	                                  alpha(@menu_gradient_color_c, 0.5) 50%,
+					  alpha(@menu_gradient_color_d, 0.5)); 
+	color:@theme_text_color;
 }
 
 .nautilus-window overlay>scrolledwindow>*>treeview.view:selected,
