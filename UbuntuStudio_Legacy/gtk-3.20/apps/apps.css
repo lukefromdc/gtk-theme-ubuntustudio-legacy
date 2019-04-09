@@ -635,7 +635,9 @@ headerbar.primary-toolbar.toolbar{
  **********************************/
 
 /*Keep the border image off password dialog entry areas*/
-dialog>box>box>box>grid>box>notebook{
+/*Cover both old and newer versions of network-manager-applet*/
+dialog>box>box>box>grid>box>notebook,
+dialog>box>grid>grid>box>notebook{
 	border-image: none;
 }
 
