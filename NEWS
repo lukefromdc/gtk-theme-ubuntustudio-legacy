@@ -1,3 +1,8 @@
+3.24.7
+	Bump version to match latest GTK version
+	Fix unwanted wifi pwd entry field border with newer nm-applet
+	Fix invisible text in some CCSM treeviews
+
 3.24.4
 	Bump version to match latest GTK version
 	Show hover on treeviews, refactor sidebar treeviews and lists
