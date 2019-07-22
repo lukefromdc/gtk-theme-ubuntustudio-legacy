@@ -1,3 +1,10 @@
+3.24.10
+	Bump version to match latest GTK version
+	metacity-theme: min/max/close heights independent of menu icon height
+		*Ensure this always works at any window scaling factor and any version of compiz, marco, metacity etc
+
+
+
 3.24.7
 	Bump version to match latest GTK version
 	Fix unwanted wifi pwd entry field border with newer nm-applet
