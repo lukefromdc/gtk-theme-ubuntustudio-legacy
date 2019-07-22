@@ -503,27 +503,17 @@
 </draw_ops>
 
 <!-- ::: Buttons ::: -->
-
-<!--
-	using a minimum icon size until there is a proper way to specify relative sizes
-	unfortunately it's logically impossible to always center the icons on non-square
-	buttons (utility windows) without distortion.
-
-	icon_size = (Bmin`max`height-Bpad*2)
-	hpadding = (width - icon_size) / 2 = ((width-(Bmin`max`height-Bpad*2))/2)
-	vpadding = (height - icon_size) / 2 = ((height-(Bmin`max`height-Bpad*2))/2)
--->
 <draw_ops name="close_button_icon">
-	<image filename="button-close-normal.png" x="(width-10)/8" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-close-normal.png" x="(width-10)/8" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="close_button_icon_hover">
-	<image filename="button-close-hover.png" x="(width-10)/8" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-close-hover.png" x="(width-10)/8" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="close_button_icon_pressed">
-	<image filename="button-close-pressed.png" x="(width-10)/8" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-close-pressed.png" x="(width-10)/8" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="close_button_icon_unfocused">
-	<image filename="button-close-pressed.png" x="(width-10)/8" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-close-pressed.png" x="(width-10)/8" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 
 <draw_ops name="close_button_normal">
@@ -548,16 +538,16 @@
 </draw_ops>
 
 <draw_ops name="maximize_button_icon">
-	<image filename="button-maximize-normal.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-maximize-normal.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="maximize_button_icon_hover">
-	<image filename="button-maximize-hover.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-maximize-hover.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="maximize_button_icon_pressed">
-	<image filename="button-maximize-pressed.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-maximize-pressed.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="maximize_button_icon_unfocused">	
-	<image filename="button-maximize-normal.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-maximize-normal.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 
 <draw_ops name="maximize_button_normal">
@@ -582,16 +572,16 @@
 </draw_ops>
 
 <draw_ops name="restore_button_icon">
-	<image filename="button-maximize-normal.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-maximize-normal.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="restore_button_icon_hover">
-	<image filename="button-maximize-hover.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-maximize-hover.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="restore_button_icon_pressed">
-	<image filename="button-maximize-pressed.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-maximize-pressed.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="restore_button_icon_unfocused">
-	<image filename="button-maximize-normal.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-maximize-normal.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 
 <draw_ops name="restore_button_normal">
@@ -616,16 +606,16 @@
 </draw_ops>
 
 <draw_ops name="minimize_button_icon">
-	<image filename="button-minimize-normal.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-minimize-normal.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="minimize_button_icon_hover">
-	<image filename="button-minimize-hover.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-minimize-hover.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="minimize_button_icon_pressed">
-	<image filename="button-minimize-pressed.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-minimize-pressed.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 <draw_ops name="minimize_button_icon_unfocused">
-	<image filename="button-minimize-normal.png" x="(width-10)/7" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<image filename="button-minimize-normal.png" x="(width-10)/7" y="height/ 2 - height/ 3" width="top_height / 1.75" height="top_height / 1.75"/>
 </draw_ops>
 
 <draw_ops name="minimize_button_normal">
@@ -652,12 +642,12 @@
 <!-- menu icon -->
 <draw_ops name="menu_button_icon">
 	<!--<icon  x="0" y="0" width="width" height="height"/>-->
-	<icon  x="(width-(mini_icon_width * 0.7))/2" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<icon  x="(width-mini_icon_width)/2" y="(height-mini_icon_height)/2" width="mini_icon_width" height="mini_icon_height"/>
 </draw_ops>
 
 <draw_ops name="menu_button_icon_unfocused">
 	<!--<icon  x="0" y="0" width="width" height="height" alpha="0.5"/>-->
-	<icon  x="(width-(mini_icon_width * 0.7))/2" y="(height-(mini_icon_height * 0.7))/2" width="(mini_icon_width * 0.7)" height="(mini_icon_height * 0.7)"/>
+	<icon  x="(width-mini_icon_width)/2" y="(height-mini_icon_height)/2" width="mini_icon_width" height="mini_icon_height"/>
 </draw_ops>
 
 <draw_ops name="menu_button_normal">
