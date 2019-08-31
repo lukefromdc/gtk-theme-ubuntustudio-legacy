@@ -308,7 +308,7 @@ gp-calendar-window
 
 window#MatePanelPopupWindow frame,
 gp-calendar-window frame{
-	background-color: alpha(black, 0.9);
+	background-color: alpha(black, 0.85);
 	border-image: none;
 	border-style: solid;
 	border-color: #888a85;
