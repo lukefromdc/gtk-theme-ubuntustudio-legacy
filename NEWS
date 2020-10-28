@@ -1,3 +1,7 @@
+3.24.21
+	Bump version to match current GTK version
+	Use .context-menu  style class (pluma and Gedit need it)
+
 3.24.10
 	Bump version to match latest GTK version
 	metacity-theme: min/max/close heights independent of menu icon height
