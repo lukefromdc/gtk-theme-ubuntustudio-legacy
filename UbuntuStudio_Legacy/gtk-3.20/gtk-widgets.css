@@ -1345,6 +1345,15 @@ scrollbar.slider.vertical.fine-tune:hover:active {
  * Menus *
  *********/
 
+
+/* Decouple the font of context menus from their entry/textview */
+.context-menu {
+        font: initial;
+        text-shadow: none;
+}
+/*above taken from mate-themes*/
+
+
 /* Make sure popup menus in transparent windows still get background! */
 
 menu{
