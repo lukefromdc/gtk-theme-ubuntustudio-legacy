@@ -10,9 +10,18 @@
   is based on selectable rows. Use a hackish workaround as a result*/
 
 .caja-navigation-window paned paned treeview.view {
-	background-image: linear-gradient(to bottom,
-					  #eeeeee,
-					  #ffffff); 
+		background-image: linear-gradient(to bottom,
+					  #e0e0e0,
+					  #ececec 50%,
+					  #fdfdfd 50%,
+					  #ffffff);
+
+/*This sort of thing SHOULD be able to be made to work but so far I have NOT found a way to do so
+		-GtkTreeView-allow-rules: true;
+		-GtkTreeView-rules_hint: true;
+		-GtkTreeView-even-row-color: #dddddd;
+        -GtkTreeView-odd-row-color: #ffffff;
+*/
 }
 
 /*list view "row" hover background lighter than for selected row*/
@@ -171,8 +180,10 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 
 .nemo-window scrolledwindow treeview.view{
 		background-image: linear-gradient(to bottom,
-					  #eeeeee,
-					  #ffffff); 
+					  #e0e0e0,
+					  #ececec 50%,
+					  #fdfdfd 50%,
+					  #ffffff);
 }
 
 /*list view hover colors*/
@@ -318,8 +329,10 @@ nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the s
 
 .nautilus-window overlay>scrolledwindow>*>treeview.view	 {                          			
 		background-image: linear-gradient(to bottom,
-					  #eeeeee,
-					  #ffffff); 
+					  #e0e0e0,
+					  #ececec 50%,
+					  #fdfdfd 50%,
+					  #ffffff);
 }
 
 /*list view hover colors*/

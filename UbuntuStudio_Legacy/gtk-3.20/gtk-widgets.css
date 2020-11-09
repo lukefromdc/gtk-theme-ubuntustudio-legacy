@@ -2581,8 +2581,10 @@ placessidebar  list {
 
 filechooser treeview.view {
 	background-image: linear-gradient(to bottom,
-					  #eeeeee,
-					  #ffffff); 
+					  #e0e0e0,
+					  #ececec 50%,
+					  #fdfdfd 50%,
+					  #ffffff);
 }
 
 filechooser treeview.view:selected,
