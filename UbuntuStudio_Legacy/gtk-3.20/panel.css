@@ -189,24 +189,10 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 }
 /*Most panel buttons */
 
-
-/*window list button theme somewhere between GNOME and Cinnamon/GNOME */
-
-#tasklist-button,#tasklist-button:checked  {
-	border-color: #333333;
-	border-style: solid;
-	background-image: none;
-	border-width: 1px;
-	background-color:alpha(@theme_bg_color, 0.20);
-}
 	/*for keyboard focus */
 .mate-panel-menu-bar button, .gnome-panel-menu-bar button{
 	outline-offset: -2px;
 	outline-width: 2px;
-}
-	/*These already get a highlight border so suppress outline */
-#tasklist-button:focus,#tasklist-button:checked:focus {
-	outline-width: 0px;
 }
 
 /*transparency on clock, disk mounting, and show desktop buttons to follow main panel background*/
@@ -221,29 +207,58 @@ button#showdesktop-button, button#clock-applet-button,  button#drive-button
 }
 
 
+.mate-panel-menu-bar #PanelApplet button.flat.toggle#clock-applet-button {
+	border-width: 0px;
+	border-image:none;
+	border-style: none;
+}
 
 #clock-applet-button label{
 	padding: 4px;  /*any less and outlines touch text or get cut off */
 }
 
+/*window list and charpick button theme somewhere between GNOME and Cinnamon */
+
+.mate-panel-menu-bar #PanelApplet button.flat.toggle{
+	border-color: #333333;
+	border-style: solid;
+	background-image: none;
+	border-width: 1px;
+	background-color:transparent;
+}
+
+.mate-panel-menu-bar #PanelApplet button.flat.toggle:checked,
+.mate-panel-menu-bar #PanelApplet button.flat.toggle:active {
+	border-color: #333333;
+	border-style: solid;
+	background-image: none;
+	border-width: 1px;
+	background-color:alpha(@theme_bg_color, 0.30);
+}
+.mate-panel-menu-bar #PanelApplet button.flat.toggle:hover {
+	border-color: #333333;
+	border-style: solid;
+	background-image: none;
+	border-width: 1px;
+	background-color:alpha(@theme_bg_color, 0.40);
+}
+
 /*WnckPager in both gnome-panel and mate-panel*/
+
 wnck-pager,
-.wnck-pager{
-	border-color: transparent;
-	border-width: 0px;
-	border-style: none;
+PanelApplet.wnck-applet .wnck-pager{
 	background-image: linear-gradient(to bottom,
 									transparent,
 									shade(@theme_bg_color, 1.1) 5%,
 									shade(@theme_bg_color, 1.1) 95%,
 									transparent);
+    outline-offset: -1px;
+	outline-width: 2px;
 }
 
 wnck-pager:selected,
-.wnck-pager:selected {
-	border-color: transparent;
-	border-width: 0px;
-	border-style: none;
+.wnck-pager:selected,
+PanelApplet.wnck-applet .wnck-pager:selected{
 	background-image: linear-gradient(to bottom,
 									transparent,
 									@theme_selected_fg_color 5%,

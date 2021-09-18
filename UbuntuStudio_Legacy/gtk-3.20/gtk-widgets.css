@@ -823,7 +823,7 @@ button:hover,
 }
 
 button:focus{
-	outline-style: solid;
+	/*outline-style: solid;*/
 	outline-color: alpha(@theme_selected_bg_color, 0.4);
 }
 
@@ -1562,7 +1562,7 @@ toolbar,
 
 toolbar button:focus,
 .primary-toolbar button:focus{
-	outline-style: dotted;
+	/*outline-style: dotted;*/
 	outline-color: alpha(@theme_selected_bg_color, 0.7);
 }
 
@@ -2450,7 +2450,7 @@ modelbutton:selected,
 
 modelbutton:focus{
 	outline-width: 1px;
-	outline-style: solid;
+	/*outline-style: solid;*/
 	outline-color: alpha(@theme_selected_bg_color, 0.1);
 	background-color: alpha(@theme_selected_bg_color, 0.1);
 }
