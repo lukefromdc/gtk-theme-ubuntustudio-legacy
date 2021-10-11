@@ -1,3 +1,7 @@
+3.24.30
+    CSD: fix headerbars in GNOME 3.41 apps
+    Also reformat a bit
+
 3.24.24
 	panel: fix tasklist and charpick button
 3.24.21
