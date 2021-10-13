@@ -78,13 +78,13 @@ headerbar,
 
 headerbar,
 .titlebar {
-	text-shadow: 1px 1px lighter (@bg_color);
+	text-shadow: 1px 1px @bg_color;
 	border-radius: 7px 7px 0px 0px;
 	background-image: url('window-controls/decoration-csd.png');
 }
 
 headerbar:backdrop {
-	text-shadow: 1px 1px lighter (@bg_color);
+	text-shadow: 1px 1px  @bg_color;
 	border-radius: 7px 7px 0px 0px;
 	background-image: none;
 	background-color:@theme_bg_color;

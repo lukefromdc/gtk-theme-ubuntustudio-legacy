@@ -1,6 +1,6 @@
 * {
 	padding: 0;
-	outline-style: dotted;
+	outline-style: none; /*FIXME: cannot use outlines due to them being shown on ALL widgets*/
 	outline-offset: -3px;
 	outline-color: alpha(@theme_selected_bg_color, 0.6);
     outline-width: 2px;
@@ -1787,9 +1787,7 @@ osd .scale trough {
 assistant  sidebar .highlight {
 	color: @theme_text_color;
 	background-image: linear-gradient(to bottom,
-	                                  mix (@notebook_active_tab_a, white, 0.2),
-	                                  mix (@notebook_active_tab_a, white, 0.05) 44%,
-	                                  shade(@notebook_active_tab_a, 0.9) 45%,
+	                                  @notebook_active_tab_a,
 	                                  black);
 
 	background-color: @darker_color;
@@ -1825,9 +1823,8 @@ switch {
 	font-weight: bold;
 	font-size: smaller;
 	background-image: linear-gradient(to bottom,
-	                                  mix (@notebook_active_tab_a, white, 0.1),
-	                                  mix (@notebook_active_tab_a, white, 0.1) 44%,
-	                                  shade(@notebook_active_tab_a, 1.1));
+	                                  @notebook_active_tab_a,
+	                                  white);
 	color: #000000;
 	border-style: solid;
 	border-width: 1px;
@@ -1836,7 +1833,7 @@ switch {
 }
 
 switch:checked {
-	color: @theme_fg_color
+	color: @theme_fg_color;
 }
 
 switch:focus slider{
@@ -1852,7 +1849,7 @@ switch:focus:hover {
 
 switch:checked:hover {
 	border-color: @theme_selected_bg_color;
-	color:@theme_fg_color	
+	color:@theme_fg_color;	
 }
 
 switch:disabled {
@@ -2057,7 +2054,7 @@ expander title:active{
 expander title label:hover,
 expander title label:selected,
 expander title	label:active{
-	color: @theme_fg_color
+	color: @theme_fg_color;
 }
 
 expander arrow:hover,
@@ -2069,7 +2066,7 @@ expander arrow:active{
 expander arrow {
 	min-height: 16px;
 	min-width: 16px;
-	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic")
+	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 } 
 
 expander arrow:checked {
@@ -2243,7 +2240,7 @@ modelbutton:focus{
  *************************************************************/
 
 placessidebar{
-	background-color: @theme_base_color
+	background-color: @theme_base_color;
 }
 
 placessidebar label   {

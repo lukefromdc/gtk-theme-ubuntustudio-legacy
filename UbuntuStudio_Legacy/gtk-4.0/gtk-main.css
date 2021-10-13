@@ -136,14 +136,14 @@
 @define-color error_color #cc0000;
 @define-color success_color #4e9a06;
 
-@define-color info_fg_color rgb (255, 255, 255);
-@define-color info_bg_color rgb (61, 116, 189);
-@define-color warning_fg_color rgb (255, 255, 255);
-@define-color warning_bg_color rgb (252, 128, 0);
-@define-color question_fg_color rgb (255, 255, 255);
-@define-color question_bg_color rgb (0, 152, 38);
-@define-color error_fg_color rgb (255, 255, 255);
-@define-color error_bg_color rgb (237, 54, 54);
+@define-color info_fg_color #FFFFFF;
+@define-color info_bg_color #3D74BD;
+@define-color warning_fg_color #FFFFFF;
+@define-color warning_bg_color #FC8000;
+@define-color question_fg_color  #FFFFFF;
+@define-color question_bg_color #FFFFFF;
+@define-color error_fg_color  #FFFFFF;
+@define-color error_bg_color #ED3636;
 
 @define-color os_chrome_bg_color black;
 @define-color os_chrome_fg_color #ccc;
