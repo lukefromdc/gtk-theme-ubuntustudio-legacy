@@ -363,7 +363,7 @@ window.background.mate-terminal box.vertical {
    use the .view class from code */
 
 matekbd-keyboard-drawing {
-    background-color: shade (@theme_bg_color, 1.0);
+    background-color:@theme_bg_color;
 }
 
 matekbd-keyboard-drawing:selected {
