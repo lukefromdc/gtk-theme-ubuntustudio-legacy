@@ -1,3 +1,6 @@
+3.24.34
+    GTK4: fix warnings
+
 3.24.30
     CSD: fix headerbars in GNOME 3.41 apps
     Also reformat a bit
