@@ -1297,7 +1297,16 @@ menu.menuitem.accelerator:active {
 /***************
  * Menu Button *
  ***************/
-/* compensation for combo shadow */
+
+menubutton>button>arrow{
+color: white;
+-gtk-icon-source: -gtk-icontheme("open-menu-symbolic");
+}
+
+menubutton>button>arrow.down{
+color: white;
+-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
 menubutton menu{
 	text-shadow: none;
 }

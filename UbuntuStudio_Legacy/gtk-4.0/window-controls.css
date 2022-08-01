@@ -73,22 +73,26 @@ decoration.backdrop {
 headerbar,
 .titlebar{
         background-image: linear-gradient(to bottom,
-	                                  shade(@theme_bg_color,1.1),
-	                                  shade(@theme_bg_color,0.9));
+	                                  #3D3D3D,
+	                                  #3D3D3D);
 }
 
 headerbar,
 .titlebar {
 	text-shadow: 1px 1px @bg_color;
 	border-radius: 7px 7px 0px 0px;
+    background-repeat: repeat-x;
 	background-image: url('window-controls/decoration-csd.png');
 }
 
-headerbar:backdrop {
+headerbar:backdrop,
+.titlebar:backdrop {
 	text-shadow: 1px 1px  @bg_color;
 	border-radius: 7px 7px 0px 0px;
-	background-image: none;
-	background-color:@theme_bg_color;
+        background-image: linear-gradient(to bottom,
+	                                  #595959,
+	                                  #414141);
+	background-color: #5F5F5F;
 }
 
 headerbar .title {
