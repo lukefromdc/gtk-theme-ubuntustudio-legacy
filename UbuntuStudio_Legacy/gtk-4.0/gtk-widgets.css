@@ -1188,12 +1188,13 @@ menu{
 
 /* this controls the general appearance of the menubar */
 menubar {
-	background-image: none;
+	/*background-image: none;*/
 	background-color: #383838;
 	border-width: 0px;
 	border-style: none;
 }
 
+menubar>*,
 menuitem,
 menubar menuitem,
 menu menuitem,
@@ -1237,6 +1238,8 @@ menu button:disabled {
 	border-style: none;
 }
 
+menubar>*:hover,
+menubar>*:selected,
 menuitem:hover,
 menu.menuitem:hover{
 	background-image: linear-gradient(to bottom,
@@ -2196,13 +2199,12 @@ window.popup{
 
 /**********************
  *     popover     *
- *  (GtkVolumeButton) *
  **********************/
 
 popover {
 	border-radius: 5px;
 	background-color: black;
-    opacity: 0.9;
+    opacity: 0.98;
 	border-color: #787878;
 	border-width: 1px;
 	border-style: solid;
