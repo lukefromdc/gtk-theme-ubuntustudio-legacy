@@ -2406,7 +2406,9 @@ printdialog paper{
  *calendar *
  *************/
 
-calendar.view{
+calendar.view,
+calendar.view grid:selected, calendar.view grid:focus,  calendar.view grid:active,
+calendar.view:selected, calendar.view:focus,  calendar.view:active{
 	background-color:transparent;
 	color: white;
 }
@@ -2416,23 +2418,31 @@ calendar{
 	background-repeat: no-repeat;
 	background-position: top left;
 	padding:0px;
+	background-color: transparent;
 }
 
 calendar header{
 	padding:4px;
 }
 
+calendar.view header:hover,
+calendar.view header:active{
+	background-color: transparent;
+}
+
 calendar>*{
 	padding: 2px 5px;
 }
 
-calendar>*>*{
+calendar label{
 	padding: 5px 5px 4px 3px;
 	font-stretch: Condensed;
 	font-size: 120%;
 }
-calendar:selected:focus,
-calendar:selected{
+
+calendar label.day-number:hover,
+calendar label.day-number:selected:focus,
+calendar label.day-number:selected{
 	background-color: transparent;
 	background-image: url("assets/calendar-selected-bg.svg");
 	background-position: bottom center;
