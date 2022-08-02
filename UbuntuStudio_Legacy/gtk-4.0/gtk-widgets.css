@@ -2037,7 +2037,7 @@ colorswatch.dark:selected:hover {
 /*************
  * Expanders *
  *************/
-expander title {
+expander {
 	border-style: solid;
 	border-width: 2px;
 	border-radius: 2px;
@@ -2045,9 +2045,9 @@ expander title {
 	border-image:none;
 }
 
-expander title:hover,
-expander title:selected,
-expander title:active{
+expander:hover,
+expander:selected,
+expander:active{
 	background-image: linear-gradient(to bottom,
 					  @menu_gradient_color_a,
 	                                  @menu_gradient_color_b 50%,
@@ -2066,20 +2066,22 @@ expander title	label:active{
 	color: @theme_fg_color;
 }
 
-expander arrow:hover,
-expander arrow:selected,
-expander arrow:active{
+expander:hover,
+expander:selected,
+expander:active{
 	background-color:transparent;
 }
 
-expander arrow {
+expander {
 	min-height: 16px;
 	min-width: 16px;
+	color: @theme_fg_color;
 	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 } 
 
-expander arrow:checked {
+expander:checked {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); 
+	color: @theme_fg_color;
 }
 
 /*********************
