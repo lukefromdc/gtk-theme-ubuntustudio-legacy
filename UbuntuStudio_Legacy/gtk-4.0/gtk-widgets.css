@@ -57,13 +57,14 @@ view,
 	background-color: @theme_base_color;
 }
 
+/*
 .view:selected, 
 .view:active,
 .view *:selected, 
 .view *:active {
 	background-color: @theme_selected_bg_color;
 }
-
+*/
 .view:disabled{
 	color:@theme_bg_color;
 }
@@ -174,7 +175,7 @@ treeview:hover {
 	background-color:@theme_fg_color;
 	color:@theme_text_color;
 }
-treeview:active,
+
 treeview:selected {
 	background-color:transparent;
 	background-image: linear-gradient(to bottom,
