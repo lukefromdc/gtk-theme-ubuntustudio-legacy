@@ -55,6 +55,7 @@ PanelToplevel.mate-panel-menu-bar.vertical,
 
 .gnome-panel-menu-bar menu,
 .mate-panel-menu-bar menu,
+.wnck-menu-window menu , /*for customized libwnck*/
 menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 	background-color: alpha(black,0.9); 
 	border-image: none;
@@ -68,6 +69,8 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 /*round the outside corners of top and bottom menuitems to fit inside the border */
 
 
+.wnck-menu-window menu   * menuitem:first-child,
+menu#cpufreq-menu  * menuitem:first-child,
 .gnome-panel-menu-bar * menuitem:first-child,
 .mate-panel-menu-bar * menuitem:first-child {
 	border-radius: 10px 10px 3px 3px;
@@ -75,6 +78,8 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 	border-color:transparent;
 }
 
+.wnck-menu-window menu * menuitem:last-child,
+menu#cpufreq-menu * menuitem:last-child,
 .gnome-panel-menu-bar * menuitem:last-child,
 .mate-panel-menu-bar * menuitem:last-child {
 	border-radius: 3px 3px 10px 10px;
@@ -89,6 +94,7 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 
 /*make menu windows transparent*/
 
+.wnck-menu-window,
 .mate-panel-menu-bar menu.window, 
 .gnome-panel-menu-bar menu.window{
 	background-color:transparent;
@@ -97,9 +103,10 @@ menu#cpufreq-menu{     /*For hacked Ubuntu indicator-cpufreq */
 
 /*Keep box-shadow off anything from the panel*/
 
+.wnck-menu-window decoration,
 .gnome-panel-menu-bar decoration,
 .mate-panel-menu-bar decoration
-{     
+{   
 	box-shadow: none; 
 }
 
