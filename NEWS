@@ -1,3 +1,6 @@
+3.24.34.2
+	gtk3 treeview: Remove hacked  zebrastripe, support gtk3-classic patch
+
 3.24.34
     GTK4: fix warnings
 
