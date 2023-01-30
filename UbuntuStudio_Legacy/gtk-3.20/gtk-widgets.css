@@ -291,6 +291,43 @@ treeview.view.separator {
 	                                  shade(@theme_bg_color, 2.6));
 }
 
+/*Zebra Stripe treeviews excluding sidebars For gtk3-classic (the right way*/
+
+treeview.view.even {
+    background-color: #ffffff;
+}
+treeview.view.odd{
+    background-color: #e5e5e5;
+}
+
+treeview.view.sorted.even{
+    background-color: #e5e5e5;
+}
+treeview.view.sorted.odd {
+    background-color: #d5d5d5;
+}
+
+treeview.view:selected,
+treeview.view.sorted:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/*Keep this off sidebars*/
+stack>scrolledwindow treeview.view.even {
+    background-color: #ffffff;
+}
+stack>scrolledwindow treeview.view.odd{
+    background-color: #ffffff;
+}
+
+stack>scrolledwindow treeview.view.sorted.even{
+    background-color: #ffffff;
+}
+stack>scrolledwindow treeview.view.sorted.odd {
+    background-color: #ffffff;
+}
+
 /************
  * Tooltips *
  ************/
@@ -2574,27 +2611,6 @@ filechooser placessidebar.frame {
 
 placessidebar  list {
 	background-color: @theme_fg_color;
-}
-
-/*zebra-stripe filechooser dialog row */
-/*have to stripe EACH row, alternating rows don't work */
-
-filechooser treeview.view {
-	background-image: linear-gradient(to bottom,
-					  #e0e0e0,
-					  #ececec 50%,
-					  #fdfdfd 50%,
-					  #ffffff);
-}
-
-filechooser treeview.view:selected,
-filechooser treeview.view:active {
-	background-image: linear-gradient(to bottom,
-					  @menu_gradient_color_a,
-	                                  @menu_gradient_color_b 50%,
-	                                  @menu_gradient_color_c 50%,
-					  @menu_gradient_color_d); 
-	color: @theme_fg_color;
 }
 
 filechooser treeview:disabled {

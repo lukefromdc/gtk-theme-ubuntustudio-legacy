@@ -4,48 +4,6 @@
 
 ***************************/
 
-/*zebra-stripe Caja list views, must be done for EVERY row as odd/even does not work: 
-  Unfortunately rows in treeviews do not get a cssnode of any kind for theming and 
-  do not seem to be exposed in any way. Yet the treeview model as rendered for the user
-  is based on selectable rows. Use a hackish workaround as a result*/
-
-.caja-navigation-window paned paned treeview.view {
-		background-image: linear-gradient(to bottom,
-					  #e0e0e0,
-					  #ececec 50%,
-					  #fdfdfd 50%,
-					  #ffffff);
-
-/*This sort of thing SHOULD be able to be made to work but so far I have NOT found a way to do so
-		-GtkTreeView-allow-rules: true;
-		-GtkTreeView-rules_hint: true;
-		-GtkTreeView-even-row-color: #dddddd;
-        -GtkTreeView-odd-row-color: #ffffff;
-*/
-}
-
-/*list view "row" hover background lighter than for selected row*/
-.caja-navigation-window paned paned treeview:hover {
-	background-color: @theme_base_color;
-	background-image: linear-gradient(to bottom,
-					  alpha(@menu_gradient_color_a, 0.5),
-	                                  alpha(@menu_gradient_color_b, 0.5) 50%,
-	                                  alpha(@menu_gradient_color_c, 0.5) 50%,
-					  alpha(@menu_gradient_color_d, 0.5)); 
-	color:@theme_text_color;
-}
-
-/*list view selected "row" background */
-.caja-navigation-window paned paned treeview.view:selected{
-	background-image: linear-gradient(to bottom,
-					  @menu_gradient_color_a,
-	                                  @menu_gradient_color_b 50%,
-	                                  @menu_gradient_color_c 50%,
-					  @menu_gradient_color_d); 
-	color: @theme_fg_color;
-}
-
-/*anything disabled-keep it readable*/
 .caja-navigation-window paned paned treeview:disabled {
 	color: @theme_bg_color;
 }
@@ -176,37 +134,6 @@ window.background>box>box>box>scrolledwindow>viewport.frame {
 	background-color: @theme_base_color;
 }
 
-/*Nemo treeviews*/
-
-.nemo-window scrolledwindow treeview.view{
-		background-image: linear-gradient(to bottom,
-					  #e0e0e0,
-					  #ececec 50%,
-					  #fdfdfd 50%,
-					  #ffffff);
-}
-
-/*list view hover colors*/
-.nemo-window scrolledwindow  treeview:hover {
-	background-color:@theme_base_color;
-	background-image: linear-gradient(to bottom,
-					  alpha(@menu_gradient_color_a, 0.5),
-	                                  alpha(@menu_gradient_color_b, 0.5) 50%,
-	                                  alpha(@menu_gradient_color_c, 0.5) 50%,
-					  alpha(@menu_gradient_color_d, 0.5)); 
-	color:@theme_text_color;
-}
-
-.nemo-window scrolledwindow treeview.view:selected,
-.nemo-window scrolledwindow treeview.view:active{
-	background-image: linear-gradient(to bottom,
-					  @menu_gradient_color_a,
-	                                  @menu_gradient_color_b 50%,
-	                                  @menu_gradient_color_c 50%,
-					  @menu_gradient_color_d); 
-	color: @theme_fg_color;
-}
-
 /*anything disabled-keep it readable*/
 .nemo-window scrolledwindow treeview:disabled {
 	color: @theme_bg_color;
@@ -323,37 +250,6 @@ put the navigation window folder on the background*/
 nautilus-desktop-window.nautilus-window  scrolledwindow, /*Nautilus before the separate desktop binary*/
 .nautilus-desktop-window scrolledwindow { 				 /*Nautilus with the separate desktop binary*/
 	background-color: transparent;
-}
-
-/*Nautilus treeviews*/
-
-.nautilus-window overlay>scrolledwindow>*>treeview.view	 {                          			
-		background-image: linear-gradient(to bottom,
-					  #e0e0e0,
-					  #ececec 50%,
-					  #fdfdfd 50%,
-					  #ffffff);
-}
-
-/*list view hover colors*/
-.nautilus-window overlay>scrolledwindow>*>treeview:hover {
-	background-color: @theme_base_color;
-	background-image: linear-gradient(to bottom,
-					  alpha(@menu_gradient_color_a, 0.5),
-	                                  alpha(@menu_gradient_color_b, 0.5) 50%,
-	                                  alpha(@menu_gradient_color_c, 0.5) 50%,
-					  alpha(@menu_gradient_color_d, 0.5)); 
-	color:@theme_text_color;
-}
-
-.nautilus-window overlay>scrolledwindow>*>treeview.view:selected,
-.nautilus-window overlay>scrolledwindow>*>treeview.view:active{
-	background-image: linear-gradient(to bottom,
-					  @menu_gradient_color_a,
-	                                  @menu_gradient_color_b 50%,
-	                                  @menu_gradient_color_c 50%,
-					  @menu_gradient_color_d); 
-	color: @theme_fg_color;
 }
 
 /*anything disabled-keep it readable*/
@@ -652,18 +548,5 @@ headerbar.primary-toolbar.toolbar{
 dialog>box>box>box>grid>box>notebook,
 dialog>box>grid>grid>box>notebook{
 	border-image: none;
-}
-
-/***********************
- * Firefox *
- ***********************/
-/*Firefox 49 is a broken mess in GTK 3.20 or later and needs this */
-/*Let's exclude as many unwanted matches as possible and if that fails keep it subtle*/
-
-window.background>widget>:not(widget):not(box):not(tab):not(notebook):not(stack):not(frame)>scrolledwindow.frame {
-	border-style: solid;
-	border-color: @theme_bg_color;
-	border-width: 1px;
-
 }
 
