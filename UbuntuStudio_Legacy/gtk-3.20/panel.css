@@ -226,7 +226,8 @@ button#showdesktop-button, button#clock-applet-button,  button#drive-button
 
 /*window list and charpick button theme somewhere between GNOME and Cinnamon */
 
-.mate-panel-menu-bar #PanelApplet button.flat.toggle{
+.mate-panel-menu-bar #PanelApplet button.flat.toggle,
+.mate-panel-menu-bar #tasklist-button{
 	border-color: #333333;
 	border-style: solid;
 	background-image: none;
@@ -235,14 +236,17 @@ button#showdesktop-button, button#clock-applet-button,  button#drive-button
 }
 
 .mate-panel-menu-bar #PanelApplet button.flat.toggle:checked,
-.mate-panel-menu-bar #PanelApplet button.flat.toggle:active {
+.mate-panel-menu-bar #PanelApplet button.flat.toggle:active,
+.mate-panel-menu-bar #tasklist-button:checked,
+.mate-panel-menu-bar #tasklist-button:active {
 	border-color: #333333;
 	border-style: solid;
 	background-image: none;
 	border-width: 1px;
 	background-color:alpha(@theme_bg_color, 0.30);
 }
-.mate-panel-menu-bar #PanelApplet button.flat.toggle:hover {
+.mate-panel-menu-bar #PanelApplet button.flat.toggle:hover 
+.mate-panel-menu-bar #tasklist-button:hover{
 	border-color: #333333;
 	border-style: solid;
 	background-image: none;
