@@ -231,6 +231,9 @@ button#showdesktop-button, button#clock-applet-button,  button#drive-button
 	border-image: url("assets/panel-button-border.svg") 2 / 2px stretch;
 	background-image: none;
 	background-color:transparent;
+/*Remove minimum dimensions so wayland tasklist never overflows*/
+	min-width: 0px;
+	min-height: 0px;
 }
 
 .mate-panel-menu-bar #PanelApplet button.flat.toggle:checked,
