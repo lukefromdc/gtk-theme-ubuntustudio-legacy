@@ -1,3 +1,6 @@
+3.24.41.0
+	CSD: reduce minimum height of titlebars to match SSD theming when not containing additional widgets
+
 3.24.34.2
 	gtk3 treeview: Remove hacked  zebrastripe, support gtk3-classic patch
 
