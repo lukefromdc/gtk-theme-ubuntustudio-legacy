@@ -22,14 +22,14 @@ window>widget>.titlebar,/*for Firefox CSD*/
 	border-radius: 7px 7px 0px 0px;
 	background-image: url('window-controls/decoration-csd.png');
 	background-repeat: repeat-x;
-	background-color: shade(@theme_bg_color,0.75);
+	background-color: #3D3D3D;
 }
 
 headerbar:backdrop, .csd headerbar:backdrop,.csd .titlebar:backdrop  {
 	text-shadow: 1px 1px lighter (@bg_color);
 	border-radius: 7px 7px 0px 0px;
 	background-image: none;
-	background-color:@theme_bg_color;
+	background-color: #3D3D3D;
 }
 
 headerbar button:not(.appmenu):not(.titlebutton){
@@ -70,7 +70,7 @@ headerbar button.appmenu, .csd button.titlebutton{
 
 .solid-csd headerbar:backdrop {
 	background-image: none;
-	background-color: @theme_bg_color;
+	background-color: #3D3D3D;
 	border-radius: 0px;
 	box-shadow: none;
 	border-width: 0px;
@@ -101,7 +101,7 @@ headerbar .subtitle {
 decoration:backdrop {
   text-shadow: none;
   background-image: none;
-  background-color: @bg_color;
+  background-color: #3D3D3D;
 }
 
 
