@@ -20,8 +20,9 @@ window>widget>.titlebar,/*for Firefox CSD*/
 .csd .titlebar {
 	text-shadow: 1px 1px lighter (@bg_color);
 	border-radius: 7px 7px 0px 0px;
-	background-image: url('window-controls/decoration-csd.png');
-	background-repeat: repeat-x;
+	background-image: url('window-controls/decoration.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	background-color: #3D3D3D;
 }
 
@@ -59,7 +60,8 @@ headerbar button.appmenu, .csd button.titlebutton{
 
 
 .solid-csd headerbar{
-	background-image: url('window-controls/decoration-csd.png');
+	background-image: url('window-controls/decoration.png');
+	background-size:100% 100%;
 	border-radius: 0px;
 	box-shadow: none;
 	border-width: 0px;
@@ -79,7 +81,12 @@ headerbar button.appmenu, .csd button.titlebutton{
 }
 
 .tiled decoration {
-	border-radius: 0px
+	border-radius: 0px;
+}
+
+.icon.titlebutton {
+	padding-left: 5px;
+	padding-top: 1px;
 }
 
 /*Theme this as a toolbar when NOT in an actual CSD window */
