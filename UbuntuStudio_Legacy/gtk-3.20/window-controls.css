@@ -7,8 +7,12 @@
 
 /*mostly taken from Adwaita except the border radius */
 decoration,  window.unified {
-	border-radius: 7px 7px 0px 0px;
-	border-width: 1px;
+	border-radius: 7px 7px 2px 2px;
+	border-width: 0px 2px 2px 2px;
+	border-style: solid;
+	border-left-color: #3D3D3D;
+	border-right-color: #3D3D3D;
+	border-bottom-color: shade (@theme_selected_bg_color, 0.8);
 	box-shadow:  0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.23);
 	/* this is used for the resize cursor area */
 	margin: 5px;
@@ -24,6 +28,9 @@ window>widget>.titlebar,/*for Firefox CSD*/
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-color: #3D3D3D;
+	/*needed for corners*/
+
+	border-style: none
 }
 
 headerbar:backdrop, .csd headerbar:backdrop,.csd .titlebar:backdrop  {
@@ -85,7 +92,7 @@ headerbar button.appmenu, .csd button.titlebutton{
 
 .icon.titlebutton {
 	padding-left: 5px;
-	padding-top: 5px;
+	padding-top: 2px;
 }
 
 /*Theme this as a toolbar when NOT in an actual CSD window */
