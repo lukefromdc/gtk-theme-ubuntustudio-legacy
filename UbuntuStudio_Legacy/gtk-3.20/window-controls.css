@@ -19,18 +19,39 @@ decoration,  window.unified {
 	padding: 0px;
 }
 
-window>widget>.titlebar,/*for Firefox CSD*/
 .csd headerbar,
 .csd .titlebar {
 	text-shadow: 1px 1px lighter (@bg_color);
 	border-radius: 7px 7px 0px 0px;
-	background-image: url('window-controls/decoration.png');
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-image: linear-gradient(to bottom,
+                                      #424a49,
+                                      #373737,
+                                      #323232,
+                                      #2e2e2e,
+                                      #2a2a2a,
+                                      #252525,
+                                      #212121,
+                                      #1c1c1c,
+                                      #181818,
+                                      #131313,
+                                      #0f0f0f,
+                                      #0c0c0c,
+                                      #141414,
+                                      #1b1b1b,
+                                      #232323,
+                                      #2a2a2a,
+                                      #323232,
+                                      #3a3a3a,
+                                      #3d3d3d,
+                                      #3d3d3d);
 	background-color: #3D3D3D;
-	/*needed for corners*/
-
 	border-style: none
+}
+
+window.background.csd>decoration{/*for Firefox CSD*/
+    background-image: linear-gradient(to bottom,
+                                      rgba(172, 205, 138, 0.7),
+                                      rgba(172, 205, 138, 0.7));
 }
 
 headerbar:backdrop, .csd headerbar:backdrop,.csd .titlebar:backdrop  {
@@ -66,7 +87,27 @@ headerbar button.appmenu, .csd button.titlebutton{
 }
 
 .solid-csd headerbar{
-	background-image: url('window-controls/decoration.png');
+	background-image: linear-gradient(to bottom,
+                                      #424a49,
+                                      #373737,
+                                      #323232,
+                                      #2e2e2e,
+                                      #2a2a2a,
+                                      #252525,
+                                      #212121,
+                                      #1c1c1c,
+                                      #181818,
+                                      #131313,
+                                      #0f0f0f,
+                                      #0c0c0c,
+                                      #141414,
+                                      #1b1b1b,
+                                      #232323,
+                                      #2a2a2a,
+                                      #323232,
+                                      #3a3a3a,
+                                      #3d3d3d,
+                                      #3d3d3d);
 	background-size:100% 100%;
 	border-radius: 0px;
 	box-shadow: none;
@@ -116,7 +157,6 @@ decoration:backdrop {
   background-image: none;
   background-color: #3D3D3D;
 }
-
 
 headerbar  button {
 	background-image:none;
