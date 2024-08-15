@@ -58,7 +58,6 @@ headerbar button.appmenu, .csd button.titlebutton{
 	margin: 1px 2px 2px 2px;
 }
 
-
 .solid-csd headerbar{
 	background-image: url('window-controls/decoration.png');
 	background-size:100% 100%;
@@ -86,7 +85,7 @@ headerbar button.appmenu, .csd button.titlebutton{
 
 .icon.titlebutton {
 	padding-left: 5px;
-	padding-top: 1px;
+	padding-top: 5px;
 }
 
 /*Theme this as a toolbar when NOT in an actual CSD window */
