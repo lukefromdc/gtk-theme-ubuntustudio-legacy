@@ -48,10 +48,9 @@ decoration,  window.unified {
 	border-style: none
 }
 
-window.background.csd>decoration{/*for Firefox CSD*/
-    background-image: linear-gradient(to bottom,
-                                      rgba(172, 205, 138, 0.7),
-                                      rgba(172, 205, 138, 0.7));
+/*Rendering a background image is broken for firefox 129 in native headerbar mode*/
+window.background.csd>*>.titlebar{
+	background-image: none;
 }
 
 headerbar:backdrop, .csd headerbar:backdrop,.csd .titlebar:backdrop  {
@@ -152,6 +151,7 @@ headerbar .subtitle {
   font-size: 90%;
 }
 
+titlebar,
 decoration:backdrop {
   text-shadow: none;
   background-image: none;
