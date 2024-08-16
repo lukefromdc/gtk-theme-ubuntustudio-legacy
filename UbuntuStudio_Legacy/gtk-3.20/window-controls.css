@@ -1,21 +1,22 @@
 /**************************
  * Client Side Decoration *
+ * This is important in many wayland compositors
 
- *headerbar*
+ * headerbar*
 
  **************************/
 
 /*mostly taken from Adwaita except the border radius */
 decoration,  window.unified {
-	border-radius: 7px 7px 2px 2px;
-	border-width: 0px 2px 2px 2px;
+	border-radius: 9px 9px 5px 5px;
+	border-width: 0px 2px 4px 2px;
 	border-style: solid;
 	border-left-color: #3D3D3D;
 	border-right-color: #3D3D3D;
 	border-bottom-color: shade (@theme_selected_bg_color, 0.8);
 	box-shadow:  0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.23);
 	/* this is used for the resize cursor area */
-	margin: 5px;
+	margin: 10px;
 	padding: 0px;
 }
 
@@ -44,8 +45,13 @@ decoration,  window.unified {
                                       #3a3a3a,
                                       #3d3d3d,
                                       #3d3d3d);
-	background-color: #3D3D3D;
-	border-style: none
+}
+
+/*Ensure that tiled decorations render square*/
+.tiled decoration,  window.tiled,
+.tiled headerbar,  window.tiled .default-decoration,
+window.tiled .titlebar{
+	border-radius: 0px 0px 0px 0px;
 }
 
 /*Rendering a background image is broken for firefox 129 in native headerbar mode*/
@@ -58,6 +64,15 @@ headerbar:backdrop, .csd headerbar:backdrop,.csd .titlebar:backdrop  {
 	border-radius: 7px 7px 0px 0px;
 	background-image: none;
 	background-color: #3D3D3D;
+}
+
+.tiled headerbar,
+.tiled headerbar:backdrop,
+.tiled .titlebar:backdrop,
+.tiled .titlebar,
+.tiled decoration,
+.tiled .default-decoration-titlebar {
+	border-radius: 0px 0px 0px 0px;
 }
 
 headerbar button:not(.appmenu):not(.titlebutton){
@@ -124,10 +139,6 @@ headerbar button.appmenu, .csd button.titlebutton{
 	border-width: 0px;
 	margin: 0px;
 	border-image: none;
-}
-
-.tiled decoration {
-	border-radius: 0px;
 }
 
 .icon.titlebutton {
