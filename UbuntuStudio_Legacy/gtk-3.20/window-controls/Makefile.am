@@ -12,8 +12,6 @@ theme_DATA = \
 	button-minimize-normal.png \
 	button-minimize-pressed.png \
 	button-normal.png \
-	button-pressed.png \
-	decoration.png \
-	decoration-csd.png
+	button-pressed.png
 	
 EXTRA_DIST = $(theme_DATA)
