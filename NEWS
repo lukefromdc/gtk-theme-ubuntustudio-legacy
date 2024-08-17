@@ -1,3 +1,17 @@
+3.24.41.1
+	Fix Make distclean
+	Do not remove index.theme on make clean
+	Fix missing subdir reference that broke make distcheck
+	Fix build failure
+	tooltips: keep decoration borders off tooltip windows
+	CSD: clean up window borders and tiling
+	CSD: Remove background image from Firefox native headerbar as it is broken
+	CSD: Replace image of metacity theme titlebar with gradient
+	CSD: Theme borders all the way around, fix oversize terminal in CSD
+	CSD: better window icon alignment
+	csd: more fixes for wayland csd rendering
+	CSD: use menubar color for titlebar in backdrop
+
 3.24.41.0
 	CSD: reduce minimum height of titlebars to match SSD theming when not containing additional widgets
 
