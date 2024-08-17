@@ -346,7 +346,8 @@ tooltip.background,
 }
 tooltip decoration,
 .tooltip decoration {
-    background-color: transparent; 
+    background-color: transparent;
+    border-width: 0px;
 }
 
 tooltip *,
