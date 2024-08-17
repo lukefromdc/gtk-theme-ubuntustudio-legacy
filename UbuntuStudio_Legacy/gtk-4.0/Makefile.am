@@ -20,4 +20,5 @@ SUBDIRS = \
 
 DIST_SUBDIRS = \
 	apps \
-	assets
+	assets \
+	window-controls
