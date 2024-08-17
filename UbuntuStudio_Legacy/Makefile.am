@@ -22,4 +22,4 @@ DIST_SUBDIRS = \
 	gtk-4.0 \
 	metacity-1
 
-CLEANFILES = index.theme
+CLEANFILES =
